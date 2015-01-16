@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://rvf0068.github.io/variable-compleja/sitemap.xml 
