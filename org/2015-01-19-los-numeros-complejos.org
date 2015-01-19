@@ -1,0 +1,171 @@
+#+title: Los números complejos
+#+author: 
+#+date: 2015-01-19 9:00
+
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Campos
+
+** Definición de campo
+
+   Un campo es una estructura formada por un conjunto \(F\) y dos
+   operaciones binarias \(F\times F\to F\), la primera llamada *suma*
+   y denotada por \((a,b)\mapsto a+b\), la segunda llamada *producto* y
+   denotada por \((a,b)\mapsto ab\), tales que:
+
+   - \(a+b=b+a\) para todos \(a,b\in F\),
+   - \(a+(b+c)=(a+b)+c\) para todos \(a,b,c\in F\),
+   - existe un elemento \(0\in F\) tal que \(a+0=a\) para todo \(a\in F\),
+   - para todo \(a\in F\) existe \(-a\in F\) tal que \(a+(-a)=0\),
+   - \(ab=ba\) para todos \(a,b\in F\),
+   - \(a(bc)=(ab)c\) para todos \(a,b,c\in F\),
+   - existe un elemento \(1\in F\) con \(1\ne 0\) tal que \(a1=a\) para todo \(a\in F\),
+   - para todo \(a\in F\), \(a\ne 0\) existe \(a^{-1}\in F\) tal que \(a(a^{-1})=1\),
+   - \(a(b+c)=ab+ac\) para todos \(a,b,c\in F\).
+
+** Ejemplos de campos
+
+   - El conjunto de los números racionales \(\mathbb{Q}\), con las
+     operaciones usuales.
+   - El conjunto de los números reales \(\mathbb{R}\), con las
+     operaciones usuales.
+   - Existen campos con una cantidad finita de elementos. (De hecho,
+     existe un campo con \(n\) elementos si y solo si \(n=p^{r}\) para
+     \(p\) primo y \(r>0\).)
+   - El campo de los números complejos, que estudiaremos aquí.
+
+** Observaciones
+
+   - En todo campo se define \(a-b\) como \(a+(-b)\). Si \(b\ne 0\) se
+     define \(\frac{a}{b}\) como \(ab^{-1}\).
+   - Existen muchas propiedades que se deducen solamente a partir de los
+     axiomas de campo. Por ejemplo, se tiene que los elementos \(0,1\)
+     son únicos con respecto a las propiedades que los definen, y que
+     \(a0=0\) para todo elemento del campo \(a\).
+
+* Caracterización de los números reales
+
+** Campos ordenados
+
+*** Campo ordenado					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+
+    Decimos que \(F\) es un *campo ordenado* si existe un conjunto
+    \(P\subseteq F\) tal que:
+
+    - \(a+b\in P\) para todos \(a,b\in P\),
+    - \(ab\in P\) para todos \(a,b\in P\),
+    - \(F\) es unión disjunta de \(\{0\}\), \(P\), y \(\{-a\mid a\in P\}\).
+
+*** Ejemplo						     :B_exampleblock:
+    :PROPERTIES:
+    :BEAMER_env: exampleblock
+    :END:
+
+    Los campos \(\mathbb{Q}\) y \(\mathbb{R}\) son ordenados.
+
+** Campos ordenados completos
+
+*** Relación de orden
+
+    En un campo ordenado, se puede definir la relación \(a>b\) como
+    \(a-b\in P\).
+
+*** Campo ordenado completo				       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+
+    Si \(F\) es un campo ordenado donde todo subconjunto no vacío
+    acotado superiormente tiene una mínima cota superior, decimos que
+    \(F\) es *completo*.
+
+*** Caracterización de \(\mathbb{R}\)						  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+
+    Salvo isomorfismo, el único campo ordenado completo es el campo de
+    los números reales.
+
+* Números complejos
+
+** Definición de Hamilton (1833)
+
+   Sea \(\mathbb{C}=\{(x,y)\mid x,y\in \mathbb{R}\}\). Entonces, en
+   \(\mathbb{C}\) podemos definir operaciones de suma y producto:
+
+   - \((x,y)+(u,v)=(x+u,y+v)\),
+   - \((x,y)(u,v)=(xu-yv,xv+yu)\),
+     
+   de tal modo que \(\mathbb{C}\) resulta ser un campo.
+
+** Propiedades de \(\mathbb{C}\)
+
+   - En \(\mathbb{C}\) tenemos \(0=(0,0)\) y \(1=(1,0)\).
+   - ¿Cuál es el inverso multiplicativo de \((x,y)\ne 0\)?
+   - El subconjunto \(\{(x,0)\in \mathbb{C}\mid x\in \mathbb{R}\}\)
+     es cerrado bajo las operaciones definidas en \(\mathbb{C}\), y
+     resulta ser un campo isomorfo a \(\mathbb{R}\) bajo la
+     correspondencia \(x\leftrightarrow (x,0)\).
+   - Por lo anterior, denotaremos a \((x,0)\) por \(x\).
+   - Tenemos que \((0,y)=y(0,1)\) para todo \(y\in
+     \mathbb{R}\). Denotaremos a \((0,1)\) por \(i\).
+   - Se tiene entonces que \(i^{2}=(0,1)(0,1)=(-1,0)=-1.\)
+   - Además, \((0,y)=(0,1)(y,0)=iy\) para todo \(y\in\mathbb{R}\). Por
+     lo tanto, \((x,y)=(x,0)+(0,y)=x+iy\) para todo
+     \((x,y)\in\mathbb{C}\). 
+
+** Breviario cultural
+
+   - ¿Es posible definir una estructura de campo en el conjunto de
+     tercias de números reales? ¿O en general en \(\mathbb{R}^{n}\)?
+   - Hamilton no lo logró en \(\mathbb{R}^{3}\). Pero en 1843 definió
+     una estructura (\(\mathbb{H}\)) de *álgebra con división* en
+     \(\mathbb{R}^{4}\), la cual cumple los axiomas de campo excepto
+     la conmutatividad del producto.
+   - Frobenius probó en 1877 que las únicas álgebras con división de
+     dimensión finita sobre \(\mathbb{R}\) son: \(\mathbb{R}\),
+     \(\mathbb{C}\) y \(\mathbb{H}\).
+   - Usando que \(\mathbb{C}\) es *algebraicamente cerrado* (es decir,
+     todo polinomio con coeficientes en \(\mathbb{C}\) tiene una raíz
+     en \(\mathbb{C}\)), es fácil demostrar que el único campo que
+     extiende a \(\mathbb{C}\) y es de dimensión finita como espacio
+     vectorial sobre \(\mathbb{R}\) es \(\mathbb{C}\).
+* Definiciones
+
+** Definiciones
+
+   - El número complejo \(z=(x,y)\) se denotará como \(z=x+iy\). Decimos
+     que \(x\) es la *parte real* de \(z\) y que \(y\) es la *parte
+     imaginaria* de \(z\). Escribimos \(x=\Re z\), \(y=\Im z\).
+   - El *conjugado* de \(z=x+iy\) es \(\overline{z}=x-iy\).
+   - La *magnitud* de \(z=x+iy\) es \(|z|=\sqrt{x^{2}+y^{2}}\).
+
+** Propiedades
+
+   - \(\overline{\overline{z}}=z\),
+     \(\overline{z+w}=\overline{z}+\overline{w}\),
+     \(\overline{zw}=\overline{z}\overline{w}\),
+     \(\overline{\frac{z}{w}}=\frac{\overline{z}}{\overline{w}}\).
+   - \(\Re z =\frac{z+\overline{z}}{2}\), \(\Im z =\frac{z-\overline{z}}{2}\).
+   - \(|zw|=|z||w|\), \(|\frac{z}{w}|=\frac{|z|}{|w|}\).
+   - \(|z|=|\overline{z}|\), \(z\overline{z}=|z|^{2}\).
+   - \(|\Re z|\leq |z|\), \(|\Im z|\leq |z|\).
+   - \(|z+w|\leq |z|+|w|\), \(|z+w|\geq ||z|-|w||\).
+   - Si \(z\ne 0\), \(z^{-1}=\frac{\overline{z}}{|z|^{2}}\).
+     
+

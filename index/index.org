@@ -1,0 +1,73 @@
+#+title: Inicio
+#+date: 2015-01-16
+#+language: es
+#+layout: page
+
+#+link:	pres https://github.com/rvf0068/variable-compleja/blob/gh-pages/org/%s.pdf?raw=true
+
+* Temario
+
+** Los números complejos
+
+   - Propiedades algebraicas de los números complejos.
+   - Representaciones geométricas de los números complejos.
+   - Raíces de un número complejo.
+   - Topología del plano complejo.
+
+** Funciones analíticas
+
+   - Funciones de una variable compleja.
+   - Límites y continuidad.
+   - Derivadas y sus propiedades.
+   - Funciones analíticas.
+   - Ecuaciones de Cauchy-Riemann.
+   - Funciones armónicas.
+   - Ejemplos de funciones analíticas.
+   - Función exponencial.
+   - Funciones trigonométricas.
+   - Logaritmo y sus ramas.
+
+** Integrales
+
+   - Integrales de contorno o de línea.
+   - Teorema de Cauchy-Goursat.
+   - Fórmula integral de Cauchy.
+   - Teorema de Morera.
+   - Módulo máximo y el teorema de Liouville.
+   - Teorema fundamental del álgebra.
+   - Teorema del mapeo abierto.
+   - Desarrollo en series de potencias.
+
+** Series de potencias
+
+   - Clasificación de singularidades.
+   - Funciones meromorfas y series de Laurent.
+   - Teorema de Casorati-Weierstrass.
+   - Teorema del residuo.
+   - Cálculo de integrales de variable real.
+   - Principio del argumento.
+   - Teorema de Rouché.
+
+** Transformaciones conformes
+
+   - Mapeos de funciones elementales.
+   - Proyección estereográfica y la esfera de Riemann.
+   - Definición de transformación conforme.
+   - Transformaciones de Möbius.
+   - Los principios de orientación y de simetría.
+
+* Presentaciones
+
+  - 19 de enero. [[pres:2015-01-19-los-numeros-complejos][Los números complejos]]
+
+* Exámenes
+
+  La calificación final se obtendrá como el promedio de tres exámenes.
+
+
+* COMMENT Local Variables
+
+# Local Variables:
+# org-octopress-is-post: nil
+# org-hide-emphasis-markers: nil
+# End:

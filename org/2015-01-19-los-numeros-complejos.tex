@@ -1,0 +1,218 @@
+% Created 2015-01-19 lun 08:46
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-01-19 9:00}
+\title{Los números complejos}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Campos}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{Definición de campo}
+Un campo es una estructura formada por un conjunto \(F\) y dos
+operaciones binarias \(F\times F\to F\), la primera llamada \alert{suma}
+y denotada por \((a,b)\mapsto a+b\), la segunda llamada \alert{producto} y
+denotada por \((a,b)\mapsto ab\), tales que:
+
+\begin{itemize}
+\item \(a+b=b+a\) para todos \(a,b\in F\),
+\item \(a+(b+c)=(a+b)+c\) para todos \(a,b,c\in F\),
+\item existe un elemento \(0\in F\) tal que \(a+0=a\) para todo \(a\in F\),
+\item para todo \(a\in F\) existe \(-a\in F\) tal que \(a+(-a)=0\),
+\item \(ab=ba\) para todos \(a,b\in F\),
+\item \(a(bc)=(ab)c\) para todos \(a,b,c\in F\),
+\item existe un elemento \(1\in F\) con \(1\ne 0\) tal que \(a1=a\) para todo \(a\in F\),
+\item para todo \(a\in F\), \(a\ne 0\) existe \(a^{-1}\in F\) tal que \(a(a^{-1})=1\),
+\item \(a(b+c)=ab+ac\) para todos \(a,b,c\in F\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{Ejemplos de campos}
+\begin{itemize}
+\item El conjunto de los números racionales \(\mathbb{Q}\), con las
+operaciones usuales.
+\item El conjunto de los números reales \(\mathbb{R}\), con las
+operaciones usuales.
+\item Existen campos con una cantidad finita de elementos. (De hecho,
+existe un campo con \(n\) elementos si y solo si \(n=p^{r}\) para
+\(p\) primo y \(r>0\).)
+\item El campo de los números complejos, que estudiaremos aquí.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{Observaciones}
+\begin{itemize}
+\item En todo campo se define \(a-b\) como \(a+(-b)\). Si \(b\ne 0\) se
+define \(\frac{a}{b}\) como \(ab^{-1}\).
+\item Existen muchas propiedades que se deducen solamente a partir de los
+axiomas de campo. Por ejemplo, se tiene que los elementos \(0,1\)
+son únicos con respecto a las propiedades que los definen, y que
+\(a0=0\) para todo elemento del campo \(a\).
+\end{itemize}
+\end{frame}
+
+\section{Caracterización de los números reales}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{Campos ordenados}
+\begin{definition}[Campo ordenado]
+Decimos que \(F\) es un \alert{campo ordenado} si existe un conjunto
+\(P\subseteq F\) tal que:
+
+\begin{itemize}
+\item \(a+b\in P\) para todos \(a,b\in P\),
+\item \(ab\in P\) para todos \(a,b\in P\),
+\item \(F\) es unión disjunta de \(\{0\}\), \(P\), y \(\{-a\mid a\in P\}\).
+\end{itemize}
+\end{definition}
+
+\begin{exampleblock}{Ejemplo}
+Los campos \(\mathbb{Q}\) y \(\mathbb{R}\) son ordenados.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[label=sec-2-2]{Campos ordenados completos}
+\begin{block}{Relación de orden}
+En un campo ordenado, se puede definir la relación \(a>b\) como
+\(a-b\in P\).
+\end{block}
+
+\begin{definition}[Campo ordenado completo]
+Si \(F\) es un campo ordenado donde todo subconjunto no vacío
+acotado superiormente tiene una mínima cota superior, decimos que
+\(F\) es \alert{completo}.
+\end{definition}
+
+\begin{theorem}[Caracterización de \(\mathbb{R}\)]
+Salvo isomorfismo, el único campo ordenado completo es el campo de
+los números reales.
+\end{theorem}
+\end{frame}
+
+\section{Números complejos}
+\label{sec-3}
+
+\begin{frame}[label=sec-3-1]{Definición de Hamilton (1833)}
+Sea \(\mathbb{C}=\{(x,y)\mid x,y\in \mathbb{R}\}\). Entonces, en
+\(\mathbb{C}\) podemos definir operaciones de suma y producto:
+
+\begin{itemize}
+\item \((x,y)+(u,v)=(x+u,y+v)\),
+\item \((x,y)(u,v)=(xu-yv,xv+yu)\),
+\end{itemize}
+
+de tal modo que \(\mathbb{C}\) resulta ser un campo.
+\end{frame}
+
+\begin{frame}[label=sec-3-2]{Propiedades de \(\mathbb{C}\)}
+\begin{itemize}
+\item En \(\mathbb{C}\) tenemos \(0=(0,0)\) y \(1=(1,0)\).
+\item ¿Cuál es el inverso multiplicativo de \((x,y)\ne 0\)?
+\item El subconjunto \(\{(x,0)\in \mathbb{C}\mid x\in \mathbb{R}\}\)
+es cerrado bajo las operaciones definidas en \(\mathbb{C}\), y
+resulta ser un campo isomorfo a \(\mathbb{R}\) bajo la
+correspondencia \(x\leftrightarrow (x,0)\).
+\item Por lo anterior, denotaremos a \((x,0)\) por \(x\).
+\item Tenemos que \((0,y)=y(0,1)\) para todo \(y\in
+     \mathbb{R}\). Denotaremos a \((0,1)\) por \(i\).
+\item Se tiene entonces que \(i^{2}=(0,1)(0,1)=(-1,0)=-1.\)
+\item Además, \((0,y)=(0,1)(y,0)=iy\) para todo \(y\in\mathbb{R}\). Por
+lo tanto, \((x,y)=(x,0)+(0,y)=x+iy\) para todo
+\((x,y)\in\mathbb{C}\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-3-3]{Breviario cultural}
+\begin{itemize}
+\item ¿Es posible definir una estructura de campo en el conjunto de
+tercias de números reales? ¿O en general en \(\mathbb{R}^{n}\)?
+\item Hamilton no lo logró en \(\mathbb{R}^{3}\). Pero en 1843 definió
+una estructura (\(\mathbb{H}\)) de \alert{álgebra con división} en
+\(\mathbb{R}^{4}\), la cual cumple los axiomas de campo excepto
+la conmutatividad del producto.
+\item Frobenius probó en 1877 que las únicas álgebras con división de
+dimensión finita sobre \(\mathbb{R}\) son: \(\mathbb{R}\),
+\(\mathbb{C}\) y \(\mathbb{H}\).
+\item Usando que \(\mathbb{C}\) es \alert{algebraicamente cerrado} (es decir,
+todo polinomio con coeficientes en \(\mathbb{C}\) tiene una raíz
+en \(\mathbb{C}\)), es fácil demostrar que el único campo que
+extiende a \(\mathbb{C}\) y es de dimensión finita como espacio
+vectorial sobre \(\mathbb{R}\) es \(\mathbb{C}\).
+\end{itemize}
+\end{frame}
+\section{Definiciones}
+\label{sec-4}
+
+\begin{frame}[label=sec-4-1]{Definiciones}
+\begin{itemize}
+\item El número complejo \(z=(x,y)\) se denotará como \(z=x+iy\). Decimos
+que \(x\) es la \alert{parte real} de \(z\) y que \(y\) es la \alert{parte
+imaginaria} de \(z\). Escribimos \(x=\Re z\), \(y=\Im z\).
+\item El \alert{conjugado} de \(z=x+iy\) es \(\overline{z}=x-iy\).
+\item La \alert{magnitud} de \(z=x+iy\) es \(|z|=\sqrt{x^{2}+y^{2}}\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-4-2]{Propiedades}
+\begin{itemize}
+\item \(\overline{\overline{z}}=z\),
+\(\overline{z+w}=\overline{z}+\overline{w}\),
+\(\overline{zw}=\overline{z}\overline{w}\),
+\(\overline{\frac{z}{w}}=\frac{\overline{z}}{\overline{w}}\).
+\item \(\Re z =\frac{z+\overline{z}}{2}\), \(\Im z =\frac{z-\overline{z}}{2}\).
+\item \(|zw|=|z||w|\), \(|\frac{z}{w}|=\frac{|z|}{|w|}\).
+\item \(|z|=|\overline{z}|\), \(z\overline{z}=|z|^{2}\).
+\item \(|\Re z|\leq |z|\), \(|\Im z|\leq |z|\).
+\item \(|z+w|\leq |z|+|w|\), \(|z+w|\geq ||z|-|w||\).
+\item Si \(z\ne 0\), \(z^{-1}=\frac{\overline{z}}{|z|^{2}}\).
+\end{itemize}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}
