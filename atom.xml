@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-01-19T08:46:40-06:00</updated>
+  <updated>2015-01-22T18:53:01-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[El Plano Complejo]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/"/>
+    <updated>2015-01-22T15:00:00-06:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo</id>
+    <content type="html"><![CDATA[<h1 id="el-plano-complejo">El plano complejo</h1>
+
+<h2 id="el-plano-complejo-1">El plano complejo</h2>
+
+<ul>
+  <li>Cada número complejo <script type="math/tex">z=(x,y)=x+iy</script> se puede describir en un plano
+por el punto con coordenadas <script type="math/tex">x,y</script>. En este <strong>plano complejo</strong> el
+eje horizontal se llama <strong>eje real</strong> y el vertical se llama <strong>eje imaginario</strong>.</li>
+  <li>En este plano, <script type="math/tex">z</script> y <script type="math/tex">\overline{z}</script> son reflejados por el eje
+real. También <script type="math/tex">\vert z\vert </script> representa la distancia al origen.</li>
+  <li>Todo complejo distinto de cero se puede escribir como producto de
+un número real y un complejo de módulo uno, a saber:
+<script type="math/tex">z=\vert z\vert \frac{z}{\vert z\vert }</script>.</li>
+  <li>Los complejos de módulo uno se dibujan en el plano complejo en la
+<strong>circunferencia unitaria</strong>: <script type="math/tex">\{z\in \mathbb{C}\mid \vert z\vert =1\}</script>.</li>
+  <li>
+    <p>Si <script type="math/tex">\theta</script> es un ángulo tal que <script type="math/tex">\cos\theta=\frac{x}{\vert z\vert }</script> y
+<script type="math/tex">\sin\theta=\frac{y}{\vert z\vert }</script>, entonces el complejo <script type="math/tex">z\ne 0</script> se
+escribe como:</p>
+
+    <script type="math/tex; mode=display">
+z=|z|(\cos \theta+i\sin\theta)
+</script>
+
+    <p>llamada <strong>forma polar</strong> del número complejo.</p>
+  </li>
+</ul>
+
+<h1 id="argumento-de-un-nmero-complejo">Argumento de un número complejo.</h1>
+
+<h2 id="puntos-en-la-circunferencia-unitaria">Puntos en la circunferencia unitaria</h2>
+
+<p><img class="center" src="http://rvf0068.github.io/variable-compleja/images/plano-complejo-1.png" /></p>
+
+<p>Cualquier ángulo <script type="math/tex">\theta</script> que cumpla que
+<script type="math/tex">z=\cos\theta+i\sin\theta</script> se llama <strong>argumento</strong> de <script type="math/tex">z</script>.</p>
+
+<h2 id="ejemplos">Ejemplos</h2>
+
+<p>Para un complejo <script type="math/tex">z\ne 0</script>, definimos su <strong>argumento</strong> <script type="math/tex">\arg z</script> como
+el argumento de <script type="math/tex">\frac{z}{\vert z\vert }</script>.</p>
+
+<p>Por ejemplo:</p>
+
+<ul>
+  <li><script type="math/tex">\arg i=90^{\circ}=\frac{\pi}{2}</script>,</li>
+  <li><script type="math/tex">\arg(i+1)=\frac{\pi}{4}</script>,</li>
+  <li><script type="math/tex">\arg(-1)=\pi</script>.</li>
+  <li>También <script type="math/tex">3\pi</script>, <script type="math/tex">-\pi</script>, etc. son valores de <script type="math/tex">\arg(-1)</script>.</li>
+</ul>
+
+<h2 id="propiedades-del-argumento">Propiedades del argumento</h2>
+
+<ul>
+  <li>
+    <p>Si <script type="math/tex">z_{1}=\cos\theta+i\sin\theta</script> y
+<script type="math/tex">z_{2}=\cos\psi+i\sin\psi</script>, entonces </p>
+
+    <script type="math/tex; mode=display">
+z_{1}z_{2}=\cos(\theta+\psi)+i\sin(\theta+\psi).
+</script>
+  </li>
+  <li>
+    <p>Por lo tanto, se obtiene la <strong>fórmula de DeMoivre</strong>:</p>
+
+    <script type="math/tex; mode=display">
+(\cos\theta+i\sin\theta)^{n}=\cos n\theta+i\sin n\theta
+</script>
+  </li>
+  <li>
+    <p>La fórmula de DeMoivre se puede usar además para extraer raíces a
+números complejos.</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Los Números Complejos]]></title>
@@ -143,6 +225,16 @@ lo tanto, <script type="math/tex">(x,y)=(x,0)+(0,y)=x+iy</script> para todo
 <script type="math/tex">(x,y)\in\mathbb{C}</script>.</li>
 </ul>
 
+<h2 id="ejercicios">Ejercicios</h2>
+
+<ul>
+  <li>Demuestra que si definimos suma de parejas de reales de manera
+usual y el producto como <script type="math/tex">(x,y)(u,v)=(xu,yv)</script>, no se obtiene un
+campo.</li>
+  <li>Demuestra que si definimos suma de tercias de reales de manera
+usual y el producto como el producto cruz, no se obtiene un campo.</li>
+</ul>
+
 <h2 id="breviario-cultural">Breviario cultural</h2>
 
 <ul>
@@ -162,16 +254,16 @@ extiende a <script type="math/tex">\mathbb{C}</script> y es de dimensión finita
 vectorial sobre <script type="math/tex">\mathbb{R}</script> es <script type="math/tex">\mathbb{C}</script>.</li>
 </ul>
 
-<h1 id="definiciones">Definiciones</h1>
+<h1 id="ms-definiciones-y-propiedades">Más definiciones y propiedades</h1>
 
-<h2 id="definiciones-1">Definiciones</h2>
+<h2 id="definiciones">Definiciones</h2>
 
 <ul>
   <li>El número complejo <script type="math/tex">z=(x,y)</script> se denotará como <script type="math/tex">z=x+iy</script>. Decimos
 que <script type="math/tex">x</script> es la <strong>parte real</strong> de <script type="math/tex">z</script> y que <script type="math/tex">y</script> es la <strong>parte
 imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script type="math/tex">x=\Re z</script>, <script type="math/tex">y=\Im z</script>.</li>
   <li>El <strong>conjugado</strong> de <script type="math/tex">z=x+iy</script> es <script type="math/tex">\overline{z}=x-iy</script>.</li>
-  <li>La <strong>magnitud</strong> de <script type="math/tex">z=x+iy</script> es <script type="math/tex">\vert z\vert =\sqrt{x^{2}+y^{2}}</script>.</li>
+  <li>El <strong>módulo</strong> de <script type="math/tex">z=x+iy</script> es <script type="math/tex">\vert z\vert =\sqrt{x^{2}+y^{2}}</script>.</li>
 </ul>
 
 <h2 id="propiedades">Propiedades</h2>
@@ -179,7 +271,7 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
 <ul>
   <li><script type="math/tex">\overline{\overline{z}}=z</script>,
 <script type="math/tex">\overline{z+w}=\overline{z}+\overline{w}</script>,
-<script type="math/tex">\overline{zw}=\overline{z}\overline{w}</script>,
+<script type="math/tex">\overline{zw}=\overline{z}\,\overline{w}</script>,
 <script type="math/tex">\overline{\frac{z}{w}}=\frac{\overline{z}}{\overline{w}}</script>.</li>
   <li><script type="math/tex">\Re z =\frac{z+\overline{z}}{2}</script>, <script type="math/tex">\Im z =\frac{z-\overline{z}}{2}</script>.</li>
   <li><script type="math/tex">\vert zw\vert =\vert z\vert \vert w\vert </script>, <script type="math/tex">\vert \frac{z}{w}\vert =\frac{\vert z\vert }{\vert w\vert }</script>.</li>

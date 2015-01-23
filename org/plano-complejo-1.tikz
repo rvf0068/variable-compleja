@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+  \draw[->] (-3,0) -- (3,0);
+  \draw[->] (0,-3) -- (0,3);
+  \draw[line width=1.5pt] (0,0) circle (2cm);
+  \draw[fill,line width=1.5pt] (60:2) circle (2pt);
+  \node[label={\(z=\cos\theta+i\sin\theta\)},right=1cm] at (60:2) {};
+  \draw[blue,line width=1pt] (0,0) -- (60:2);
+  \draw[red,line width=1pt] (1,0) arc (0:60:1);
+  \node[label={\color{red}\(\theta=\arg z\)},right=0.6cm] at (10:1) {};
+\end{tikzpicture}

@@ -1,0 +1,124 @@
+% Created 2015-01-22 jue 18:52
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-01-22 15:00}
+\title{El plano complejo}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{El plano complejo}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{El plano complejo}
+\begin{itemize}
+\item Cada número complejo \(z=(x,y)=x+iy\) se puede describir en un plano
+por el punto con coordenadas \(x,y\). En este \alert{plano complejo} el
+eje horizontal se llama \alert{eje real} y el vertical se llama \alert{eje imaginario}.
+\item En este plano, \(z\) y \(\overline{z}\) son reflejados por el eje
+real. También \(|z|\) representa la distancia al origen.
+\item Todo complejo distinto de cero se puede escribir como producto de
+un número real y un complejo de módulo uno, a saber:
+\(z=|z|\frac{z}{|z|}\).
+\item Los complejos de módulo uno se dibujan en el plano complejo en la
+\alert{circunferencia unitaria}: \(\{z\in \mathbb{C}\mid |z|=1\}\).
+\item Si \(\theta\) es un ángulo tal que \(\cos\theta=\frac{x}{|z|}\) y
+\(\sin\theta=\frac{y}{|z|}\), entonces el complejo \(z\ne 0\) se
+escribe como:
+\begin{displaymath}
+z=|z|(\cos \theta+i\sin\theta)
+\end{displaymath}
+llamada \alert{forma polar} del número complejo.
+\end{itemize}
+\end{frame}
+
+\section{Argumento de un número complejo.}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{Puntos en la circunferencia unitaria}
+\begin{figure}[htb]
+\centering
+\input{plano-complejo-1.tikz}
+\end{figure}
+
+
+Cualquier ángulo \(\theta\) que cumpla que
+\(z=\cos\theta+i\sin\theta\) se llama \alert{argumento} de \(z\).
+\end{frame}
+
+\begin{frame}[label=sec-2-2]{Ejemplos}
+Para un complejo \(z\ne 0\), definimos su \alert{argumento} \(\arg z\) como
+el argumento de \(\frac{z}{|z|}\).
+
+Por ejemplo:
+
+\begin{itemize}
+\item \(\arg i=90^{\circ}=\frac{\pi}{2}\),
+\item \(\arg(i+1)=\frac{\pi}{4}\),
+\item \(\arg(-1)=\pi\).
+\item También \(3\pi\), \(-\pi\), etc. son valores de \(\arg(-1)\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-2-3]{Propiedades del argumento}
+\begin{itemize}
+\item Si \(z_{1}=\cos\theta+i\sin\theta\) y
+\(z_{2}=\cos\psi+i\sin\psi\), entonces 
+\begin{displaymath}
+z_{1}z_{2}=\cos(\theta+\psi)+i\sin(\theta+\psi).
+\end{displaymath}
+\item Por lo tanto, se obtiene la \alert{fórmula de DeMoivre}:
+\begin{displaymath}
+(\cos\theta+i\sin\theta)^{n}=\cos n\theta+i\sin n\theta
+\end{displaymath}
+\item La fórmula de DeMoivre se puede usar además para extraer raíces a
+números complejos.
+\end{itemize}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}

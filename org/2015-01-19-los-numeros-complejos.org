@@ -129,6 +129,14 @@
      lo tanto, \((x,y)=(x,0)+(0,y)=x+iy\) para todo
      \((x,y)\in\mathbb{C}\). 
 
+** Ejercicios
+
+   - Demuestra que si definimos suma de parejas de reales de manera
+     usual y el producto como \((x,y)(u,v)=(xu,yv)\), no se obtiene un
+     campo.
+   - Demuestra que si definimos suma de tercias de reales de manera
+     usual y el producto como el producto cruz, no se obtiene un campo.
+
 ** Breviario cultural
 
    - ¿Es posible definir una estructura de campo en el conjunto de
@@ -145,7 +153,7 @@
      en \(\mathbb{C}\)), es fácil demostrar que el único campo que
      extiende a \(\mathbb{C}\) y es de dimensión finita como espacio
      vectorial sobre \(\mathbb{R}\) es \(\mathbb{C}\).
-* Definiciones
+* Más definiciones y propiedades
 
 ** Definiciones
 
@@ -153,13 +161,13 @@
      que \(x\) es la *parte real* de \(z\) y que \(y\) es la *parte
      imaginaria* de \(z\). Escribimos \(x=\Re z\), \(y=\Im z\).
    - El *conjugado* de \(z=x+iy\) es \(\overline{z}=x-iy\).
-   - La *magnitud* de \(z=x+iy\) es \(|z|=\sqrt{x^{2}+y^{2}}\).
+   - El *módulo* de \(z=x+iy\) es \(|z|=\sqrt{x^{2}+y^{2}}\).
 
 ** Propiedades
 
    - \(\overline{\overline{z}}=z\),
      \(\overline{z+w}=\overline{z}+\overline{w}\),
-     \(\overline{zw}=\overline{z}\overline{w}\),
+     \(\overline{zw}=\overline{z}\,\overline{w}\),
      \(\overline{\frac{z}{w}}=\frac{\overline{z}}{\overline{w}}\).
    - \(\Re z =\frac{z+\overline{z}}{2}\), \(\Im z =\frac{z-\overline{z}}{2}\).
    - \(|zw|=|z||w|\), \(|\frac{z}{w}|=\frac{|z|}{|w|}\).

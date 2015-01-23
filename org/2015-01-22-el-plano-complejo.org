@@ -1,0 +1,101 @@
+#+title: El plano complejo
+#+author: 
+#+date: 2015-01-22 15:00
+
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* El plano complejo
+
+** El plano complejo
+
+   - Cada número complejo \(z=(x,y)=x+iy\) se puede describir en un plano
+     por el punto con coordenadas \(x,y\). En este *plano complejo* el
+     eje horizontal se llama *eje real* y el vertical se llama *eje imaginario*.
+   - En este plano, \(z\) y \(\overline{z}\) son reflejados por el eje
+     real. También \(|z|\) representa la distancia al origen.
+   - Todo complejo distinto de cero se puede escribir como producto de
+     un número real y un complejo de módulo uno, a saber:
+     \(z=|z|\frac{z}{|z|}\).
+   - Los complejos de módulo uno se dibujan en el plano complejo en la
+     *circunferencia unitaria*: \(\{z\in \mathbb{C}\mid |z|=1\}\).
+   - Si \(\theta\) es un ángulo tal que \(\cos\theta=\frac{x}{|z|}\) y
+     \(\sin\theta=\frac{y}{|z|}\), entonces el complejo \(z\ne 0\) se
+     escribe como:
+     \begin{displaymath}
+     z=|z|(\cos \theta+i\sin\theta)
+     \end{displaymath}
+     llamada *forma polar* del número complejo.
+
+* Argumento de un número complejo.
+
+** Puntos en la circunferencia unitaria
+   
+   #+name: plano-complejo-1
+   #+header: :imagemagick yes :iminoptions -density 300 -resize 400
+   #+header: :packages '(("" "tikz") ("" "tkz-berge")) :border 1pt
+   #+header: :file (by-backend (latex "plano-complejo-1.tikz") (beamer "plano-complejo-1.tikz") (t "plano-complejo-1.png"))
+   #+header: :cache yes
+   #+begin_src latex :results raw file
+\begin{tikzpicture}
+  \draw[->] (-3,0) -- (3,0);
+  \draw[->] (0,-3) -- (0,3);
+  \draw[line width=1.5pt] (0,0) circle (2cm);
+  \draw[fill,line width=1.5pt] (60:2) circle (2pt);
+  \node[label={\(z=\cos\theta+i\sin\theta\)},right=1cm] at (60:2) {};
+  \draw[blue,line width=1pt] (0,0) -- (60:2);
+  \draw[red,line width=1pt] (1,0) arc (0:60:1);
+  \node[label={\color{red}\(\theta=\arg z\)},right=0.6cm] at (10:1) {};
+\end{tikzpicture}
+   #+end_src
+   
+   #+attr_html: :width 400 :alt plano-complejo-1 :align center
+   #+attr_latex: :float t :width ""
+   #+RESULTS[193f35d36f5f347e3e16ce64927462c4970918ad]: plano-complejo-1
+   [[file:plano-complejo-1.png]]
+
+
+   Cualquier ángulo \(\theta\) que cumpla que
+   \(z=\cos\theta+i\sin\theta\) se llama *argumento* de \(z\).
+
+** Ejemplos
+
+   Para un complejo \(z\ne 0\), definimos su *argumento* \(\arg z\) como
+   el argumento de \(\frac{z}{|z|}\).
+
+   Por ejemplo:
+
+   - \(\arg i=90^{\circ}=\frac{\pi}{2}\),
+   - \(\arg(i+1)=\frac{\pi}{4}\),
+   - \(\arg(-1)=\pi\).
+   - También \(3\pi\), \(-\pi\), etc. son valores de \(\arg(-1)\).
+
+** Propiedades del argumento
+
+   - Si \(z_{1}=\cos\theta+i\sin\theta\) y
+     \(z_{2}=\cos\psi+i\sin\psi\), entonces 
+     \begin{displaymath}
+     z_{1}z_{2}=\cos(\theta+\psi)+i\sin(\theta+\psi).
+     \end{displaymath}
+   - Por lo tanto, se obtiene la *fórmula de DeMoivre*:
+     \begin{displaymath}
+     (\cos\theta+i\sin\theta)^{n}=\cos n\theta+i\sin n\theta
+     \end{displaymath}
+   - La fórmula de DeMoivre se puede usar además para extraer raíces a
+     números complejos.
+
+* COMMENT Local Variables
+
+# Local Variables:
+# org-confirm-babel-evaluate: nil
+# End:
