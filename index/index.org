@@ -59,6 +59,7 @@
 * Presentaciones
 
   - 19 de enero. [[pres:2015-01-19-los-numeros-complejos][Los números complejos]]
+  - 22 de enero. [[pres:2015-01-22-el-plano-complejo][El plano complejo]]
 
 * Exámenes
 
