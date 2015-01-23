@@ -1,0 +1,199 @@
+#+title: Topología del plano complejo
+#+author: 
+#+date: 2015-01-23 7:00
+
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Definiciones básicas
+
+** Discos
+
+*** Disco						       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sean \(z_{0}\in\mathbb{C}\) y \(r\) un real positivo. Definimos el
+    *disco* con centro en \(z_{0}\) y radio \(r\), denotado \(D(z_{0},r)\), como
+    el conjunto:
+    \begin{displaymath}
+    D(z_{0},r)=\{z\in\mathbb{C}\mid |z-z_{0}|<r\}.
+    \end{displaymath}
+
+*** Disco cerrado					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sean \(z_{0}\in\mathbb{C}\) y \(r\) un real positivo. Definimos el
+    *disco cerrado* con centro en \(z_{0}\) y radio \(r\), denotado \(\overline{D}(z_{0},r)\), como
+    el conjunto:
+    \begin{displaymath}
+    \overline{D}(z_{0},r)=\{z\in\mathbb{C}\mid |z-z_{0}|\leq r\}.
+    \end{displaymath}   
+
+** Conjuntos abiertos
+
+*** Punto interior					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sean \(A\subseteq \mathbb{C}\) y \(z\in \mathbb{C}\). Decimos que
+    \(z\) es *punto interior* de \(A\) si existe \(r>0\) tal que
+    \(D(z,r)\subseteq A\).
+
+*** Conjunto abierto					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(A\subseteq \mathbb{C}\). Decimos que \(A\) es un *conjunto
+    abierto* si todo punto de \(A\) es punto interior de \(A\).
+
+*** Propiedades de conjuntos abiertos 				  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    - Si \(\{U_{\alpha}\}_{\alpha\in I}\) es una colección de
+      conjuntos abiertos, entonces \(\cup_{\alpha\in I}U_{\alpha}\) es un
+      conjunto abierto.
+    - Si \(U_{1},U_{2}\) son abiertos, entonces \(U_{1}\cap U_{2}\) es
+      abierto. 
+
+** Ejemplos de conjuntos abiertos
+
+*** 							     :B_exampleblock:
+    :PROPERTIES:
+    :BEAMER_env: exampleblock
+    :END:
+    - \(\mathbb{C}\) es abierto.
+    - \(\emptyset\) es abierto.
+    - Para todo \(z\in \mathbb{C}\), \(r>0\), se tiene que \(D(z,r)\)
+      es abierto.
+
+** Conjuntos cerrados
+
+*** Conjunto cerrado					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(A\subseteq \mathbb{C}\). Decimos que \(A\) es cerrado si su
+    complemento en \(\mathbb{C}\), es decir, \(\mathbb{C}-A\), es un
+    conjunto abierto.
+
+*** 							     :B_exampleblock:
+    :PROPERTIES:
+    :BEAMER_env: exampleblock
+    :END:
+    - \(\mathbb{C}\) y \(\emptyset\) son cerrados.
+    - Para todo \(z\in \mathbb{C}\), \(r>0\), se tiene que \(\overline{D}(z,r)\)
+      es cerrado.
+    - La circunferencia unitaria \(\{z\in \mathbb{C}\mid |z|=1\}\) es cerrada.
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    - Si \(\{F_{\alpha}\}_{\alpha\in I}\) es una colección de
+      conjuntos cerrados, entonces \(\cap_{\alpha\in I}F_{\alpha}\) es un
+      conjunto cerrado.
+    - Si \(F_{1},F_{2}\) son cerrados, entonces \(F_{1}\cap F_{2}\) es
+      cerrado.     
+
+** Frontera
+
+*** Punto frontera 					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sean \(A\subseteq \mathbb{C}\) y \(z\in \mathbb{C}\). Decimos que \(z\) es
+    un *punto frontera* de \(A\) si para todo \(r>0\) se tiene que
+    \(A\cap D(z,r)\not=\emptyset\) y \((\mathbb{C}-A)\cap
+    D(z,r)\not=\emptyset\). 
+
+*** 
+    El conjunto de puntos frontera de \(A\) se denota con \(\partial A\).
+
+*** Ejemplo 						     :B_exampleblock:
+    :PROPERTIES:
+    :BEAMER_env: exampleblock
+    :END:
+    \(\partial D(z,r)=\partial \overline{D}(z,r)=\{z\in \mathbb{C}\mid |z|=1\}\)
+
+** Ejercicios
+
+   - Demuestra que \(A\subseteq \mathbb{C}\) es abierto si y solo si \(\partial A\cap A=\emptyset\).
+   - Demuestra que \(A\subseteq \mathbb{C}\) es cerrado si y solo si \(\partial A\subseteq A\).
+   - Demuestra que para todo \(A\subseteq \mathbb{C}\) se tiene que \(\partial A\) es un
+     conjunto cerrado.
+
+** Cerradura
+
+*** Cerradura						       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(A\subseteq \mathbb{C}\). La *cerradura* de \(A\), denotada
+    \(\overline{A}\), se define como:
+    \begin{displaymath}
+    \overline{A}=A\cup\partial A.
+    \end{displaymath}
+
+*** 							     :B_exampleblock:
+    :PROPERTIES:
+    :BEAMER_env: exampleblock
+    :END:
+    Por ejemplo, \(\overline{D(z,r)}=\overline{D}(z,r)\).
+
+*** Ejercicios
+    - Demuestra que \(z\in \overline{A}\) si y solo si \(D(z,r)\cap
+      A\ne\emptyset\) para todo \(r>0\).
+    - Demuestra que \(\overline{A}\) es cerrado para todo \(A\subseteq \mathbb{C}\).
+    - Demuestra que \(A\subseteq \mathbb{C}\) es cerrado si y solo si \(A=\overline{A}\).
+
+* Sucesiones
+
+** Definición y notación
+
+*** Sucesión						       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Una *sucesión* en un conjunto \(A\) es una función
+    \(a\colon\mathbb{N}\to A\). Denotaremos \(a(n)\) como \(a_{n}\) y
+    a \(a\) como \(\{a_{n}\}\).
+
+*** Convergencia					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Decimos que la sucesión \(\{a_{n}\}\subseteq \mathbb{C}\) *converge*
+    a \(z\in\mathbb{C}\) si para todo \(\epsilon>0\) existe \(N\) tal
+    que \(a_{n}\in D(z,\epsilon)\) para todo \(n\geq N\). Escribimos
+    \(\lim_{n\to\infty}a_{n}=z\). 
+
+*** Observación
+    \(\lim_{n\to\infty}a_{n}=z\) si y solo si \(\lim_{n\to\infty}|a_{n}-z|=0\).
+
+** Propiedades
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    \(\lim_{n\to\infty}a_{n}=z\) si y solo si \(\lim_{n\to\infty}\Re
+    a_{n}=\Re z\) y \(\lim_{n\to\infty}\Im a_{n}=\Im z\)
+
+* COMMENT Local Variables
+
+# Local Variables:
+# org-confirm-babel-evaluate: nil
+# End:
