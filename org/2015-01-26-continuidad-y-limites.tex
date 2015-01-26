@@ -1,0 +1,167 @@
+% Created 2015-01-26 lun 13:03
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-01-26 9:00}
+\title{Continuidad y límites}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Funciones continuas}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{Continuidad}
+\begin{definition}[Continuidad en un punto]
+Sean \(A\subseteq \mathbb{C}\), \(a\in A\) y \(f\colon A\to
+    \mathbb{C}\) una función. Decimos que \(f\) es \alert{continua en
+\(a\)} si y solo si para cada \(\epsilon>0\) existe
+\(\delta>0\) tal que:
+\begin{displaymath}
+f(A\cap D(a,\delta))\subseteq D(f(a),\epsilon).
+\end{displaymath}
+\end{definition}
+
+\begin{block}{}
+Decimos que \(f\colon A\to \mathbb{C}\) es \alert{continua} si es continua
+en \(a\) para todo \(a\in A\).
+\end{block}
+
+\begin{theorem}
+Sean \(A\subseteq \mathbb{C}\), \(a\in A\) y \(f\colon A\to
+    \mathbb{C}\) una función. Entonces \(f\) es continua en \(a\)
+si y solo si para toda sucesión \(z_{n}\) en \(A\) tal que
+\(z_{n}\to a\), se tiene que \(f(z_{n})\to f(a)\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{}
+\begin{theorem}
+Sean \(f,g\colon A\to \mathbb{C}\) funciones continuas en \(a\in
+    A\). Entonces \(cf\), \(\Re f\), \(\Im f\), \(\overline{f}\),
+\(f+g\), \(fg\) son continuas en \(a\). En particular si \(f,g\) son
+continuas, entonces cada una de las funciones listadas son
+continuas.
+\end{theorem}
+
+\begin{theorem}
+Si \(g(a)\ne 0\), entonces \(\frac{f}{g}\) es continua en
+\(a\). Si \(g(a)\ne 0\) para todo \(a\in A\), entonces
+\(\frac{f}{g}\) es continua. 
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{}
+\begin{theorem}
+Sean \(f\colon A\to \mathbb{C}\), \(g\colon B\to \mathbb{C}\)
+funciones tales que \(f(A)\subseteq B\). Si \(f\) es continua en
+\(a\in A\) y \(g\) es continua en \(f(a)\), entonces \(g\circ f\)
+es continua en \(a\). En particular, si \(f\) y \(g\) son
+continuas, entonces \(g\circ f\) es continua.
+\end{theorem}
+
+\begin{theorem}
+Sea \(U\subseteq \mathbb{C}\) abierto. Una función \(f\colon U\to
+    \mathbb{C}\) es continua si y solo si para todo abierto
+\(V\subseteq \mathbb{C}\) se tiene que el conjunto
+\begin{displaymath}
+f^{-1}(V)=\{z\in U\mid f(z)\in V\},
+\end{displaymath}
+es abierto.
+\end{theorem}
+\end{frame}
+
+\section{Límites}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{Definición de límite}
+\begin{block}{}
+Dados \(a\in \mathbb{C}\) y \(r>0\), denotaremos con
+\(D^{*}(a,r)\) al conjunto \(D(a,r)-\{a\}\).
+\end{block}
+
+\begin{definition}[Límite]
+Sean \(f\colon A\to \mathbb{C}\) una función y \(a\in \mathbb{C}\)
+un punto de acumulación de \(A\). Decimos que \(c\in \mathbb{C}\)
+es \alert{límite de \(f\) en \(a\)}, denotado \(\lim_{z\to a}f(z)=c\), si
+para todo \(\epsilon>0\) existe \(\delta>0\) tal que:
+\begin{displaymath}
+f(A\cap D^{*}(a,\delta))\subseteq D(c,\epsilon).
+\end{displaymath}
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-2-2]{Relación con continuidad}
+\begin{theorem}
+Sea \(a\in A\) tal que \(a\) es punto de acumulación de
+\(A\). Entonces \(f\colon A\to \mathbb{C}\) es continua en \(a\)
+si y solo si \(\lim_{z\to a}f(z)=f(a)\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-2-3]{}
+\begin{theorem}
+Sea \(a\) punto de acumulación de \(A\in \mathbb{C}\). Entonces
+\(f\colon A\to \mathbb{C}\) tiene límite \(c\) en \(a\) si y solo
+si para toda sucesión \(z_{n}\) en \(A-\{a\}\) con límite \(a\) se
+tiene que \(f(z_{n})\) converge a \(c\).
+\end{theorem}
+
+\begin{theorem}
+Sea \(A\subseteq \mathbb{C}\) y \(a\) un punto de acumulación de
+\(A\). Sean \(f,g\colon A\to \mathbb{C}\) funciones tales que
+\(\lim_{z\to a}f(z)=l_{1}\) y \(\lim_{z\to
+    a}g(z)=l_{2}\). Entonces \(cf\), \(\Re f\), \(\Im f\),
+\(\overline{f}\), \(f+g\), \(fg\) tienen todas límite cuando
+\(z\to a\), y su valor es \(cl_{1}\), \(\Re l_{1}\), \(\Im
+    l_{1}\), \(\overline{l_{1}}\), \(l_{1}+l_{2}\) y \(l_{1}l_{2}\),
+respectivamente. Si \(l_{2}\ne 0\), entonces \(\lim_{z\to
+    a}\frac{f}{g}\) existe y es igual a \(\frac{l_{1}}{l_{2}}\).
+\end{theorem}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}

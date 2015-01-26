@@ -183,6 +183,7 @@
 *** Observación
     \(\lim_{n\to\infty}a_{n}=z\) si y solo si \(\lim_{n\to\infty}|a_{n}-z|=0\).
 
+
 ** Propiedades
 
 *** 								  :B_theorem:
@@ -200,8 +201,8 @@
     complejos tales que \(a_{n}\to z\) y \(b_{n}\to w\). Entonces:
 
     - \(ca_{n}\to cz\) para todo \(c\in \mathbb{C}\),
-    - \(\overline{a_{n}}\to \overline{z}\), \(|a_{n}|\to z\),
-    - \(a_{n}+b_{n}\to z+w\), \(a_{n}b_{n}\to zw\)
+    - \(\overline{a_{n}}\to \overline{z}\), \(|a_{n}|\to |z|\),
+    - \(a_{n}+b_{n}\to z+w\), \(a_{n}b_{n}\to zw\).
     - Si \(w\ne 0\), entonces \(b_{n}= 0\) a lo más para una cantidad
       finita de valores de \(n\), y \(\frac{a_{n}}{b_{n}}\to
       \frac{z}{w}\).
@@ -263,6 +264,7 @@
     Sea \(A\subseteq \mathbb{C}\). Entonces \(A\) es cerrado si y solo
     si \(A\) contiene todo punto de acumulación de toda sucesión en
     \(A\). 
+
 
 * COMMENT Local Variables
 
