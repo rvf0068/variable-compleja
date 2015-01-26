@@ -192,6 +192,78 @@
     \(\lim_{n\to\infty}a_{n}=z\) si y solo si \(\lim_{n\to\infty}\Re
     a_{n}=\Re z\) y \(\lim_{n\to\infty}\Im a_{n}=\Im z\)
 
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sean \(\{a_{n}\}\), \(\{b_{n}\}\) dos sucesiones de números
+    complejos tales que \(a_{n}\to z\) y \(b_{n}\to w\). Entonces:
+
+    - \(ca_{n}\to cz\) para todo \(c\in \mathbb{C}\),
+    - \(\overline{a_{n}}\to \overline{z}\), \(|a_{n}|\to z\),
+    - \(a_{n}+b_{n}\to z+w\), \(a_{n}b_{n}\to zw\)
+    - Si \(w\ne 0\), entonces \(b_{n}= 0\) a lo más para una cantidad
+      finita de valores de \(n\), y \(\frac{a_{n}}{b_{n}}\to
+      \frac{z}{w}\).
+
+* Puntos de acumulación y sucesiones
+
+** Punto de acumulación
+
+*** Punto de acumulación				       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(A\subseteq \mathbb{C}\). Decimos que \(z\in \mathbb{C}\) es
+    *punto de acumulación* de \(A\) si para todo \(\epsilon>0\) existe
+    un punto en \(D(z,\epsilon)\cap A\) /distinto de \(z\)/.
+
+*** Subsucesión						       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Se dice que la sucesión \(\{b_{k}\}\) es una *subsucesión* de
+    \(\{a_{n}\}\) si existe una sucesión creciente en \(\mathbb{N}\)
+    \begin{displaymath}
+    n_{1}<n_{2}<\cdots
+    \end{displaymath}
+    tal que \(a_{n_{k}}=b_{k}\) para \(k=1,2,\ldots\).
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    El complejo \(z\in \mathbb{C}\) es punto de acumulación de la
+    sucesión \(a=\{a_{n}\}\) si y solo si existe una subsucesión
+    \(\{a_{n_{k}}\}\) de \(a\) tal que \(\lim a_{n_{k}}=z\).
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Si una sucesión \(a=\{a_{n}\}\) tiene límite \(z\), entonces toda
+    subsucesión de \(a\) tiene límite \(z\).
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sean \(A\subseteq \mathbb{C}\) y \(z\in \mathbb{C}\). Entonces
+    \(z\in \overline{A}\) si y solo si existe una sucesión en \(A\)
+    con límite \(z\).
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(A\subseteq \mathbb{C}\). Entonces \(A\) es cerrado si y solo
+    si \(A\) contiene todo punto de acumulación de toda sucesión en
+    \(A\). 
+
 * COMMENT Local Variables
 
 # Local Variables:

@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-01-23T09:39:04-06:00</updated>
+  <updated>2015-01-26T08:08:51-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -216,6 +216,70 @@ que <script type="math/tex">a_{n}\in D(z,\epsilon)</script> para todo <script ty
 
     <p><script type="math/tex">\lim_{n\to\infty}a_{n}=z</script> si y solo si <script type="math/tex">\lim_{n\to\infty}\Re
     a_{n}=\Re z</script> y <script type="math/tex">\lim_{n\to\infty}\Im a_{n}=\Im z</script></p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">\{a_{n}\}</script>, <script type="math/tex">\{b_{n}\}</script> dos sucesiones de números
+complejos tales que <script type="math/tex">a_{n}\to z</script> y <script type="math/tex">b_{n}\to w</script>. Entonces:</p>
+
+    <ul>
+      <li><script type="math/tex">ca_{n}\to cz</script> para todo <script type="math/tex">c\in \mathbb{C}</script>,</li>
+      <li><script type="math/tex">\overline{a_{n}}\to \overline{z}</script>, <script type="math/tex">\vert a_{n}\vert \to z</script>,</li>
+      <li><script type="math/tex">a_{n}+b_{n}\to z+w</script>, <script type="math/tex">a_{n}b_{n}\to zw</script></li>
+      <li>Si <script type="math/tex">w\ne 0</script>, entonces <script type="math/tex">b_{n}= 0</script> a lo más para una cantidad
+finita de valores de <script type="math/tex">n</script>, y <script type="math/tex">\frac{a_{n}}{b_{n}}\to
+      \frac{z}{w}</script>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="puntos-de-acumulacin-y-sucesiones">Puntos de acumulación y sucesiones</h1>
+
+<h2 id="punto-de-acumulacin">Punto de acumulación</h2>
+
+<ul>
+  <li>
+    <p>Punto de acumulación</p>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. Decimos que <script type="math/tex">z\in \mathbb{C}</script> es
+<strong>punto de acumulación</strong> de <script type="math/tex">A</script> si para todo <script type="math/tex">\epsilon>0</script> existe
+un punto en <script type="math/tex">D(z,\epsilon)\cap A</script> <em>distinto de <script type="math/tex">z</script></em>.</p>
+  </li>
+  <li>
+    <p>Subsucesión</p>
+
+    <p>Se dice que la sucesión <script type="math/tex">\{b_{k}\}</script> es una <strong>subsucesión</strong> de
+<script type="math/tex">\{a_{n}\}</script> si existe una sucesión creciente en <script type="math/tex">\mathbb{N}</script></p>
+
+    <script type="math/tex; mode=display">% &lt;![CDATA[
+
+n_{1}<n_{2}<\cdots
+ %]]&gt;</script>
+
+    <p>tal que <script type="math/tex">a_{n_{k}}=b_{k}</script> para <script type="math/tex">k=1,2,\ldots</script>.</p>
+  </li>
+  <li>
+
+    <p>El complejo <script type="math/tex">z\in \mathbb{C}</script> es punto de acumulación de la
+sucesión <script type="math/tex">a=\{a_{n}\}</script> si y solo si existe una subsucesión
+<script type="math/tex">\{a_{n_{k}}\}</script> de <script type="math/tex">a</script> tal que <script type="math/tex">\lim a_{n_{k}}=z</script>.</p>
+  </li>
+  <li>
+
+    <p>Si una sucesión <script type="math/tex">a=\{a_{n}\}</script> tiene límite <script type="math/tex">z</script>, entonces toda
+subsucesión de <script type="math/tex">a</script> tiene límite <script type="math/tex">z</script>.</p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z\in \mathbb{C}</script>. Entonces
+<script type="math/tex">z\in \overline{A}</script> si y solo si existe una sucesión en <script type="math/tex">A</script>
+con límite <script type="math/tex">z</script>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. Entonces <script type="math/tex">A</script> es cerrado si y solo
+si <script type="math/tex">A</script> contiene todo punto de acumulación de toda sucesión en
+<script type="math/tex">A</script>.</p>
   </li>
 </ul>
 ]]></content>
