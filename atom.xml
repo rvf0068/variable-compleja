@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-01-29T17:26:43-06:00</updated>
+  <updated>2015-01-29T17:29:57-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -370,6 +370,14 @@ finita de valores de <script type="math/tex">n</script>, y <script type="math/te
     <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. Decimos que <script type="math/tex">z\in \mathbb{C}</script> es
 <strong>punto de acumulación</strong> de <script type="math/tex">A</script> si para todo <script type="math/tex">\epsilon>0</script> existe
 un punto en <script type="math/tex">D(z,\epsilon)\cap A</script> <em>distinto de <script type="math/tex">z</script></em>.</p>
+  </li>
+  <li>
+    <p>Punto de acumulación de una sucesión</p>
+
+    <p>Sea <script type="math/tex">\{a_{n}\}</script> una sucesión en <script type="math/tex">\mathbb{C}</script>. Decimos que
+<script type="math/tex">z\in \mathbb{C}</script> es <strong>punto de acumulación</strong> de <script type="math/tex">a_{n}</script> si para
+todo <script type="math/tex">\epsilon>0</script> existe una infinidad de valores de <script type="math/tex">n</script> tales
+que <script type="math/tex">a_{n}\in D(z,\epsilon)</script>.</p>
   </li>
   <li>
     <p>Subsucesión</p>
