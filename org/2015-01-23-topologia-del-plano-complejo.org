@@ -219,6 +219,18 @@
     *punto de acumulación* de \(A\) si para todo \(\epsilon>0\) existe
     un punto en \(D(z,\epsilon)\cap A\) /distinto de \(z\)/.
 
+
+*** Punto de acumulación de una sucesión 		       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(\{a_{n}\}\) una sucesión en \(\mathbb{C}\). Decimos que
+    \(z\in \mathbb{C}\) es *punto de acumulación* de \(a_{n}\) si para
+    todo \(\epsilon>0\) existe una infinidad de valores de \(n\) tales
+    que \(a_{n}\in D(z,\epsilon)\).
+
+** 
+
 *** Subsucesión						       :B_definition:
     :PROPERTIES:
     :BEAMER_env: definition
@@ -230,7 +242,6 @@
     \end{displaymath}
     tal que \(a_{n_{k}}=b_{k}\) para \(k=1,2,\ldots\).
 
-** 
 
 *** 								  :B_theorem:
     :PROPERTIES:
@@ -240,14 +251,14 @@
     sucesión \(a=\{a_{n}\}\) si y solo si existe una subsucesión
     \(\{a_{n_{k}}\}\) de \(a\) tal que \(\lim a_{n_{k}}=z\).
 
+** 
+
 *** 								  :B_theorem:
     :PROPERTIES:
     :BEAMER_env: theorem
     :END:
     Si una sucesión \(a=\{a_{n}\}\) tiene límite \(z\), entonces toda
     subsucesión de \(a\) tiene límite \(z\).
-
-** 
 
 *** 								  :B_theorem:
     :PROPERTIES:

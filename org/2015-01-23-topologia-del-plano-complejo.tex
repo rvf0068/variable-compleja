@@ -1,4 +1,4 @@
-% Created 2015-01-26 Mon 09:52
+% Created 2015-01-29 jue 17:26
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -239,6 +239,16 @@ Sea \(A\subseteq \mathbb{C}\). Decimos que \(z\in \mathbb{C}\) es
 un punto en \(D(z,\epsilon)\cap A\) \emph{distinto de \(z\)}.
 \end{definition}
 
+
+\begin{definition}[Punto de acumulación de una sucesión]
+Sea \(\{a_{n}\}\) una sucesión en \(\mathbb{C}\). Decimos que
+\(z\in \mathbb{C}\) es \alert{punto de acumulación} de \(a_{n}\) si para
+todo \(\epsilon>0\) existe una infinidad de valores de \(n\) tales
+que \(a_{n}\in D(z,\epsilon)\).
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-3-2]{}
 \begin{definition}[Subsucesión]
 Se dice que la sucesión \(\{b_{k}\}\) es una \alert{subsucesión} de
 \(\{a_{n}\}\) si existe una sucesión creciente en \(\mathbb{N}\)
@@ -247,22 +257,21 @@ n_{1}<n_{2}<\cdots
 \end{displaymath}
 tal que \(a_{n_{k}}=b_{k}\) para \(k=1,2,\ldots\).
 \end{definition}
-\end{frame}
 
-\begin{frame}[label=sec-3-2]{}
+
 \begin{theorem}
 El complejo \(z\in \mathbb{C}\) es punto de acumulación de la
 sucesión \(a=\{a_{n}\}\) si y solo si existe una subsucesión
 \(\{a_{n_{k}}\}\) de \(a\) tal que \(\lim a_{n_{k}}=z\).
 \end{theorem}
+\end{frame}
 
+\begin{frame}[label=sec-3-3]{}
 \begin{theorem}
 Si una sucesión \(a=\{a_{n}\}\) tiene límite \(z\), entonces toda
 subsucesión de \(a\) tiene límite \(z\).
 \end{theorem}
-\end{frame}
 
-\begin{frame}[label=sec-3-3]{}
 \begin{theorem}
 Sean \(A\subseteq \mathbb{C}\) y \(z\in \mathbb{C}\). Entonces
 \(z\in \overline{A}\) si y solo si existe una sucesión en \(A\)
@@ -275,5 +284,5 @@ si \(A\) contiene todo punto de acumulación de toda sucesión en
 \(A\). 
 \end{theorem}
 \end{frame}
-% Emacs 24.3.1 (Org mode 8.3beta)
+% Emacs 24.3.1 (Org mode N/A)
 \end{document}

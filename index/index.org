@@ -67,6 +67,9 @@
 
   La calificación final se obtendrá como el promedio de tres exámenes.
 
+  - Lunes 23 de febrero
+  - Lunes 13 de abril
+  - Lunes 18 de mayo
 
 * COMMENT Local Variables
 
