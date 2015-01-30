@@ -62,6 +62,9 @@
   - 22 de enero. [[pres:2015-01-22-el-plano-complejo][El plano complejo]]
   - 23 de enero. [[pres:2015-01-23-topologia-del-plano-complejo][Topología del plano complejo]]
   - 26 de enero. [[pres:2015-01-26-continuidad-y-limites][Continuidad y límites]]
+  - 29 de enero. Ejercicios
+  - 30 de enero. [[pres:2015-01-30-funciones-derivables][Funciones derivables]]
+
 
 * Exámenes
 

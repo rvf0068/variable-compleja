@@ -1,0 +1,139 @@
+% Created 2015-01-30 vie 11:20
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-01-30 7:00}
+\title{Funciones derivables}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Definición}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{Derivada}
+\begin{definition}
+Sean \(A\subseteq \mathbb{C}\) y \(z_{0}\) en el interior de
+\(A\). Decimos que \(f\colon A\to \mathbb{C}\) es \alert{derivable en
+\(z_{0}\)} si el límite
+\begin{displaymath}
+\lim_{z\to z_{0}}\frac{f(z)-f(z_{0})}{z-z_{0}}
+\end{displaymath}
+existe. En caso de existir, al valor del límite lo denotamos por
+\(f'(z_{0})\). 
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{Equivalencias de la definición}
+\begin{theorem}
+Dados \(A\subseteq \mathbb{C}\) y \(z_{0}\) en el interior de
+\(A\), son equivalentes:
+
+\begin{itemize}
+\item \(f\) es derivable en \(z_{0}\).
+\item El límite 
+\begin{displaymath}
+\lim_{h\to 0}\frac{f(z_{0}+h)-f(z_{0})}{h}
+\end{displaymath}
+existe.
+\item Existen \(c\in \mathbb{C}\) y una función \(E\colon A\to
+      \mathbb{C}\) tal que
+\begin{displaymath}
+f(z)=f(z_{0})+c(z-z_{0})+E(z)
+\end{displaymath}
+con \(\lim_{z\to z_{0}}\frac{E(z)}{z-z_{0}}=0\).
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{Observaciones}
+\begin{itemize}
+\item Dada \(f\colon A\to \mathbb{C}\), se define \(f'\colon B\to
+     \mathbb{C}\), donde \(B\subseteq A\) es el conjunto de puntos
+donde \(f\) es derivable.
+\item Si \(f\) es derivable en \(z_{0}\), entonces es continua en \(z_{0}\).
+\end{itemize}
+\end{frame}
+
+\section{Reglas de derivación}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{theorem}
+Supongamos que \(f,g\colon A\to \mathbb{C}\) son derivables en
+\(z_{0}\in A\) y \(c\in \mathbb{C}\). Entonces \(cf\), \(f+g\),
+\(fg\) son derivables en \(z_{0}\). También \(\frac{f}{g}\) es
+derivable en \(z_{0}\) si \(g(z_{0})\ne 0\). Además:
+
+\begin{itemize}
+\item \((cf)'(z_{0})=cf'(z_{0})\),
+\item \((f+g)(z_{0})=f(z_{0})+g(z_{0})\),
+\item \((fg)'(z_{0})=f'(z_{0})g(z_{0})+f(z_{0})g'(z_{0})\),
+\item \((\frac{f}{g})'(z_{0})=\frac{f'(z_{0})g(z_{0})-f(z_{0})g'(z_{0})}{g(z_{0})^{2}}\).
+\end{itemize}
+\end{theorem}
+
+\begin{theorem}
+Para todo \(z\in \mathbb{Z}\) se tiene que \(f(z)=z^{n}\) es
+diferenciable y \(f'(z)=nz^{n-1}\).
+\end{theorem}
+\end{frame}
+
+\section{Ecuaciones de Cauchy-Riemann}
+\label{sec-3}
+
+\begin{frame}[label=sec-3-1]{}
+\begin{theorem}
+Sea \(f\colon A\to \mathbb{C}\) derivable en \(z_{0}\). Si
+\(f=u+iv\), entonces
+\begin{displaymath}
+u_{x}(z_{0})=v_{y}(z_{0}),\qquad u_{y}(z_{0})=-v_{x}(z_{0}).
+\end{displaymath}
+\end{theorem}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}
