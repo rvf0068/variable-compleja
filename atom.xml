@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-01-30T11:21:14-06:00</updated>
+  <updated>2015-02-09T07:54:44-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -104,10 +104,24 @@ diferenciable y <script type="math/tex">f'(z)=nz^{n-1}</script>.</p>
   </li>
 </ul>
 
+<h2 id="regla-de-la-cadena">Regla de la cadena</h2>
+
+<ul>
+  <li>
+
+    <p>Sean <script type="math/tex">f\colon A\to \mathbb{C}</script> y <script type="math/tex">g\colon B\to \mathbb{C}</script>
+funciones tales que <script type="math/tex">f(A)\subseteq B</script>. Sean <script type="math/tex">f</script> derivable en
+<script type="math/tex">z_{0}\in A</script> y <script type="math/tex">g</script> derivable en <script type="math/tex">f(z_{0})</script>. Entonces
+<script type="math/tex">g\circ f</script> es derivable en <script type="math/tex">z_{0}</script>, y <script type="math/tex">(g\circ
+    f)'(z_{0})=g'(f(z_{0}))</script>. </p>
+  </li>
+</ul>
+
 <h1 id="ecuaciones-de-cauchy-riemann">Ecuaciones de Cauchy-Riemann</h1>
 
 <ul>
   <li>
+    <p>Ecuaciones de Cauchy-Riemann</p>
 
     <p>Sea <script type="math/tex">f\colon A\to \mathbb{C}</script> derivable en <script type="math/tex">z_{0}</script>. Si
 <script type="math/tex">f=u+iv</script>, entonces</p>

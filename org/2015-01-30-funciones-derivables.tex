@@ -1,4 +1,4 @@
-% Created 2015-01-30 vie 11:20
+% Created 2015-02-09 lun 07:54
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -123,11 +123,21 @@ diferenciable y \(f'(z)=nz^{n-1}\).
 \end{theorem}
 \end{frame}
 
+\begin{frame}[label=sec-2-2]{Regla de la cadena}
+\begin{theorem}
+Sean \(f\colon A\to \mathbb{C}\) y \(g\colon B\to \mathbb{C}\)
+funciones tales que \(f(A)\subseteq B\). Sean \(f\) derivable en
+\(z_{0}\in A\) y \(g\) derivable en \(f(z_{0})\). Entonces
+\(g\circ f\) es derivable en \(z_{0}\), y \((g\circ
+    f)'(z_{0})=g'(f(z_{0}))\). 
+\end{theorem}
+\end{frame}
+
 \section{Ecuaciones de Cauchy-Riemann}
 \label{sec-3}
 
 \begin{frame}[label=sec-3-1]{}
-\begin{theorem}
+\begin{theorem}[Ecuaciones de Cauchy-Riemann]
 Sea \(f\colon A\to \mathbb{C}\) derivable en \(z_{0}\). Si
 \(f=u+iv\), entonces
 \begin{displaymath}

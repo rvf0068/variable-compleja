@@ -86,11 +86,23 @@
     Para todo \(z\in \mathbb{Z}\) se tiene que \(f(z)=z^{n}\) es
     diferenciable y \(f'(z)=nz^{n-1}\).
 
+** Regla de la cadena
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sean \(f\colon A\to \mathbb{C}\) y \(g\colon B\to \mathbb{C}\)
+    funciones tales que \(f(A)\subseteq B\). Sean \(f\) derivable en
+    \(z_{0}\in A\) y \(g\) derivable en \(f(z_{0})\). Entonces
+    \(g\circ f\) es derivable en \(z_{0}\), y \((g\circ
+    f)'(z_{0})=g'(f(z_{0}))\). 
+
 * Ecuaciones de Cauchy-Riemann
 
 ** 
 
-*** 								  :B_theorem:
+*** Ecuaciones de Cauchy-Riemann				  :B_theorem:
     :PROPERTIES:
     :BEAMER_env: theorem
     :END:
