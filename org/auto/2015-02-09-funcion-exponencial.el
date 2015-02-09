@@ -47,5 +47,6 @@
     "pgfplots")
    (LaTeX-add-labels
     "sec-1"
-    "sec-2")))
+    "sec-2"
+    "sec-3")))
 

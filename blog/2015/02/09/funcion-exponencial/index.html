@@ -135,7 +135,7 @@ satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
     <p>La función de variable compleja</p>
 
     <script type="math/tex; mode=display">
-f(z)=f(x+iy)=e^{x}\cos y+ie^{x}\sin y
+e^{z}=e^{x+iy}=e^{x}\cos y+ie^{x}\sin y
 </script>
 
     <p>se llama <strong>función exponencial compleja</strong>.</p>
@@ -149,13 +149,14 @@ f(z)=f(x+iy)=e^{x}\cos y+ie^{x}\sin y
   <li><script type="math/tex">e^{a+b}=e^{a}e^{b}</script> para todos <script type="math/tex">a,b\in \mathbb{C}</script>.</li>
   <li><script type="math/tex">e^{z}\ne 0</script> para todo <script type="math/tex">z\in \mathbb{C}</script>.</li>
   <li><script type="math/tex">f(z)=e^{z}</script> es una función <strong>entera</strong>, es decir, es analítica en
-<script type="math/tex">\mathbb{C}</script>.</li>
+el plano complejo <script type="math/tex">\mathbb{C}</script>.</li>
 </ul>
 
 <h1 id="las-funciones-trigonomtricas">Las funciones trigonométricas</h1>
 
 <ul>
   <li>
+    <p>Seno y coseno</p>
 
     <p>Las funciones trigonométricas de variable compleja se definen
 como:</p>
@@ -173,6 +174,47 @@ como:</p>
       <li><script type="math/tex">(\cos z)'=-\sin z</script>, <script type="math/tex">(\sin z)'=\cos z</script>,</li>
       <li><script type="math/tex">\cos(a+b)=\cos a\cos b-\sin a\sin b</script>, <script type="math/tex">\sin(a+b)=\cos a\sin
       b+\sin a\cos b</script>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="logaritmo">Logaritmo</h1>
+
+<h2 id="definicin-1">Definición</h2>
+
+<ul>
+  <li>
+    <p>Logaritmo</p>
+
+    <p>Dado <script type="math/tex">w\in \mathbb{C}</script>, se define <script type="math/tex">z=\log w</script> como una solución
+de la ecuación <script type="math/tex">e^{z}=w</script>.</p>
+  </li>
+  <li>
+    <p>Observaciones</p>
+
+    <ul>
+      <li>Como <script type="math/tex">e^{z}\ne 0</script> para todo <script type="math/tex">z\in \mathbb{C}</script>, se obtiene
+que <script type="math/tex">0</script> no tiene logaritmo.</li>
+      <li>
+        <p>Sea <script type="math/tex">w\ne 0</script>. Entonces <script type="math/tex">e^{x+iy}=w</script> es equivalente a:</p>
+
+        <script type="math/tex; mode=display">
+e^{x}=|w|,\qquad e^{iy}=\frac{w}{|w|}.
+</script>
+      </li>
+      <li>
+        <p>De lo anterior se obtiene:</p>
+
+        <script type="math/tex; mode=display">
+\log w = \log |w| +i\arg w,
+</script>
+
+        <p>donde <script type="math/tex">\arg w</script> representa el conjunto de argumentos de
+<script type="math/tex">w</script>. Em particular, <script type="math/tex">\log w</script> tiene una infinidad de valores,
+que difieren por un múltiplo de <script type="math/tex">2\pi i</script>.</p>
+      </li>
+      <li>Sin embargo, si <script type="math/tex">a\in\mathbb{R}</script>, <script type="math/tex">a>0</script>, consideraremos en
+el valor usual (real) de <script type="math/tex">\log a</script>.</li>
     </ul>
   </li>
 </ul>

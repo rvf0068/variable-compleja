@@ -1,4 +1,4 @@
-% Created 2015-02-09 lun 08:38
+% Created 2015-02-09 lun 11:07
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -65,7 +65,7 @@ satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
 \begin{definition}
 La función de variable compleja
 \begin{displaymath}
-f(z)=f(x+iy)=e^{x}\cos y+ie^{x}\sin y
+e^{z}=e^{x+iy}=e^{x}\cos y+ie^{x}\sin y
 \end{displaymath}
 se llama \alert{función exponencial compleja}.
 \end{definition}
@@ -77,7 +77,7 @@ se llama \alert{función exponencial compleja}.
 \item \(e^{a+b}=e^{a}e^{b}\) para todos \(a,b\in \mathbb{C}\).
 \item \(e^{z}\ne 0\) para todo \(z\in \mathbb{C}\).
 \item \(f(z)=e^{z}\) es una función \alert{entera}, es decir, es analítica en
-\(\mathbb{C}\).
+el plano complejo \(\mathbb{C}\).
 \end{itemize}
 \end{frame}
 
@@ -85,7 +85,7 @@ se llama \alert{función exponencial compleja}.
 \label{sec-2}
 
 \begin{frame}[label=sec-2-1]{}
-\begin{definition}
+\begin{definition}[Seno y coseno]
 Las funciones trigonométricas de variable compleja se definen
 como:
 \begin{displaymath}
@@ -100,6 +100,38 @@ como:
 \item \((\cos z)'=-\sin z\), \((\sin z)'=\cos z\),
 \item \(\cos(a+b)=\cos a\cos b-\sin a\sin b\), \(\sin(a+b)=\cos a\sin
       b+\sin a\cos b\).
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{Logaritmo}
+\label{sec-3}
+
+\begin{frame}[label=sec-3-1]{Definición}
+\begin{definition}[Logaritmo]
+Dado \(w\in \mathbb{C}\), se define \(z=\log w\) como una solución
+de la ecuación \(e^{z}=w\).
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-3-2]{}
+\begin{block}{Observaciones}
+\begin{itemize}
+\item Como \(e^{z}\ne 0\) para todo \(z\in \mathbb{C}\), se obtiene
+que \(0\) no tiene logaritmo.
+\item Sea \(w\ne 0\). Entonces \(e^{x+iy}=w\) es equivalente a:
+\begin{displaymath}
+e^{x}=|w|,\qquad e^{iy}=\frac{w}{|w|}.
+\end{displaymath}
+\item De lo anterior se obtiene:
+\begin{displaymath}
+\log w = \log |w| +i\arg w,
+\end{displaymath}
+donde \(\arg w\) representa el conjunto de argumentos de
+\(w\). Em particular, \(\log w\) tiene una infinidad de valores,
+que difieren por un múltiplo de \(2\pi i\).
+\item Sin embargo, si \(a\in\mathbb{R}\), \(a>0\), consideraremos en
+el valor usual (real) de \(\log a\).
 \end{itemize}
 \end{block}
 \end{frame}
