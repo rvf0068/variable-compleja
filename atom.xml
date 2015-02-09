@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-02-09T07:54:44-06:00</updated>
+  <updated>2015-02-09T08:13:32-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Consecuencias De Las Ecuaciones De Cauchy-Riemann]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/"/>
+    <updated>2015-02-06T09:00:00-06:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann</id>
+    <content type="html"><![CDATA[<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">f=u+iv\colon U\to \mathbb{C}</script> donde <script type="math/tex">U</script> es
+abierto. Supongamos que <script type="math/tex">u_{x},u_{y},v_{x},v_{y}</script> existen en
+<script type="math/tex">U</script>, son continuas en <script type="math/tex">z_{0}\in U</script>, y satisfacen allí las
+ecuaciones de Cauchy-Riemann, es decir,
+<script type="math/tex">u_{x}(z_{0})=v_{y}(z_{0})</script> y
+<script type="math/tex">v_{x}(z_{0})=-u_{y}(z_{0})</script>. Entonces <script type="math/tex">f</script> es derivable en
+<script type="math/tex">z_{0}</script>, y <script type="math/tex">f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})</script>.</p>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">D\subseteq \mathbb{C}</script> es abierto y conexo, decimos que
+<script type="math/tex">D</script> es un <strong>dominio</strong>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">u\colon D\subseteq \mathbb{C}\to \mathbb{R}</script> donde <script type="math/tex">D</script> es
+un dominio. Si <script type="math/tex">u_{x}(z)=u_{y}(z)=0</script> para todo <script type="math/tex">z\in D</script>,
+entonces <script type="math/tex">u</script> es constante.</p>
+  </li>
+</ul>
+
+<h2 id="funciones-analticas">Funciones analíticas</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">U\subseteq \mathbb{C}</script> un abierto. Si <script type="math/tex">f</script> es derivable en
+todo <script type="math/tex">z\in U</script>, decimos que <script type="math/tex">f</script> es <strong>analítica</strong> en <script type="math/tex">U</script>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">f</script> una función analítica en un dominio <script type="math/tex">D\subseteq
+    \mathbb{C}</script>. Si <script type="math/tex">f'(z)=0</script> para todo <script type="math/tex">z\in D</script>, entonces <script type="math/tex">f</script>
+es constante.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
+    \mathbb{C}</script>. Si alguna de las funciones <script type="math/tex">u,v,\vert f\vert </script> es constante
+en <script type="math/tex">D</script>, entonces <script type="math/tex">f</script> es constante en <script type="math/tex">D</script>.</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Funciones Derivables]]></title>

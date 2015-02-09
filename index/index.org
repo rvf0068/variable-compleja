@@ -64,7 +64,9 @@
   - 26 de enero. [[pres:2015-01-26-continuidad-y-limites][Continuidad y límites]]
   - 29 de enero. Ejercicios
   - 30 de enero. [[pres:2015-01-30-funciones-derivables][Funciones derivables]]
-
+  - 2 de febrero. Feriado
+  - 5 de febrero. Ejercicios
+  - 6 de febrero. [[pres:2015-02-06-cauchy-riemann][Consecuencias de las ecuaciones de Cauchy-Riemann]]
 
 * Exámenes
 
@@ -73,6 +75,7 @@
   - Lunes 23 de febrero
   - Lunes 13 de abril
   - Lunes 18 de mayo
+
 
 * COMMENT Local Variables
 

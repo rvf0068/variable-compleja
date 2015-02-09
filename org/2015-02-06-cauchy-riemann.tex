@@ -1,0 +1,102 @@
+% Created 2015-02-09 lun 08:10
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-02-06 9:00}
+\title{Consecuencias de las ecuaciones de Cauchy-Riemann}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{theorem}
+Sea \(f=u+iv\colon U\to \mathbb{C}\) donde \(U\) es
+abierto. Supongamos que \(u_{x},u_{y},v_{x},v_{y}\) existen en
+\(U\), son continuas en \(z_{0}\in U\), y satisfacen allí las
+ecuaciones de Cauchy-Riemann, es decir,
+\(u_{x}(z_{0})=v_{y}(z_{0})\) y
+\(v_{x}(z_{0})=-u_{y}(z_{0})\). Entonces \(f\) es derivable en
+\(z_{0}\), y \(f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{}
+\begin{definition}
+Si \(D\subseteq \mathbb{C}\) es abierto y conexo, decimos que
+\(D\) es un \alert{dominio}.
+\end{definition}
+
+\begin{lemma}
+Sea \(u\colon D\subseteq \mathbb{C}\to \mathbb{R}\) donde \(D\) es
+un dominio. Si \(u_{x}(z)=u_{y}(z)=0\) para todo \(z\in D\),
+entonces \(u\) es constante.
+\end{lemma}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{Funciones analíticas}
+\begin{definition}
+Sea \(U\subseteq \mathbb{C}\) un abierto. Si \(f\) es derivable en
+todo \(z\in U\), decimos que \(f\) es \alert{analítica} en \(U\).
+\end{definition}
+
+\begin{theorem}
+Sea \(f\) una función analítica en un dominio \(D\subseteq
+    \mathbb{C}\). Si \(f'(z)=0\) para todo \(z\in D\), entonces \(f\)
+es constante.
+\end{theorem}
+
+\begin{theorem}
+Sea \(f=u+iv\) analítica en un dominio \(D\subseteq
+    \mathbb{C}\). Si alguna de las funciones \(u,v,|f|\) es constante
+en \(D\), entonces \(f\) es constante en \(D\).
+\end{theorem}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}

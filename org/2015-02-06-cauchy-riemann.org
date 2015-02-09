@@ -1,0 +1,74 @@
+#+title: Consecuencias de las ecuaciones de Cauchy-Riemann
+#+author: 
+#+date: 2015-02-06 9:00
+
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* 
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(f=u+iv\colon U\to \mathbb{C}\) donde \(U\) es
+    abierto. Supongamos que \(u_{x},u_{y},v_{x},v_{y}\) existen en
+    \(U\), son continuas en \(z_{0}\in U\), y satisfacen allí las
+    ecuaciones de Cauchy-Riemann, es decir,
+    \(u_{x}(z_{0})=v_{y}(z_{0})\) y
+    \(v_{x}(z_{0})=-u_{y}(z_{0})\). Entonces \(f\) es derivable en
+    \(z_{0}\), y \(f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})\).
+
+** 
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Si \(D\subseteq \mathbb{C}\) es abierto y conexo, decimos que
+    \(D\) es un *dominio*.
+
+*** 								    :B_lemma:
+    :PROPERTIES:
+    :BEAMER_env: lemma
+    :END:
+    Sea \(u\colon D\subseteq \mathbb{C}\to \mathbb{R}\) donde \(D\) es
+    un dominio. Si \(u_{x}(z)=u_{y}(z)=0\) para todo \(z\in D\),
+    entonces \(u\) es constante.
+
+** Funciones analíticas
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(U\subseteq \mathbb{C}\) un abierto. Si \(f\) es derivable en
+    todo \(z\in U\), decimos que \(f\) es *analítica* en \(U\).
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(f\) una función analítica en un dominio \(D\subseteq
+    \mathbb{C}\). Si \(f'(z)=0\) para todo \(z\in D\), entonces \(f\)
+    es constante.
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(f=u+iv\) analítica en un dominio \(D\subseteq
+    \mathbb{C}\). Si alguna de las funciones \(u,v,|f|\) es constante
+    en \(D\), entonces \(f\) es constante en \(D\).
