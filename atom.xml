@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-02-09T08:23:07-06:00</updated>
+  <updated>2015-02-09T08:40:25-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -14,9 +14,72 @@
 
   
   <entry>
+    <title type="html"><![CDATA[La Función Exponencial]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/02/09/funcion-exponencial/"/>
+    <updated>2015-02-09T09:00:00-06:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/02/09/funcion-exponencial</id>
+    <content type="html"><![CDATA[<h1 id="definicin">Definición</h1>
+
+<ul>
+  <li>
+
+    <p>Observemos que las funciones <script type="math/tex">u=e^{x}\cos y</script> y <script type="math/tex">v=e^{x}\sin y</script>
+satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
+<script type="math/tex">\mathbb{C}</script>. </p>
+  </li>
+  <li>
+
+    <p>La función de variable compleja</p>
+
+    <script type="math/tex; mode=display">
+f(z)=f(x+iy)=e^{x}\cos y+ie^{x}\sin y
+</script>
+
+    <p>se llama <strong>función exponencial compleja</strong>.</p>
+  </li>
+</ul>
+
+<h2 id="propiedades">Propiedades</h2>
+
+<ul>
+  <li><script type="math/tex">(e^{z})'=e^{z}</script>.</li>
+  <li><script type="math/tex">e^{a+b}=e^{a}e^{b}</script> para todos <script type="math/tex">a,b\in \mathbb{C}</script>.</li>
+  <li><script type="math/tex">e^{z}\ne 0</script> para todo <script type="math/tex">z\in \mathbb{C}</script>.</li>
+  <li><script type="math/tex">f(z)=e^{z}</script> es una función <strong>entera</strong>, es decir, es analítica en
+<script type="math/tex">\mathbb{C}</script>.</li>
+</ul>
+
+<h1 id="las-funciones-trigonomtricas">Las funciones trigonométricas</h1>
+
+<ul>
+  <li>
+
+    <p>Las funciones trigonométricas de variable compleja se definen
+como:</p>
+
+    <script type="math/tex; mode=display">
+\cos z=\frac{e^{iz}+e^{-iz}}{2},\qquad \sin z=\frac{e^{iz}-e^{-iz}}{2i}
+</script>
+  </li>
+  <li>
+    <p>Propiedades</p>
+
+    <ul>
+      <li><script type="math/tex">e^{iz}=\cos z+i\sin z</script> (fórmula de Euler),</li>
+      <li><script type="math/tex">\cos^{2} z+\sin^{2}z=1</script>,</li>
+      <li><script type="math/tex">(\cos z)'=-\sin z</script>, <script type="math/tex">(\sin z)'=\cos z</script>,</li>
+      <li><script type="math/tex">\cos(a+b)=\cos a\cos b-\sin a\sin b</script>, <script type="math/tex">\sin(a+b)=\cos a\sin
+      b+\sin a\cos b</script>.</li>
+    </ul>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Consecuencias De Las Ecuaciones De Cauchy-Riemann]]></title>
     <link href="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/"/>
-    <updated>2015-02-06T09:00:00-06:00</updated>
+    <updated>2015-02-06T07:00:00-06:00</updated>
     <id>http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann</id>
     <content type="html"><![CDATA[<h1 id="consecuencias">Consecuencias</h1>
 

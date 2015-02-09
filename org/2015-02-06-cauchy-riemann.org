@@ -1,6 +1,6 @@
 #+title: Consecuencias de las ecuaciones de Cauchy-Riemann
 #+author: 
-#+date: 2015-02-06 9:00
+#+date: 2015-02-06 7:00
 
 #+setupfile: opciones.org
 

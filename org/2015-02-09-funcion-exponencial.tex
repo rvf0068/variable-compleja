@@ -1,0 +1,107 @@
+% Created 2015-02-09 lun 08:38
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-02-09 9:00}
+\title{La función exponencial}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Definición}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{block}{}
+Observemos que las funciones \(u=e^{x}\cos y\) y \(v=e^{x}\sin y\)
+satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
+\(\mathbb{C}\). 
+\end{block}
+
+\begin{definition}
+La función de variable compleja
+\begin{displaymath}
+f(z)=f(x+iy)=e^{x}\cos y+ie^{x}\sin y
+\end{displaymath}
+se llama \alert{función exponencial compleja}.
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{Propiedades}
+\begin{itemize}
+\item \((e^{z})'=e^{z}\).
+\item \(e^{a+b}=e^{a}e^{b}\) para todos \(a,b\in \mathbb{C}\).
+\item \(e^{z}\ne 0\) para todo \(z\in \mathbb{C}\).
+\item \(f(z)=e^{z}\) es una función \alert{entera}, es decir, es analítica en
+\(\mathbb{C}\).
+\end{itemize}
+\end{frame}
+
+\section{Las funciones trigonométricas}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{definition}
+Las funciones trigonométricas de variable compleja se definen
+como:
+\begin{displaymath}
+\cos z=\frac{e^{iz}+e^{-iz}}{2},\qquad \sin z=\frac{e^{iz}-e^{-iz}}{2i}
+\end{displaymath}
+\end{definition}
+
+\begin{block}{Propiedades}
+\begin{itemize}
+\item \(e^{iz}=\cos z+i\sin z\) (fórmula de Euler),
+\item \(\cos^{2} z+\sin^{2}z=1\),
+\item \((\cos z)'=-\sin z\), \((\sin z)'=\cos z\),
+\item \(\cos(a+b)=\cos a\cos b-\sin a\sin b\), \(\sin(a+b)=\cos a\sin
+      b+\sin a\cos b\).
+\end{itemize}
+\end{block}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}
