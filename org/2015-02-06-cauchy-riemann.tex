@@ -1,4 +1,4 @@
-% Created 2015-02-09 lun 08:10
+% Created 2015-02-09 lun 08:22
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -52,10 +52,10 @@ label=\protect\usebeamerfont{enumerate item}%
 
 \tableofcontents
 
-\section{}
+\section{Consecuencias}
 \label{sec-1}
 
-\begin{frame}[label=sec-1-1]{}
+\begin{frame}[label=sec-1-1]{Condición suficiente para derivabilidad}
 \begin{theorem}
 Sea \(f=u+iv\colon U\to \mathbb{C}\) donde \(U\) es
 abierto. Supongamos que \(u_{x},u_{y},v_{x},v_{y}\) existen en
@@ -67,7 +67,7 @@ ecuaciones de Cauchy-Riemann, es decir,
 \end{theorem}
 \end{frame}
 
-\begin{frame}[label=sec-1-2]{}
+\begin{frame}[label=sec-1-2]{Dominios}
 \begin{definition}
 Si \(D\subseteq \mathbb{C}\) es abierto y conexo, decimos que
 \(D\) es un \alert{dominio}.
@@ -96,6 +96,23 @@ es constante.
 Sea \(f=u+iv\) analítica en un dominio \(D\subseteq
     \mathbb{C}\). Si alguna de las funciones \(u,v,|f|\) es constante
 en \(D\), entonces \(f\) es constante en \(D\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-4]{Funciones armónicas}
+\begin{definition}
+Sea \(u\colon D\to \mathbb{R}\). El \alert{laplaciano} de \(u\) es
+\begin{displaymath}
+\bigtriangleup u=\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}
+\end{displaymath}
+La función \(u\) es \alert{armónica} si \(\bigtriangleup u=0\)
+\end{definition}
+
+\begin{theorem}
+Sea \(f=u+iv\) analítica en un dominio \(D\subseteq
+    \mathbb{C}\). Demostraremos más adelante que \(u,v\) son funciones
+de clase \(C^{\infty}\). Suponiendo eso, se tiene que \(u,v\) son
+armónicas. 
 \end{theorem}
 \end{frame}
 % Emacs 24.3.1 (Org mode N/A)

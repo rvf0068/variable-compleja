@@ -15,9 +15,9 @@
 
 #+beamer: \tableofcontents
 
-* 
+* Consecuencias 
 
-** 
+** Condición suficiente para derivabilidad
 
 *** 								  :B_theorem:
     :PROPERTIES:
@@ -31,7 +31,7 @@
     \(v_{x}(z_{0})=-u_{y}(z_{0})\). Entonces \(f\) es derivable en
     \(z_{0}\), y \(f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})\).
 
-** 
+** Dominios
 
 *** 							       :B_definition:
     :PROPERTIES:
@@ -72,3 +72,24 @@
     Sea \(f=u+iv\) analítica en un dominio \(D\subseteq
     \mathbb{C}\). Si alguna de las funciones \(u,v,|f|\) es constante
     en \(D\), entonces \(f\) es constante en \(D\).
+
+** Funciones armónicas
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(u\colon D\to \mathbb{R}\). El *laplaciano* de \(u\) es
+    \begin{displaymath}
+    \bigtriangleup u=\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}
+    \end{displaymath}
+    La función \(u\) es *armónica* si \(\bigtriangleup u=0\)
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(f=u+iv\) analítica en un dominio \(D\subseteq
+    \mathbb{C}\). Demostraremos más adelante que \(u,v\) son funciones
+    de clase \(C^{\infty}\). Suponiendo eso, se tiene que \(u,v\) son
+    armónicas. 

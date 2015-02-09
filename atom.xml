@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-02-09T08:13:32-06:00</updated>
+  <updated>2015-02-09T08:23:07-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -18,7 +18,11 @@
     <link href="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/"/>
     <updated>2015-02-06T09:00:00-06:00</updated>
     <id>http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann</id>
-    <content type="html"><![CDATA[<ul>
+    <content type="html"><![CDATA[<h1 id="consecuencias">Consecuencias</h1>
+
+<h2 id="condicin-suficiente-para-derivabilidad">Condición suficiente para derivabilidad</h2>
+
+<ul>
   <li>
 
     <p>Sea <script type="math/tex">f=u+iv\colon U\to \mathbb{C}</script> donde <script type="math/tex">U</script> es
@@ -29,6 +33,11 @@ ecuaciones de Cauchy-Riemann, es decir,
 <script type="math/tex">v_{x}(z_{0})=-u_{y}(z_{0})</script>. Entonces <script type="math/tex">f</script> es derivable en
 <script type="math/tex">z_{0}</script>, y <script type="math/tex">f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})</script>.</p>
   </li>
+</ul>
+
+<h2 id="dominios">Dominios</h2>
+
+<ul>
   <li>
 
     <p>Si <script type="math/tex">D\subseteq \mathbb{C}</script> es abierto y conexo, decimos que
@@ -61,6 +70,28 @@ es constante.</p>
     <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
     \mathbb{C}</script>. Si alguna de las funciones <script type="math/tex">u,v,\vert f\vert </script> es constante
 en <script type="math/tex">D</script>, entonces <script type="math/tex">f</script> es constante en <script type="math/tex">D</script>.</p>
+  </li>
+</ul>
+
+<h2 id="funciones-armnicas">Funciones armónicas</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">u\colon D\to \mathbb{R}</script>. El <strong>laplaciano</strong> de <script type="math/tex">u</script> es</p>
+
+    <script type="math/tex; mode=display">
+\bigtriangleup u=\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}
+</script>
+
+    <p>La función <script type="math/tex">u</script> es <strong>armónica</strong> si <script type="math/tex">\bigtriangleup u=0</script></p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
+    \mathbb{C}</script>. Demostraremos más adelante que <script type="math/tex">u,v</script> son funciones
+de clase <script type="math/tex">C^{\infty}</script>. Suponiendo eso, se tiene que <script type="math/tex">u,v</script> son
+armónicas.</p>
   </li>
 </ul>
 ]]></content>
