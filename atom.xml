@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-02-09T11:10:04-06:00</updated>
+  <updated>2015-02-09T18:48:16-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -576,7 +576,7 @@ un <strong>punto frontera</strong> de <script type="math/tex">A</script> si para
   <li>
     <p>Ejemplo</p>
 
-    <script type="math/tex; mode=display">\partial D(z,r)=\partial \overline{D}(z,r)=\{z\in \mathbb{C}\mid \vert z\vert =1\}</script>
+    <script type="math/tex; mode=display">\partial D(z,r)=\partial \overline{D}(z,r)=\{z\in \mathbb{C}\mid \vert z\vert =r\}</script>
   </li>
 </ul>
 

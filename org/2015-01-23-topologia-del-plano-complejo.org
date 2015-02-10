@@ -126,7 +126,7 @@
     :PROPERTIES:
     :BEAMER_env: exampleblock
     :END:
-    \(\partial D(z,r)=\partial \overline{D}(z,r)=\{z\in \mathbb{C}\mid |z|=1\}\)
+    \(\partial D(z,r)=\partial \overline{D}(z,r)=\{z\in \mathbb{C}\mid |z|=r\}\)
 
 ** Ejercicios
 
