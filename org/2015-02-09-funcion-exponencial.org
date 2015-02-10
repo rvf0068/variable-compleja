@@ -91,5 +91,5 @@
       donde \(\arg w\) representa el conjunto de argumentos de
       \(w\). Em particular, \(\log w\) tiene una infinidad de valores,
       que difieren por un múltiplo de \(2\pi i\).
-    - Sin embargo, si \(a\in\mathbb{R}\), \(a>0\), consideraremos en
+    - Sin embargo, si \(a\in\mathbb{R}\), \(a>0\), consideraremos
       el valor usual (real) de \(\log a\).
