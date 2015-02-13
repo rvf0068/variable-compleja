@@ -1,0 +1,52 @@
+#+title: Integrales
+#+author: 
+#+date: 2015-02-13 7:00
+  
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Definiciones
+
+** 
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Dado \(\gamma\colon[a,b]\to \mathbb{C}\), escribimos
+    \(\gamma(t)=x(t)+iy(t)\). Decimos que \(\gamma\) es continua (derivable) si
+    \(x,y\) son funciones continuas (derivables) \([a,b]\to
+    \mathbb{R}\). 
+
+    Si \(\gamma\) es continua, definimos
+    \begin{displaymath}
+    \int_{a}^{b}\gamma(t)\,dt=\int_{a}^{b}x(t)\,dt+\int_{a}^{b}y(t)\,dt.
+    \end{displaymath}
+
+    Si \(\gamma\) es derivable, escribimos
+    \(\gamma'(t)=x'(t)+iy'(t)\). Si \(U\subseteq \mathbb{C}\) es
+    abierto y \(\gamma([a,b])\subseteq U\), decimos que \(\gamma\) es
+    una *curva en \(U\)*.
+
+** 
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sean \(U\subseteq \mathbb{C}\) abierto, \(f\colon U\to
+    \mathbb{C}\) una función y \(\gamma\) una curva en
+    \(U\). Definimos la *integral de \(f\) sobre \(\gamma\)* como:
+    \begin{displaymath}
+    \int_{\gamma}f\,dz=\int_{a}^{b}f(\gamma(t))\gamma'(t)\,dt.
+    \end{displaymath}

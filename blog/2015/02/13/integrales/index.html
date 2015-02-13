@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Variable compleja</title>
+  <title>Integrales - Variable compleja</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Blog Archives Entradas recientes Integrales La Función Exponencial Consecuencias De Las Ecuaciones De Cauchy-Riemann Funciones Derivables &hellip;">
+  <meta name="description" content="Definiciones Dado , escribimos
+. Decimos que es continua (derivable) si son funciones continuas (derivables) . Si es continua, definimos Si es &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog">
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/02/13/integrales">
   <link href="/variable-compleja/favicon.png" rel="icon">
   <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
@@ -92,15 +93,124 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
+  <header>
+    
+      <h1 class="entry-title">Integrales</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
   
-  <div class="pagination">
+
+
+<time datetime="2015-02-13T07:00:00-06:00" pubdate data-updated="true"></time>
+        
+      </p>
     
-    <a href="/variable-compleja/blog/archives">Blog Archives</a>
-    
-  </div>
+  </header>
+
+
+<div class="entry-content"><h1 id="definiciones">Definiciones</h1>
+
+<ul>
+  <li>
+
+    <p>Dado <script type="math/tex">\gamma\colon[a,b]\to \mathbb{C}</script>, escribimos
+<script type="math/tex">\gamma(t)=x(t)+iy(t)</script>. Decimos que <script type="math/tex">\gamma</script> es continua (derivable) si
+<script type="math/tex">x,y</script> son funciones continuas (derivables) <script type="math/tex">[a,b]\to
+    \mathbb{R}</script>. </p>
+
+    <p>Si <script type="math/tex">\gamma</script> es continua, definimos</p>
+
+    <script type="math/tex; mode=display">
+\int_{a}^{b}\gamma(t)\,dt=\int_{a}^{b}x(t)\,dt+\int_{a}^{b}y(t)\,dt.
+</script>
+
+    <p>Si <script type="math/tex">\gamma</script> es derivable, escribimos
+<script type="math/tex">\gamma'(t)=x'(t)+iy'(t)</script>. Si <script type="math/tex">U\subseteq \mathbb{C}</script> es
+abierto y <script type="math/tex">\gamma([a,b])\subseteq U</script>, decimos que <script type="math/tex">\gamma</script> es
+una <strong>curva en <script type="math/tex">U</script></strong>.</p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">U\subseteq \mathbb{C}</script> abierto, <script type="math/tex">f\colon U\to
+    \mathbb{C}</script> una función y <script type="math/tex">\gamma</script> una curva en
+<script type="math/tex">U</script>. Definimos la <strong>integral de <script type="math/tex">f</script> sobre <script type="math/tex">\gamma</script></strong> como:</p>
+
+    <script type="math/tex; mode=display">
+\int_{\gamma}f\,dz=\int_{a}^{b}f(\gamma(t))\gamma'(t)\,dt.
+</script>
+  </li>
+</ul>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rafael Villarroel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-13T07:00:00-06:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/02/13/integrales/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/02/13/integrales/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/02/09/funcion-exponencial/" title="Previous Post: La función exponencial">&laquo; La función exponencial</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comentarios</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -137,6 +247,7 @@
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -152,7 +263,10 @@
       var disqus_shortname = 'mateclases';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/13/integrales/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/13/integrales/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

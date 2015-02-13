@@ -1,0 +1,88 @@
+% Created 2015-02-13 vie 12:26
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-02-13 7:00}
+\title{Integrales}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Definiciones}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{definition}
+Dado \(\gamma\colon[a,b]\to \mathbb{C}\), escribimos
+\(\gamma(t)=x(t)+iy(t)\). Decimos que \(\gamma\) es continua (derivable) si
+\(x,y\) son funciones continuas (derivables) \([a,b]\to
+    \mathbb{R}\). 
+
+Si \(\gamma\) es continua, definimos
+\begin{displaymath}
+\int_{a}^{b}\gamma(t)\,dt=\int_{a}^{b}x(t)\,dt+\int_{a}^{b}y(t)\,dt.
+\end{displaymath}
+
+Si \(\gamma\) es derivable, escribimos
+\(\gamma'(t)=x'(t)+iy'(t)\). Si \(U\subseteq \mathbb{C}\) es
+abierto y \(\gamma([a,b])\subseteq U\), decimos que \(\gamma\) es
+una \alert{curva en \(U\)}.
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{}
+\begin{definition}
+Sean \(U\subseteq \mathbb{C}\) abierto, \(f\colon U\to
+    \mathbb{C}\) una función y \(\gamma\) una curva en
+\(U\). Definimos la \alert{integral de \(f\) sobre \(\gamma\)} como:
+\begin{displaymath}
+\int_{\gamma}f\,dz=\int_{a}^{b}f(\gamma(t))\gamma'(t)\,dt.
+\end{displaymath}
+\end{definition}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}

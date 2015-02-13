@@ -1,4 +1,4 @@
-% Created 2015-02-13 vie 10:13
+% Created 2015-02-13 Fri 11:53
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -62,7 +62,7 @@ satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
 \(\mathbb{C}\). 
 \end{block}
 
-\begin{definition}
+\begin{definition}[:B_definition:]
 La función de variable compleja
 \begin{displaymath}
 e^{z}=e^{x+iy}=e^{x}\cos y+ie^{x}\sin y
@@ -137,7 +137,7 @@ el valor usual (real) de \(\log a\).
 \end{frame}
 
 \begin{frame}[label=sec-3-3]{Ramas}
-\begin{definition}
+\begin{definition}[:B_definition:]
 Si \(f\colon U\to \mathbb{C}\) es analítica y \(D\subseteq f(U)\)
 es un dominio, una \alert{rama de \(f^{-1}\) en \(D\)} es una función
 continua \(g\colon D\to U\) tal que \(f(g(z))=z\) para todo \(z\in
@@ -157,7 +157,7 @@ La función \(\mathrm{Arg}\colon \mathbb{C}-\{z\in \mathbb{C}\mid
 \end{frame}
 
 \begin{frame}[label=sec-3-4]{Raíz cuadrada}
-\begin{example}
+\begin{example}[:B_example:]
 La función
 \begin{displaymath}
 z\mapsto \sqrt{|z|}(\cos \frac{\mathrm{Arg}(z)}{2}+i\sin\frac{\mathrm{Arg}(z)}{2}),
@@ -166,7 +166,7 @@ es una rama de la inversa de \(f(z)=z^{2}\), definida en
 \(D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}\).
 \end{example}
 
-\begin{example}
+\begin{example}[:B_example:]
 La función 
 \begin{displaymath}
 z\mapsto \log |z|+i\mathrm{Arg}(z)
@@ -177,7 +177,7 @@ es una rama de la inversa de \(f(z)=e^{z}\), definida en
 \end{frame}
 
 \begin{frame}[label=sec-3-5]{Derivabilidad de ramas}
-\begin{theorem}
+\begin{theorem}[:B_theorem:]
 Sea \(f\colon U\to \mathbb{C}\) analítica, y sea \(g\colon D\to
     U\) una rama de \(f^{-1}\). Sean \(z_{0}\in D\) y
 \(w_{0}=g(z_{0})\in U\). Si \(f'(w_{0})\ne 0\), entonces \(g\) es
@@ -187,5 +187,5 @@ Por lo tanto, si \(f'\) no tiene ceros en \(g(D)\), entonces \(g\)
 es analítica en \(D\), y \(g'(z)=\frac{1}{f'(g(z))}\).
 \end{theorem}
 \end{frame}
-% Emacs 24.3.1 (Org mode N/A)
+% Emacs 24.3.1 (Org mode 8.3beta)
 \end{document}

@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-02-13T10:13:38-06:00</updated>
+  <updated>2015-02-13T13:16:18-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Integrales]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/02/13/integrales/"/>
+    <updated>2015-02-13T07:00:00-06:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/02/13/integrales</id>
+    <content type="html"><![CDATA[<h1 id="definiciones">Definiciones</h1>
+
+<ul>
+  <li>
+
+    <p>Dado <script type="math/tex">\gamma\colon[a,b]\to \mathbb{C}</script>, escribimos
+<script type="math/tex">\gamma(t)=x(t)+iy(t)</script>. Decimos que <script type="math/tex">\gamma</script> es continua (derivable) si
+<script type="math/tex">x,y</script> son funciones continuas (derivables) <script type="math/tex">[a,b]\to
+    \mathbb{R}</script>. </p>
+
+    <p>Si <script type="math/tex">\gamma</script> es continua, definimos</p>
+
+    <script type="math/tex; mode=display">
+\int_{a}^{b}\gamma(t)\,dt=\int_{a}^{b}x(t)\,dt+\int_{a}^{b}y(t)\,dt.
+</script>
+
+    <p>Si <script type="math/tex">\gamma</script> es derivable, escribimos
+<script type="math/tex">\gamma'(t)=x'(t)+iy'(t)</script>. Si <script type="math/tex">U\subseteq \mathbb{C}</script> es
+abierto y <script type="math/tex">\gamma([a,b])\subseteq U</script>, decimos que <script type="math/tex">\gamma</script> es
+una <strong>curva en <script type="math/tex">U</script></strong>.</p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">U\subseteq \mathbb{C}</script> abierto, <script type="math/tex">f\colon U\to
+    \mathbb{C}</script> una función y <script type="math/tex">\gamma</script> una curva en
+<script type="math/tex">U</script>. Definimos la <strong>integral de <script type="math/tex">f</script> sobre <script type="math/tex">\gamma</script></strong> como:</p>
+
+    <script type="math/tex; mode=display">
+\int_{\gamma}f\,dz=\int_{a}^{b}f(\gamma(t))\gamma'(t)\,dt.
+</script>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[La Función Exponencial]]></title>
@@ -28,6 +68,7 @@ satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
 <script type="math/tex">\mathbb{C}</script>. </p>
   </li>
   <li>
+    <p>:B<sub>definition</sub>:</p>
 
     <p>La función de variable compleja</p>
 
@@ -120,6 +161,7 @@ el valor usual (real) de <script type="math/tex">\log a</script>.</li>
 
 <ul>
   <li>
+    <p>:B<sub>definition</sub>:</p>
 
     <p>Si <script type="math/tex">f\colon U\to \mathbb{C}</script> es analítica y <script type="math/tex">D\subseteq f(U)</script>
 es un dominio, una <strong>rama de <script type="math/tex">f^{-1}</script> en <script type="math/tex">D</script></strong> es una función
@@ -145,6 +187,7 @@ intervalo <script type="math/tex">(-\pi,\pi]</script>.</p>
 
 <ul>
   <li>
+    <p>:B<sub>example</sub>:</p>
 
     <p>La función</p>
 
@@ -156,6 +199,7 @@ z\mapsto \sqrt{|z|}(\cos \frac{\mathrm{Arg}(z)}{2}+i\sin\frac{\mathrm{Arg}(z)}{2
 <script type="math/tex">D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}</script>.</p>
   </li>
   <li>
+    <p>:B<sub>example</sub>:</p>
 
     <p>La función </p>
 
@@ -172,6 +216,7 @@ z\mapsto \log |z|+i\mathrm{Arg}(z)
 
 <ul>
   <li>
+    <p>:B<sub>theorem</sub>:</p>
 
     <p>Sea <script type="math/tex">f\colon U\to \mathbb{C}</script> analítica, y sea <script type="math/tex">g\colon D\to
     U</script> una rama de <script type="math/tex">f^{-1}</script>. Sean <script type="math/tex">z_{0}\in D</script> y

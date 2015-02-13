@@ -68,6 +68,8 @@
   - 5 de febrero. Ejercicios
   - 6 de febrero. [[pres:2015-02-06-cauchy-riemann][Consecuencias de las ecuaciones de Cauchy-Riemann]]
   - 9 de febrero. [[pres:2015-02-09-funcion-exponencial][La función exponencial]]
+  - 12 de febrero. Ejercicios
+  - 13 de febrero. [[pres:2015-02-13-integrales][Integrales]]
 
 * Exámenes
 
