@@ -89,7 +89,68 @@
       \log w = \log |w| +i\arg w,
       \end{displaymath}
       donde \(\arg w\) representa el conjunto de argumentos de
-      \(w\). Em particular, \(\log w\) tiene una infinidad de valores,
+      \(w\). En particular, \(\log w\) tiene una infinidad de valores,
       que difieren por un múltiplo de \(2\pi i\).
     - Sin embargo, si \(a\in\mathbb{R}\), \(a>0\), consideraremos
       el valor usual (real) de \(\log a\).
+
+** Ramas 
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Si \(f\colon U\to \mathbb{C}\) es analítica y \(D\subseteq f(U)\)
+    es un dominio, una *rama de \(f^{-1}\) en \(D\)* es una función
+    continua \(g\colon D\to U\) tal que \(f(g(z))=z\) para todo \(z\in
+    D\).
+
+*** Argumento principal 				       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Dado \(z\in \mathbb{C}-\{0\}\), definimos
+    \(\mathrm{Arg}(z)\) como el argumento de \(z\) que está en el
+    intervalo \((-\pi,\pi]\).
+
+*** Observación
+    La función \(\mathrm{Arg}\colon \mathbb{C}-\{z\in \mathbb{C}\mid
+    z\leq 0\}\to \mathbb{R}\) es continua.
+
+** Raíz cuadrada
+
+*** 								  :B_example:
+    :PROPERTIES:
+    :BEAMER_env: example
+    :END:
+    La función
+    \begin{displaymath}
+    z\mapsto \sqrt{|z|}(\cos \frac{\mathrm{Arg}(z)}{2}+i\sin\frac{\mathrm{Arg}(z)}{2}),
+    \end{displaymath}
+    es una rama de la inversa de \(f(z)=z^{2}\), definida en
+    \(D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}\).
+
+*** 								  :B_example:
+    :PROPERTIES:
+    :BEAMER_env: example
+    :END:
+    La función 
+    \begin{displaymath}
+    z\mapsto \log |z|+i\mathrm{Arg}(z)
+    \end{displaymath}
+    es una rama de la inversa de \(f(z)=e^{z}\), definida en
+    \(D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}\).
+
+** Derivabilidad de ramas
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(f\colon U\to \mathbb{C}\) analítica, y sea \(g\colon D\to
+    U\) una rama de \(f^{-1}\). Sean \(z_{0}\in D\) y
+    \(w_{0}=g(z_{0})\in U\). Si \(f'(w_{0})\ne 0\), entonces \(g\) es
+    derivable en \(z_{0}\) y \(g'(z_{0})=\frac{1}{f'(z_{0})}\).
+
+    Por lo tanto, si \(f'\) no tiene ceros en \(g(D)\), entonces \(g\)
+    es analítica en \(D\), y \(g'(z)=\frac{1}{f(z)}\).

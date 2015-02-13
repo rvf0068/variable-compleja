@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-02-10T11:04:47-06:00</updated>
+  <updated>2015-02-12T18:13:06-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -107,12 +107,79 @@ e^{x}=|w|,\qquad e^{iy}=\frac{w}{|w|}.
 </script>
 
         <p>donde <script type="math/tex">\arg w</script> representa el conjunto de argumentos de
-<script type="math/tex">w</script>. Em particular, <script type="math/tex">\log w</script> tiene una infinidad de valores,
+<script type="math/tex">w</script>. En particular, <script type="math/tex">\log w</script> tiene una infinidad de valores,
 que difieren por un múltiplo de <script type="math/tex">2\pi i</script>.</p>
       </li>
       <li>Sin embargo, si <script type="math/tex">a\in\mathbb{R}</script>, <script type="math/tex">a>0</script>, consideraremos
 el valor usual (real) de <script type="math/tex">\log a</script>.</li>
     </ul>
+  </li>
+</ul>
+
+<h2 id="ramas">Ramas</h2>
+
+<ul>
+  <li>
+
+    <p>Si <script type="math/tex">f\colon U\to \mathbb{C}</script> es analítica y <script type="math/tex">D\subseteq f(U)</script>
+es un dominio, una <strong>rama de <script type="math/tex">f^{-1}</script> en <script type="math/tex">D</script></strong> es una función
+continua <script type="math/tex">g\colon D\to U</script> tal que <script type="math/tex">f(g(z))=z</script> para todo <script type="math/tex">z\in
+    D</script>.</p>
+  </li>
+  <li>
+    <p>Argumento principal</p>
+
+    <p>Dado <script type="math/tex">z\in \mathbb{C}-\{0\}</script>, definimos
+<script type="math/tex">\mathrm{Arg}(z)</script> como el argumento de <script type="math/tex">z</script> que está en el
+intervalo <script type="math/tex">(-\pi,\pi]</script>.</p>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>La función <script type="math/tex">\mathrm{Arg}\colon \mathbb{C}-\{z\in \mathbb{C}\mid
+    z\leq 0\}\to \mathbb{R}</script> es continua.</p>
+  </li>
+</ul>
+
+<h2 id="raz-cuadrada">Raíz cuadrada</h2>
+
+<ul>
+  <li>
+
+    <p>La función</p>
+
+    <script type="math/tex; mode=display">
+z\mapsto \sqrt{|z|}(\cos \frac{\mathrm{Arg}(z)}{2}+i\sin\frac{\mathrm{Arg}(z)}{2}),
+</script>
+
+    <p>es una rama de la inversa de <script type="math/tex">f(z)=z^{2}</script>, definida en
+<script type="math/tex">D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}</script>.</p>
+  </li>
+  <li>
+
+    <p>La función </p>
+
+    <script type="math/tex; mode=display">
+z\mapsto \log |z|+i\mathrm{Arg}(z)
+</script>
+
+    <p>es una rama de la inversa de <script type="math/tex">f(z)=e^{z}</script>, definida en
+<script type="math/tex">D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}</script>.</p>
+  </li>
+</ul>
+
+<h2 id="derivabilidad-de-ramas">Derivabilidad de ramas</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">f\colon U\to \mathbb{C}</script> analítica, y sea <script type="math/tex">g\colon D\to
+    U</script> una rama de <script type="math/tex">f^{-1}</script>. Sean <script type="math/tex">z_{0}\in D</script> y
+<script type="math/tex">w_{0}=g(z_{0})\in U</script>. Si <script type="math/tex">f'(w_{0})\ne 0</script>, entonces <script type="math/tex">g</script> es
+derivable en <script type="math/tex">z_{0}</script> y <script type="math/tex">g'(z_{0})=\frac{1}{f'(z_{0})}</script>.</p>
+
+    <p>Por lo tanto, si <script type="math/tex">f'</script> no tiene ceros en <script type="math/tex">g(D)</script>, entonces <script type="math/tex">g</script>
+es analítica en <script type="math/tex">D</script>, y <script type="math/tex">g'(z)=\frac{1}{f(z)}</script>.</p>
   </li>
 </ul>
 ]]></content>
