@@ -1,7 +1,7 @@
 #+title: La función exponencial
 #+author: 
 #+date: 2015-02-09 9:00
-
+  
 #+setupfile: opciones.org
 
 #+beamer: \setbeamertemplate{navigation symbols}{}
@@ -150,7 +150,7 @@
     Sea \(f\colon U\to \mathbb{C}\) analítica, y sea \(g\colon D\to
     U\) una rama de \(f^{-1}\). Sean \(z_{0}\in D\) y
     \(w_{0}=g(z_{0})\in U\). Si \(f'(w_{0})\ne 0\), entonces \(g\) es
-    derivable en \(z_{0}\) y \(g'(z_{0})=\frac{1}{f'(z_{0})}\).
+    derivable en \(z_{0}\) y \(g'(z_{0})=\frac{1}{f'(w_{0})}\).
 
     Por lo tanto, si \(f'\) no tiene ceros en \(g(D)\), entonces \(g\)
-    es analítica en \(D\), y \(g'(z)=\frac{1}{f(z)}\).
+    es analítica en \(D\), y \(g'(z)=\frac{1}{f'(g(z))}\).
