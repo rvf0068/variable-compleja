@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-02-13T13:16:18-06:00</updated>
+  <updated>2015-02-16T08:02:39-06:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -68,7 +68,6 @@ satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
 <script type="math/tex">\mathbb{C}</script>. </p>
   </li>
   <li>
-    <p>:B<sub>definition</sub>:</p>
 
     <p>La función de variable compleja</p>
 
@@ -161,7 +160,6 @@ el valor usual (real) de <script type="math/tex">\log a</script>.</li>
 
 <ul>
   <li>
-    <p>:B<sub>definition</sub>:</p>
 
     <p>Si <script type="math/tex">f\colon U\to \mathbb{C}</script> es analítica y <script type="math/tex">D\subseteq f(U)</script>
 es un dominio, una <strong>rama de <script type="math/tex">f^{-1}</script> en <script type="math/tex">D</script></strong> es una función
@@ -187,7 +185,6 @@ intervalo <script type="math/tex">(-\pi,\pi]</script>.</p>
 
 <ul>
   <li>
-    <p>:B<sub>example</sub>:</p>
 
     <p>La función</p>
 
@@ -199,7 +196,6 @@ z\mapsto \sqrt{|z|}(\cos \frac{\mathrm{Arg}(z)}{2}+i\sin\frac{\mathrm{Arg}(z)}{2
 <script type="math/tex">D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}</script>.</p>
   </li>
   <li>
-    <p>:B<sub>example</sub>:</p>
 
     <p>La función </p>
 
@@ -216,7 +212,6 @@ z\mapsto \log |z|+i\mathrm{Arg}(z)
 
 <ul>
   <li>
-    <p>:B<sub>theorem</sub>:</p>
 
     <p>Sea <script type="math/tex">f\colon U\to \mathbb{C}</script> analítica, y sea <script type="math/tex">g\colon D\to
     U</script> una rama de <script type="math/tex">f^{-1}</script>. Sean <script type="math/tex">z_{0}\in D</script> y
