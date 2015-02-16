@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>El Plano Complejo - Variable compleja</title>
+  <title>Teoremas Sobre Integrales - Variable compleja</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="El plano complejo El plano complejo Cada número complejo se puede describir en un plano
-por el punto con coordenadas . En este plano complejo el
-eje &hellip;">
+  <meta name="description" content="Teorema fundamental Sea continua, y sea tal que . Si es
+suave a trozos, entonces: En particular, si es una curva cerrada, se obtiene que
+. Longitud &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ eje &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo">
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales">
   <link href="/variable-compleja/favicon.png" rel="icon">
   <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
@@ -99,7 +99,7 @@ eje &hellip;">
   
   <header>
     
-      <h1 class="entry-title">El Plano Complejo</h1>
+      <h1 class="entry-title">Teoremas Sobre Integrales</h1>
     
     
       <p class="meta">
@@ -115,85 +115,68 @@ eje &hellip;">
   
 
 
-<time datetime="2015-01-22T15:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-02-16T09:00:00-06:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1 id="el-plano-complejo">El plano complejo</h1>
-
-<h2 id="el-plano-complejo-1">El plano complejo</h2>
+<div class="entry-content"><h1 id="teorema-fundamental">Teorema fundamental</h1>
 
 <ul>
-  <li>Cada número complejo <script type="math/tex">z=(x,y)=x+iy</script> se puede describir en un plano
-por el punto con coordenadas <script type="math/tex">x,y</script>. En este <strong>plano complejo</strong> el
-eje horizontal se llama <strong>eje real</strong> y el vertical se llama <strong>eje imaginario</strong>.</li>
-  <li>En este plano, <script type="math/tex">z</script> y <script type="math/tex">\overline{z}</script> son reflejados por el eje
-real. También <script type="math/tex">\vert z\vert </script> representa la distancia al origen.</li>
-  <li>Todo complejo distinto de cero se puede escribir como producto de
-un número real y un complejo de módulo uno, a saber:
-<script type="math/tex">z=\vert z\vert \frac{z}{\vert z\vert }</script>.</li>
-  <li>Los complejos de módulo uno se dibujan en el plano complejo en la
-<strong>circunferencia unitaria</strong>: <script type="math/tex">\{z\in \mathbb{C}\mid \vert z\vert =1\}</script>.</li>
   <li>
-    <p>Si <script type="math/tex">\theta</script> es un ángulo tal que <script type="math/tex">\cos\theta=\frac{x}{\vert z\vert }</script> y
-<script type="math/tex">\sin\theta=\frac{y}{\vert z\vert }</script>, entonces el complejo <script type="math/tex">z\ne 0</script> se
-escribe como:</p>
+
+    <p>Sea <script type="math/tex">f\colon U\to \mathbb{C}</script> continua, y sea <script type="math/tex">F\colon U\to
+    \mathbb{C}</script> tal que <script type="math/tex">F'=f</script>. Si <script type="math/tex">\gamma\colon[a,b]\to U</script> es
+suave a trozos, entonces:</p>
 
     <script type="math/tex; mode=display">
-z=|z|(\cos \theta+i\sin\theta)
+\int_{\gamma}f(z)\,dz=[F(z)]_{\gamma(a)}^{\gamma(b)}=F(\gamma(b))-F(\gamma(a)).
 </script>
+  </li>
+  <li>
 
-    <p>llamada <strong>forma polar</strong> del número complejo.</p>
+    <p>En particular, si <script type="math/tex">\gamma</script> es una curva cerrada, se obtiene que
+<script type="math/tex">\int_{\gamma}f(z)\,dz=0</script>. </p>
   </li>
 </ul>
 
-<h1 id="argumento-de-un-nmero-complejo">Argumento de un número complejo.</h1>
-
-<h2 id="puntos-en-la-circunferencia-unitaria">Puntos en la circunferencia unitaria</h2>
-
-<p><img class="center" src="/variable-compleja/images/plano-complejo-1.png" /></p>
-
-<p>Cualquier ángulo <script type="math/tex">\theta</script> que cumpla que
-<script type="math/tex">z=\cos\theta+i\sin\theta</script> se llama <strong>argumento</strong> de <script type="math/tex">z</script>.</p>
-
-<h2 id="ejemplos">Ejemplos</h2>
-
-<p>Para un complejo <script type="math/tex">z\ne 0</script>, definimos su <strong>argumento</strong> <script type="math/tex">\arg z</script> como
-el argumento de <script type="math/tex">\frac{z}{\vert z\vert }</script>.</p>
-
-<p>Por ejemplo:</p>
+<h1 id="longitud">Longitud</h1>
 
 <ul>
-  <li><script type="math/tex">\arg i=90^{\circ}=\frac{\pi}{2}</script>,</li>
-  <li><script type="math/tex">\arg(i+1)=\frac{\pi}{4}</script>,</li>
-  <li><script type="math/tex">\arg(-1)=\pi</script>.</li>
-  <li>También <script type="math/tex">3\pi</script>, <script type="math/tex">-\pi</script>, etc. son valores de <script type="math/tex">\arg(-1)</script>.</li>
+  <li>
+    <p>Longitud</p>
+
+    <p>Sea <script type="math/tex">\gamma\colon[a,b]\to U</script> una curva suave. Su <strong>longitud</strong> se
+define como:</p>
+
+    <script type="math/tex; mode=display">
+\int_{\gamma}|dz|=\int_{a}^{b}|\gamma'(t)|\,dt
+</script>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">f\colon U\to \mathbb{C}</script> continua. La <strong>integral de <script type="math/tex">f</script>
+sobre <script type="math/tex">\gamma</script> respecto a longitud de arco</strong> se define como:</p>
+
+    <script type="math/tex; mode=display">
+\int_{\gamma} f(z)\,|dz|=\int_{a}^{b} f(\gamma(t))|\gamma'(t)|\,dt
+</script>
+  </li>
 </ul>
 
-<h2 id="propiedades-del-argumento">Propiedades del argumento</h2>
+<h1 id="teorema-de-estimacin">Teorema de estimación</h1>
 
 <ul>
   <li>
-    <p>Si <script type="math/tex">z_{1}=\cos\theta+i\sin\theta</script> y
-<script type="math/tex">z_{2}=\cos\psi+i\sin\psi</script>, entonces </p>
+
+    <p>Sean <script type="math/tex">f\colon U\to \mathbb{C}</script> continua y <script type="math/tex">\gamma</script> una curva
+suave a trozos en en <script type="math/tex">U</script>. Entonces:</p>
 
     <script type="math/tex; mode=display">
-z_{1}z_{2}=\cos(\theta+\psi)+i\sin(\theta+\psi).
+\left|\int_{\gamma}f(z)\,dz\right|\leq \int_{\gamma}|f(z)|\,|dz|
 </script>
-  </li>
-  <li>
-    <p>Por lo tanto, se obtiene la <strong>fórmula de DeMoivre</strong>:</p>
-
-    <script type="math/tex; mode=display">
-(\cos\theta+i\sin\theta)^{n}=\cos n\theta+i\sin n\theta
-</script>
-  </li>
-  <li>
-    <p>La fórmula de DeMoivre se puede usar además para extraer raíces a
-números complejos.</p>
   </li>
 </ul>
 </div>
@@ -218,7 +201,7 @@ números complejos.</p>
   
 
 
-<time datetime="2015-01-22T15:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-02-16T09:00:00-06:00" pubdate data-updated="true"></time>
       
 
 
@@ -226,7 +209,7 @@ números complejos.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -239,10 +222,8 @@ números complejos.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/variable-compleja/blog/2015/01/19/los-numeros-complejos/" title="Previous Post: Los números complejos">&laquo; Los números complejos</a>
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/02/13/integrales/" title="Previous Post: Integrales">&laquo; Integrales</a>
       
-      
-        <a class="basic-alignment right" href="/variable-compleja/blog/2015/01/23/topologia-del-plano-complejo/" title="Next Post: Topología del plano complejo">Topología del plano complejo &raquo;</a>
       
     </p>
   </footer>
@@ -309,8 +290,8 @@ números complejos.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/';
-        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/';
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/';
         var disqus_script = 'embed.js';
       
     (function () {

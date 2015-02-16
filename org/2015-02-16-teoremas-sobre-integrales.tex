@@ -1,0 +1,110 @@
+% Created 2015-02-16 lun 11:12
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-02-16 9:00}
+\title{Teoremas sobre integrales}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Teorema fundamental}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{theorem}
+Sea \(f\colon U\to \mathbb{C}\) continua, y sea \(F\colon U\to
+    \mathbb{C}\) tal que \(F'=f\). Si \(\gamma\colon[a,b]\to U\) es
+suave a trozos, entonces:
+\begin{displaymath}
+\int_{\gamma}f(z)\,dz=[F(z)]_{\gamma(a)}^{\gamma(b)}=F(\gamma(b))-F(\gamma(a)).
+\end{displaymath}
+\end{theorem}
+
+\begin{block}{}
+En particular, si \(\gamma\) es una curva cerrada, se obtiene que
+\(\int_{\gamma}f(z)\,dz=0\). 
+\end{block}
+\end{frame}
+
+\section{Longitud}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{block}{Longitud}
+Sea \(\gamma\colon[a,b]\to U\) una curva suave. Su \alert{longitud} se
+define como:
+\begin{displaymath}
+\int_{\gamma}|dz|=\int_{a}^{b}|\gamma'(t)|\,dt
+\end{displaymath}
+\end{block}
+
+\begin{block}{}
+Sea \(f\colon U\to \mathbb{C}\) continua. La \alert{integral de \(f\)
+sobre \(\gamma\) respecto a longitud de arco} se define como:
+\begin{displaymath}
+\int_{\gamma} f(z)\,|dz|=\int_{a}^{b} f(\gamma(t))|\gamma'(t)|\,dt
+\end{displaymath}
+\end{block}
+\end{frame}
+
+
+
+\section{Teorema de estimación}
+\label{sec-3}
+
+\begin{frame}[label=sec-3-1]{}
+\begin{theorem}
+Sean \(f\colon U\to \mathbb{C}\) continua y \(\gamma\) una curva
+suave a trozos en en \(U\). Entonces:
+\begin{displaymath}
+\left|\int_{\gamma}f(z)\,dz\right|\leq \int_{\gamma}|f(z)|\,|dz|
+\end{displaymath}
+\end{theorem}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}

@@ -1,0 +1,69 @@
+#+title: Teoremas sobre integrales
+#+author: 
+#+date: 2015-02-16 9:00
+  
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Teorema fundamental
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(f\colon U\to \mathbb{C}\) continua, y sea \(F\colon U\to
+    \mathbb{C}\) tal que \(F'=f\). Si \(\gamma\colon[a,b]\to U\) es
+    suave a trozos, entonces:
+    \begin{displaymath}
+    \int_{\gamma}f(z)\,dz=[F(z)]_{\gamma(a)}^{\gamma(b)}=F(\gamma(b))-F(\gamma(a)).
+    \end{displaymath}
+
+*** 
+    En particular, si \(\gamma\) es una curva cerrada, se obtiene que
+    \(\int_{\gamma}f(z)\,dz=0\). 
+
+* Longitud
+
+** 
+
+*** Longitud
+    Sea \(\gamma\colon[a,b]\to U\) una curva suave. Su *longitud* se
+    define como:
+    \begin{displaymath}
+    \int_{\gamma}|dz|=\int_{a}^{b}|\gamma'(t)|\,dt
+    \end{displaymath}
+
+*** 
+    Sea \(f\colon U\to \mathbb{C}\) continua. La *integral de \(f\)
+    sobre \(\gamma\) respecto a longitud de arco* se define como:
+    \begin{displaymath}
+    \int_{\gamma} f(z)\,|dz|=\int_{a}^{b} f(\gamma(t))|\gamma'(t)|\,dt
+    \end{displaymath}
+
+
+
+* Teorema de estimación
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sean \(f\colon U\to \mathbb{C}\) continua y \(\gamma\) una curva
+    suave a trozos en en \(U\). Entonces:
+    \begin{displaymath}
+    \left|\int_{\gamma}f(z)\,dz\right|\leq \int_{\gamma}|f(z)|\,|dz|
+    \end{displaymath}

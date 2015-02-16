@@ -1,7 +1,7 @@
 #+title: Integrales
 #+author: 
 #+date: 2015-02-13 7:00
-  
+   
 #+setupfile: opciones.org
 
 #+beamer: \setbeamertemplate{navigation symbols}{}
@@ -18,7 +18,6 @@
 * Definiciones
 
 ** 
-
 *** 							       :B_definition:
     :PROPERTIES:
     :BEAMER_env: definition
@@ -26,11 +25,12 @@
     Dado \(\gamma\colon[a,b]\to \mathbb{C}\), escribimos
     \(\gamma(t)=x(t)+iy(t)\). Decimos que \(\gamma\) es continua (derivable) si
     \(x,y\) son funciones continuas (derivables) \([a,b]\to
-    \mathbb{R}\). 
+    \mathbb{R}\). Decimos que \(\gamma\) es *suave* si \(\gamma(t)\) es
+    derivable y \(\gamma'(t)\) es continua.
 
     Si \(\gamma\) es continua, definimos
     \begin{displaymath}
-    \int_{a}^{b}\gamma(t)\,dt=\int_{a}^{b}x(t)\,dt+\int_{a}^{b}y(t)\,dt.
+    \int_{a}^{b}\gamma(t)\,dt=\int_{a}^{b}x(t)\,dt+i\int_{a}^{b}y(t)\,dt.
     \end{displaymath}
 
     Si \(\gamma\) es derivable, escribimos
@@ -45,8 +45,74 @@
     :BEAMER_env: definition
     :END:
     Sean \(U\subseteq \mathbb{C}\) abierto, \(f\colon U\to
-    \mathbb{C}\) una función y \(\gamma\) una curva en
+    \mathbb{C}\) una función continua, y \(\gamma\) una curva suave en
     \(U\). Definimos la *integral de \(f\) sobre \(\gamma\)* como:
     \begin{displaymath}
-    \int_{\gamma}f\,dz=\int_{a}^{b}f(\gamma(t))\gamma'(t)\,dt.
+    \int_{\gamma}f(z)\,dz=\int_{a}^{b}f(\gamma(t))\gamma'(t)\,dt.
     \end{displaymath}
+
+** Propiedades de la integral
+
+   - Si \(f_{1}, f_{2}\colon U\to \mathbb{C}\) y \(\gamma\) es una
+     curva suave en \(U\), se tiene:
+     \begin{displaymath}
+     \int_{\gamma}(f_{1}+f_{2})(z)\,dz=\int_{\gamma}f_{1}(z)\,dz+\int_{\gamma}f_{2}(z)\,dz.
+     \end{displaymath}
+   - Si \(f\colon U\to \mathbb{C}\) y \(c\in \mathbb{C}\), se tiene:
+     \begin{displaymath}
+     \int_{\gamma}cf(z)\,dz=c\int_{\gamma}f(z)\,dz.
+     \end{displaymath}
+
+** Camino inverso
+
+*** Camino inverso 					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Dado \(\gamma\colon[a,b]\to \mathbb{C}\), definimos el *camino
+    inverso* \(-\gamma\colon[a,b]\to\mathbb{C}\) como:
+    \begin{displaymath}
+    (-\gamma)(t)=\gamma(a+b-t).
+    \end{displaymath}
+
+*** 
+    Se tiene que:
+    \begin{displaymath}
+    \int_{-\gamma}f(z)\,dz=-\int_{\gamma}f(z)\,dz.
+    \end{displaymath}
+
+** 
+
+*** Camino suave a trozos				       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Sea \(U\subseteq \mathbb{C}\) abierto. Sea \(\gamma\colon [a,b]\to
+    U\) continua tal que existen
+    \(a=x_{0}<x_{1}<\ldots<x_{n-1}<x_{n}=b\) y 
+    \(\gamma_{1},\gamma_{2},\ldots,\gamma_{n}\) curvas suaves en \(U\)
+    con dominios \([x_{i-1},x_{i}]\) para \(i=1,\ldots,n\) respectivamente.
+    Decimos entonces que \(\gamma\) es un *camino suave a trozos* y
+    escribimos:
+    \begin{displaymath}
+    \gamma=\gamma_{1}+\cdots+\gamma_{n}.
+    \end{displaymath}
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Si \(\gamma\) es suave a trozos, con la notación anterior
+    definimos:
+    \begin{displaymath}
+    \int_{\gamma}f(z)\,dz=\int_{\gamma_{1}}f(z)\,dz+\cdots+\int_{\gamma_{n}}f(z)\,dz.
+    \end{displaymath}
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Las propiedades de la integral demostradas hasta ahora se
+    conservan si \(\gamma\) se supone suave a trozos.
