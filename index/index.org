@@ -70,6 +70,7 @@
   - 9 de febrero. [[pres:2015-02-09-funcion-exponencial][La función exponencial]]
   - 12 de febrero. Ejercicios
   - 13 de febrero. [[pres:2015-02-13-integrales][Integrales]]
+  - 16 de febrero. [[pres:2015-02-16-teoremas-sobre-integrales][Teoremas sobre integrales]]
 
 * Exámenes
 

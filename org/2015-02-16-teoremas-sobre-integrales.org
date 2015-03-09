@@ -1,7 +1,7 @@
 #+title: Teoremas sobre integrales
 #+author: 
 #+date: 2015-02-16 9:00
-  
+   
 #+setupfile: opciones.org
 
 #+beamer: \setbeamertemplate{navigation symbols}{}
@@ -51,7 +51,6 @@
     \begin{displaymath}
     \int_{\gamma} f(z)\,|dz|=\int_{a}^{b} f(\gamma(t))|\gamma'(t)|\,dt
     \end{displaymath}
-
 
 
 * Teorema de estimación
