@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Clasificación De Singularidades - Variable compleja</title>
+  <meta name="author" content="Rafael Villarroel">
+
+  
+  <meta name="description" content="Definición Singularidades aisladas Singularidad Si es tal que la función compleja es
+analítica en para algún
+, decimos que es singularidad (aislada) &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/04/10/singularidades">
+  <link href="/variable-compleja/favicon.png" rel="icon">
+  <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
+  <script src="/variable-compleja/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/variable-compleja/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/variable-compleja/">Variable compleja</a></h1>
+  
+    <h2>LIMA, UAEH, enero-junio 2015</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/variable-compleja/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rvf0068.github.io/variable-compleja" />
+    <input class="search" type="text" name="q" results="0" placeholder="Buscar"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/variable-compleja/">Inicio</a></li>
+  <li><a href="/variable-compleja/blog/archives">Archivo</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Clasificación De Singularidades</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-10T07:00:00-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1 id="definicin">Definición</h1>
+
+<h2 id="singularidades-aisladas">Singularidades aisladas</h2>
+
+<ul>
+  <li>
+    <p>Singularidad</p>
+
+    <p>Si <script type="math/tex">a\in \mathbb{C}</script> es tal que la función compleja <script type="math/tex">f</script> es
+analítica en <script type="math/tex">% <![CDATA[
+\{z\in \mathbb{C}\mid 0<\vert z-a\vert <\delta\} %]]></script> para algún
+<script type="math/tex">\delta>0</script>, decimos que <script type="math/tex">a</script> es <strong>singularidad (aislada)</strong> de
+<script type="math/tex">f</script>.</p>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">\lim_{z\to a}(z-a)f(z)=0</script>, entonces podemos definir el valor
+de <script type="math/tex">f</script> en <script type="math/tex">a</script>, de modo que <script type="math/tex">f</script> es analítica en toda una
+vecindad de <script type="math/tex">a</script>. En tal caso, se dice que <script type="math/tex">a</script> es <strong>singularidad
+removible</strong>. </p>
+  </li>
+</ul>
+
+<h2 id="polos">Polos</h2>
+
+<ul>
+  <li>
+    <p>Polo</p>
+
+    <p>Si <script type="math/tex">a</script> es una singularidad aislada, y <script type="math/tex">\lim_{z\to
+    a}f(z)=\infty</script>, decimos que <script type="math/tex">a</script> es <strong>polo</strong> de <script type="math/tex">f</script>.</p>
+  </li>
+  <li>
+    <p>Ejemplo</p>
+
+    <p>Por ejemplo, <script type="math/tex">f(z)=\frac{1}{(z+i)^{2}}</script> tiene un polo en
+<script type="math/tex">z=-i</script>. </p>
+  </li>
+  <li>
+    <p>Observaciones</p>
+
+    <ul>
+      <li>Si <script type="math/tex">a</script> es polo, existe <script type="math/tex">\delta'\leq\delta</script> tal que <script type="math/tex">f(z)\ne
+      0</script> para <script type="math/tex">z</script> tal que <script type="math/tex">% <![CDATA[
+0<\vert z-a\vert <\delta' %]]></script>.</li>
+      <li>En tal dominio, la función <script type="math/tex">g(z)=\frac{1}{f(z)}</script> está definida
+y es analítica, más aún, <script type="math/tex">a</script> es singularidad removible y <script type="math/tex">g</script>
+se puede definir como <script type="math/tex">g(a)=0</script>.</li>
+      <li>Como <script type="math/tex">g</script> no es idénticamente cero, podemos suponer que el cero
+<script type="math/tex">a</script> tiene un orden <script type="math/tex">h</script>, es decir,
+<script type="math/tex">g(z)=(z-a)^{h}g_{h}(z)</script>, donde <script type="math/tex">g_{h}(a)\ne 0</script>.</li>
+      <li>
+        <p>En tal caso, </p>
+
+        <script type="math/tex; mode=display">
+f(z)=\frac{f_{h}(z)}{(z-a)^{h}},
+</script>
+
+        <p>donde <script type="math/tex">f_{h}(z)=\frac{1}{g_{h}(z)}</script>.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="funciones-meromorfas">Funciones meromorfas</h2>
+
+<ul>
+  <li>
+
+    <p>Si <script type="math/tex">f</script> es analítica en una región <script type="math/tex">\Omega</script>, salvo por polos,
+decimos que <script type="math/tex">f</script> es <strong>meromorfa</strong> en <script type="math/tex">\Omega</script>.</p>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>La suma, producto y cociente de funciones meromorfas es
+meromorfas, siempre que el divisor de un cociente no sea la
+función idénticamente cero. </p>
+  </li>
+</ul>
+
+<h1 id="clasificacin-de-singularidades">Clasificación de singularidades</h1>
+
+<h2 id="condiciones">Condiciones</h2>
+
+<p>Consideremos las siguientes propiedades acerca de la función <script type="math/tex">f</script>
+con una singularidad aislada <script type="math/tex">a</script>, y <script type="math/tex">\alpha\in \mathbb{R}</script>:</p>
+
+<ul>
+  <li><strong>Condición 1::</strong> <script type="math/tex">\lim_{z\to a}\vert z-a\vert ^{\alpha}\vert f(z)\vert =0</script>,</li>
+  <li>
+    <p><strong>Condición 2::</strong> <script type="math/tex">\lim_{z\to a}\vert z-a\vert ^{\alpha}\vert f(z)\vert =\infty</script>.</p>
+  </li>
+  <li>Supongamos que la condición 1 se cumple para cierta <script type="math/tex">\alpha</script>.</li>
+  <li>Entonces, también se cumple para toda <script type="math/tex">\alpha'>\alpha</script>, y por
+lo tanto, para algún entero <script type="math/tex">m</script>.</li>
+  <li>En tal caso, <script type="math/tex">(z-a)^{m}f(z)</script> tiene una singularidad removible
+en <script type="math/tex">a</script>, si <script type="math/tex">f(z)</script> no es idénticamente cero, <script type="math/tex">a</script> es un cero,
+digamos de orden <script type="math/tex">k</script>.</li>
+  <li>
+    <p>Entonces <script type="math/tex">(z-a)^{m}f(z)=(z-a)^{k}f_{k}(z)</script>. Escribimos</p>
+
+    <script type="math/tex; mode=display">
+(z-a)^{m-k}f(z)=f_{k}(z),
+</script>
+
+    <p>de donde se obtiene que, si <script type="math/tex">\alpha>m-k</script>, se cumple la condición
+1, y si <script type="math/tex">% <![CDATA[
+\alpha<m-k %]]></script>, se cumple la condición 2.</p>
+  </li>
+  <li>Supongamos ahora que la condición 2 se cumple para cierta <script type="math/tex">\alpha</script>.</li>
+  <li>Entonces, también se cumple para toda <script type="math/tex">% <![CDATA[
+\alpha'<\alpha %]]></script>, y por
+lo tanto, para algún entero <script type="math/tex">n</script>.</li>
+  <li>En tal caso, <script type="math/tex">(z-a)^{n}f(z)</script> tiene un polo en <script type="math/tex">a</script>, digamos
+de orden <script type="math/tex">l</script>, es decir <script type="math/tex">(z-a)^{n}f(z)=\frac{f_{l}(z)}{(z-a)^{l}}</script>.</li>
+  <li>
+    <p>Podemos escribir entonces</p>
+
+    <script type="math/tex; mode=display">
+(z-a)^{n+l}f(z)=f_{l}(z).
+</script>
+  </li>
+  <li>De lo anterior, se obiente que si <script type="math/tex">\alpha>n+l</script>, se cumple la condición
+1, y si <script type="math/tex">% <![CDATA[
+\alpha<n+l %]]></script>, se cumple la condición 2.</li>
+</ul>
+
+<h2 id="singularidades-esenciales">Singularidades esenciales</h2>
+
+<ul>
+  <li>
+    <p>Singularidad esencial</p>
+
+    <p>Si <script type="math/tex">a</script> es una singularidad aislada tal que no se cumple la
+condición 1 ni la condición 2 para ninguna <script type="math/tex">\alpha\in
+    \mathbb{R}</script>, decimos que <script type="math/tex">a</script> es <strong>singularidad esencial</strong> de <script type="math/tex">f</script>.</p>
+  </li>
+  <li>
+    <p>Casorati–Weierstrass</p>
+
+    <p>Si <script type="math/tex">a</script> es una singularidad esencial de <script type="math/tex">f</script>, entonces para toda
+<script type="math/tex">% <![CDATA[
+0<\delta'<\delta %]]></script>, se tiene que <script type="math/tex">f(D(a,\delta'))</script> es denso en
+<script type="math/tex">\mathbb{C}</script>. </p>
+  </li>
+</ul>
+
+<h2 id="demostracin">Demostración</h2>
+
+<ul>
+  <li>Si el teorema no fuera cierto, existirían un número complejo
+<script type="math/tex">A</script> y un <script type="math/tex">r>0</script> tal que <script type="math/tex">\vert f(z)-A\vert >r</script> para todo <script type="math/tex">z</script> en
+alguna vecindad perforada de <script type="math/tex">a</script>.</li>
+  <li>Para <script type="math/tex">% <![CDATA[
+\alpha<0 %]]></script>, entonces <script type="math/tex">\lim_{z\to
+     a}\vert z-a\vert ^{\alpha}\vert f(z)-A\vert =\infty</script>, lo cual implica que <script type="math/tex">a</script> no
+es singularidad esencial de <script type="math/tex">f(z)-A</script>.</li>
+  <li>Existe <script type="math/tex">\beta>0</script> tal que <script type="math/tex">\lim_{z\to
+     a}\vert z-a\vert ^{\beta}\vert f(z)-A\vert =0</script>, además <script type="math/tex">\lim_{z\to a}\vert z-a\vert ^{\beta}\vert A\vert =0</script>.</li>
+  <li>
+    <p>De lo anterior, se obtiene que</p>
+
+    <script type="math/tex; mode=display">
+\lim_{z\to a}|z-a|^{\beta}|f(z)|=0,
+</script>
+
+    <p>lo cual contradice que <script type="math/tex">a</script> es singularidad esencial.</p>
+  </li>
+</ul>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rafael Villarroel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-10T07:00:00-05:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/04/10/singularidades/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/04/10/singularidades/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/04/06/modulo-maximo/" title="Previous Post: Teoremas del módulo máximo y del mapeo abierto">&laquo; Teoremas del módulo máximo y del mapeo abierto</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comentarios</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Entradas recientes</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/04/10/singularidades/">Clasificación De Singularidades</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/04/06/modulo-maximo/">Teoremas Del Módulo Máximo Y Del Mapeo Abierto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/">Teoremas Sobre Integrales</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/02/13/integrales/">Integrales</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/02/09/funcion-exponencial/">La Función Exponencial</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rafael Villarroel -
+  <span class="credit">Designed by <a href="http://stchangg.com">@stchangg</a></span> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mateclases';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/10/singularidades/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/10/singularidades/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

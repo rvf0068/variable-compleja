@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-03-09T08:10:00-06:00</updated>
+  <updated>2015-04-09T18:57:48-05:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,309 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Clasificación De Singularidades]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/04/10/singularidades/"/>
+    <updated>2015-04-10T07:00:00-05:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/04/10/singularidades</id>
+    <content type="html"><![CDATA[<h1 id="definicin">Definición</h1>
+
+<h2 id="singularidades-aisladas">Singularidades aisladas</h2>
+
+<ul>
+  <li>
+    <p>Singularidad</p>
+
+    <p>Si <script type="math/tex">a\in \mathbb{C}</script> es tal que la función compleja <script type="math/tex">f</script> es
+analítica en <script type="math/tex">% &lt;![CDATA[
+\{z\in \mathbb{C}\mid 0<\vert z-a\vert <\delta\} %]]&gt;</script> para algún
+<script type="math/tex">\delta>0</script>, decimos que <script type="math/tex">a</script> es <strong>singularidad (aislada)</strong> de
+<script type="math/tex">f</script>.</p>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">\lim_{z\to a}(z-a)f(z)=0</script>, entonces podemos definir el valor
+de <script type="math/tex">f</script> en <script type="math/tex">a</script>, de modo que <script type="math/tex">f</script> es analítica en toda una
+vecindad de <script type="math/tex">a</script>. En tal caso, se dice que <script type="math/tex">a</script> es <strong>singularidad
+removible</strong>. </p>
+  </li>
+</ul>
+
+<h2 id="polos">Polos</h2>
+
+<ul>
+  <li>
+    <p>Polo</p>
+
+    <p>Si <script type="math/tex">a</script> es una singularidad aislada, y <script type="math/tex">\lim_{z\to
+    a}f(z)=\infty</script>, decimos que <script type="math/tex">a</script> es <strong>polo</strong> de <script type="math/tex">f</script>.</p>
+  </li>
+  <li>
+    <p>Ejemplo</p>
+
+    <p>Por ejemplo, <script type="math/tex">f(z)=\frac{1}{(z+i)^{2}}</script> tiene un polo en
+<script type="math/tex">z=-i</script>. </p>
+  </li>
+  <li>
+    <p>Observaciones</p>
+
+    <ul>
+      <li>Si <script type="math/tex">a</script> es polo, existe <script type="math/tex">\delta'\leq\delta</script> tal que <script type="math/tex">f(z)\ne
+      0</script> para <script type="math/tex">z</script> tal que <script type="math/tex">% &lt;![CDATA[
+0<\vert z-a\vert <\delta' %]]&gt;</script>.</li>
+      <li>En tal dominio, la función <script type="math/tex">g(z)=\frac{1}{f(z)}</script> está definida
+y es analítica, más aún, <script type="math/tex">a</script> es singularidad removible y <script type="math/tex">g</script>
+se puede definir como <script type="math/tex">g(a)=0</script>.</li>
+      <li>Como <script type="math/tex">g</script> no es idénticamente cero, podemos suponer que el cero
+<script type="math/tex">a</script> tiene un orden <script type="math/tex">h</script>, es decir,
+<script type="math/tex">g(z)=(z-a)^{h}g_{h}(z)</script>, donde <script type="math/tex">g_{h}(a)\ne 0</script>.</li>
+      <li>
+        <p>En tal caso, </p>
+
+        <script type="math/tex; mode=display">
+f(z)=\frac{f_{h}(z)}{(z-a)^{h}},
+</script>
+
+        <p>donde <script type="math/tex">f_{h}(z)=\frac{1}{g_{h}(z)}</script>.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="funciones-meromorfas">Funciones meromorfas</h2>
+
+<ul>
+  <li>
+
+    <p>Si <script type="math/tex">f</script> es analítica en una región <script type="math/tex">\Omega</script>, salvo por polos,
+decimos que <script type="math/tex">f</script> es <strong>meromorfa</strong> en <script type="math/tex">\Omega</script>.</p>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>La suma, producto y cociente de funciones meromorfas es
+meromorfas, siempre que el divisor de un cociente no sea la
+función idénticamente cero. </p>
+  </li>
+</ul>
+
+<h1 id="clasificacin-de-singularidades">Clasificación de singularidades</h1>
+
+<h2 id="condiciones">Condiciones</h2>
+
+<p>Consideremos las siguientes propiedades acerca de la función <script type="math/tex">f</script>
+con una singularidad aislada <script type="math/tex">a</script>, y <script type="math/tex">\alpha\in \mathbb{R}</script>:</p>
+
+<ul>
+  <li><strong>Condición 1::</strong> <script type="math/tex">\lim_{z\to a}\vert z-a\vert ^{\alpha}\vert f(z)\vert =0</script>,</li>
+  <li>
+    <p><strong>Condición 2::</strong> <script type="math/tex">\lim_{z\to a}\vert z-a\vert ^{\alpha}\vert f(z)\vert =\infty</script>.</p>
+  </li>
+  <li>Supongamos que la condición 1 se cumple para cierta <script type="math/tex">\alpha</script>.</li>
+  <li>Entonces, también se cumple para toda <script type="math/tex">\alpha'>\alpha</script>, y por
+lo tanto, para algún entero <script type="math/tex">m</script>.</li>
+  <li>En tal caso, <script type="math/tex">(z-a)^{m}f(z)</script> tiene una singularidad removible
+en <script type="math/tex">a</script>, si <script type="math/tex">f(z)</script> no es idénticamente cero, <script type="math/tex">a</script> es un cero,
+digamos de orden <script type="math/tex">k</script>.</li>
+  <li>
+    <p>Entonces <script type="math/tex">(z-a)^{m}f(z)=(z-a)^{k}f_{k}(z)</script>. Escribimos</p>
+
+    <script type="math/tex; mode=display">
+(z-a)^{m-k}f(z)=f_{k}(z),
+</script>
+
+    <p>de donde se obtiene que, si <script type="math/tex">\alpha>m-k</script>, se cumple la condición
+1, y si <script type="math/tex">% &lt;![CDATA[
+\alpha<m-k %]]&gt;</script>, se cumple la condición 2.</p>
+  </li>
+  <li>Supongamos ahora que la condición 2 se cumple para cierta <script type="math/tex">\alpha</script>.</li>
+  <li>Entonces, también se cumple para toda <script type="math/tex">% &lt;![CDATA[
+\alpha'<\alpha %]]&gt;</script>, y por
+lo tanto, para algún entero <script type="math/tex">n</script>.</li>
+  <li>En tal caso, <script type="math/tex">(z-a)^{n}f(z)</script> tiene un polo en <script type="math/tex">a</script>, digamos
+de orden <script type="math/tex">l</script>, es decir <script type="math/tex">(z-a)^{n}f(z)=\frac{f_{l}(z)}{(z-a)^{l}}</script>.</li>
+  <li>
+    <p>Podemos escribir entonces</p>
+
+    <script type="math/tex; mode=display">
+(z-a)^{n+l}f(z)=f_{l}(z).
+</script>
+  </li>
+  <li>De lo anterior, se obiente que si <script type="math/tex">\alpha>n+l</script>, se cumple la condición
+1, y si <script type="math/tex">% &lt;![CDATA[
+\alpha<n+l %]]&gt;</script>, se cumple la condición 2.</li>
+</ul>
+
+<h2 id="singularidades-esenciales">Singularidades esenciales</h2>
+
+<ul>
+  <li>
+    <p>Singularidad esencial</p>
+
+    <p>Si <script type="math/tex">a</script> es una singularidad aislada tal que no se cumple la
+condición 1 ni la condición 2 para ninguna <script type="math/tex">\alpha\in
+    \mathbb{R}</script>, decimos que <script type="math/tex">a</script> es <strong>singularidad esencial</strong> de <script type="math/tex">f</script>.</p>
+  </li>
+  <li>
+    <p>Casorati–Weierstrass</p>
+
+    <p>Si <script type="math/tex">a</script> es una singularidad esencial de <script type="math/tex">f</script>, entonces para toda
+<script type="math/tex">% &lt;![CDATA[
+0<\delta'<\delta %]]&gt;</script>, se tiene que <script type="math/tex">f(D(a,\delta'))</script> es denso en
+<script type="math/tex">\mathbb{C}</script>. </p>
+  </li>
+</ul>
+
+<h2 id="demostracin">Demostración</h2>
+
+<ul>
+  <li>Si el teorema no fuera cierto, existirían un número complejo
+<script type="math/tex">A</script> y un <script type="math/tex">r>0</script> tal que <script type="math/tex">\vert f(z)-A\vert >r</script> para todo <script type="math/tex">z</script> en
+alguna vecindad perforada de <script type="math/tex">a</script>.</li>
+  <li>Para <script type="math/tex">% &lt;![CDATA[
+\alpha<0 %]]&gt;</script>, entonces <script type="math/tex">\lim_{z\to
+     a}\vert z-a\vert ^{\alpha}\vert f(z)-A\vert =\infty</script>, lo cual implica que <script type="math/tex">a</script> no
+es singularidad esencial de <script type="math/tex">f(z)-A</script>.</li>
+  <li>Existe <script type="math/tex">\beta>0</script> tal que <script type="math/tex">\lim_{z\to
+     a}\vert z-a\vert ^{\beta}\vert f(z)-A\vert =0</script>, además <script type="math/tex">\lim_{z\to a}\vert z-a\vert ^{\beta}\vert A\vert =0</script>.</li>
+  <li>
+    <p>De lo anterior, se obtiene que</p>
+
+    <script type="math/tex; mode=display">
+\lim_{z\to a}|z-a|^{\beta}|f(z)|=0,
+</script>
+
+    <p>lo cual contradice que <script type="math/tex">a</script> es singularidad esencial.</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Teoremas Del Módulo Máximo Y Del Mapeo Abierto]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/04/06/modulo-maximo/"/>
+    <updated>2015-04-06T09:00:00-05:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/04/06/modulo-maximo</id>
+    <content type="html"><![CDATA[<h1 id="teorema-del-mdulo-mximo">Teorema del módulo máximo</h1>
+
+<ul>
+  <li>
+    <p>Módulo máximo</p>
+
+    <p>Sean <script type="math/tex">D</script> abierto y <script type="math/tex">f\colon D\to \mathbb{C}</script> analítica y no
+constante. Entonces, para cada <script type="math/tex">z_{0}\in D</script> y <script type="math/tex">\delta>0</script>,
+existe <script type="math/tex">z\in D(z_{0},\delta)\cap D</script> tal que
+<script type="math/tex">\vert f(z)\vert >\vert f(z_{0})\vert </script>.</p>
+  </li>
+</ul>
+
+<h2 id="demostracin">Demostración</h2>
+
+<ul>
+  <li>Si no es cierto, existen <script type="math/tex">z_{0}\in D</script> y <script type="math/tex">\delta>0</script> tal que
+para todo <script type="math/tex">z\in D(z_{0},\delta)</script> se tiene que
+<script type="math/tex">\vert f(z)\vert \leq \vert f(z_{0})\vert </script>.</li>
+  <li>
+    <p>Sea <script type="math/tex">% &lt;![CDATA[
+r<\delta %]]&gt;</script>. Tenemos que
+<script type="math/tex">f(z_{0})=\frac{1}{2\pi}\int_{0}^{2\pi}f(z_{0}+re^{i\theta})\,d\theta</script>,
+de donde se obtiene:</p>
+
+    <script type="math/tex; mode=display">
+|f(z_{0})|\leq\frac{1}{2\pi}\int_{0}^{2\pi}|f(z_{0}+re^{i\theta})|\,d\theta.
+</script>
+  </li>
+  <li>
+    <p>Por lo que:</p>
+
+    <script type="math/tex; mode=display">
+0 \leq\frac{1}{2\pi}\int_{0}^{2\pi} (|f(z_{0}+re^{i\theta})|-|f(z_{0})|)\,d\theta.
+</script>
+  </li>
+  <li>Pero por nuestra hipótesis, el integrando es <script type="math/tex">\leq 0</script>, por lo
+que la integral es también <script type="math/tex">\leq 0</script>, y por lo tanto, igual a
+cero. Como el integrando es continuo, se tiene
+<script type="math/tex">\vert f(z_{0}+re^{i\theta})\vert =\vert f(z_{0})\vert </script> para toda <script type="math/tex">\theta</script>.</li>
+</ul>
+
+<h2 id="demostracin-continuacin">Demostración (continuación)</h2>
+
+<ul>
+  <li>Como <script type="math/tex">% &lt;![CDATA[
+r<\delta %]]&gt;</script> es arbitrario, hemos demostrado entonces que
+<script type="math/tex">\vert f\vert </script> es una función constante en <script type="math/tex">D(z_{0},\delta)</script>. Pero una
+de las consecuencias de las ecuaciones de Cauchy-Riemman dice que
+entonces <script type="math/tex">f</script> es constante en el mismo disco.</li>
+  <li>Se deduce entonces que <script type="math/tex">f</script> coincide con una constante en el
+disco, por lo tanto es constante en todo su dominio <script type="math/tex">D</script>, lo
+cual contradice nuestra hipótesis de que <script type="math/tex">f</script> no es constante.</li>
+</ul>
+
+<h2 id="un-corolario">Un corolario</h2>
+
+<ul>
+  <li>
+    <p>Corolario</p>
+
+    <p>Si <script type="math/tex">f</script> es analítica y no constante en un disco <script type="math/tex">D(a,\delta)</script> y
+continua en el disco cerrado, entonces <script type="math/tex">\vert f\vert </script> alcanza su máximo
+en la frontera del disco.</p>
+  </li>
+</ul>
+
+<h2 id="teorema-del-mdulo-mnimo">Teorema del módulo mínimo</h2>
+
+<ul>
+  <li>
+    <p>Módulo mínimo</p>
+
+    <p>Sean <script type="math/tex">D</script> abierto y <script type="math/tex">f\colon D\to \mathbb{C}</script> analítica y no
+constante. Entonces, para cada <script type="math/tex">z_{0}\in D</script> y <script type="math/tex">\delta>0</script>,
+existe <script type="math/tex">z\in D(z_{0},\delta)\cap D</script> tal que
+<script type="math/tex">% &lt;![CDATA[
+\vert f(z)\vert <\vert f(z_{0})\vert  %]]&gt;</script>, a menos que <script type="math/tex">\vert f(z_{0})\vert =0</script>.</p>
+  </li>
+  <li>
+    <p>Demostración</p>
+
+    <p>Si <script type="math/tex">\vert f\vert </script> alcanzara un mínimo local en <script type="math/tex">z_{0}\ne 0</script>, entonces
+<script type="math/tex">g=\frac{1}{f}</script> sería tal que <script type="math/tex">\vert g\vert </script> alcanza un máximo local en
+<script type="math/tex">z_{0}</script>, lo cual contradice que <script type="math/tex">f</script> no es constante.</p>
+  </li>
+</ul>
+
+<h2 id="lema-de-schwarz">Lema de Schwarz</h2>
+
+<ul>
+  <li>
+
+    <ul>
+      <li>Sea <script type="math/tex">f</script> analítica para <script type="math/tex">% &lt;![CDATA[
+\vert z\vert <1 %]]&gt;</script> tal que: <script type="math/tex">\vert f(z)\vert \leq 1</script> y
+<script type="math/tex">f(0)=0</script>. Entonces se obtiene que <script type="math/tex">\vert f(z)\vert \leq\vert z\vert </script> para toda
+<script type="math/tex">% &lt;![CDATA[
+\vert z\vert <1 %]]&gt;</script> y que <script type="math/tex">\vert f'(0)\vert \leq 1</script>.</li>
+      <li>Si además se tiene que <script type="math/tex">\vert f(z)\vert =\vert z\vert </script> para algún <script type="math/tex">z\ne 0</script>, o
+bien que <script type="math/tex">\vert f'(0)\vert =1</script>, entonces <script type="math/tex">f(z)=cz</script> para algún <script type="math/tex">c</script>
+tal que <script type="math/tex">\vert c\vert =1</script>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="teorema-del-mapeo-abierto">Teorema del mapeo abierto</h1>
+
+<ul>
+  <li>
+    <p>Mapeo abierto</p>
+
+    <p>Si <script type="math/tex">U\subseteq\Omega</script> es abierto, y <script type="math/tex">f\colon\Omega\to
+    \mathbb{C}</script> es analítica y no constante, entonces <script type="math/tex">f(U)\subseteq
+    \mathbb{C}</script> es abierto.</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Teoremas Sobre Integrales]]></title>

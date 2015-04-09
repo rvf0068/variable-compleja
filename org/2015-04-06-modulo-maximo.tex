@@ -1,0 +1,150 @@
+% Created 2015-04-09 jue 18:57
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-04-06 9:00}
+\title{Teoremas del módulo máximo y del mapeo abierto}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Teorema del módulo máximo}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{theorem}[Módulo máximo]
+Sean \(D\) abierto y \(f\colon D\to \mathbb{C}\) analítica y no
+constante. Entonces, para cada \(z_{0}\in D\) y \(\delta>0\),
+existe \(z\in D(z_{0},\delta)\cap D\) tal que
+\(|f(z)|>|f(z_{0})|\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{Demostración}
+\begin{itemize}
+\item Si no es cierto, existen \(z_{0}\in D\) y \(\delta>0\) tal que
+para todo \(z\in D(z_{0},\delta)\) se tiene que
+\(|f(z)|\leq |f(z_{0})|\).
+\item Sea \(r<\delta\). Tenemos que
+\(f(z_{0})=\frac{1}{2\pi}\int_{0}^{2\pi}f(z_{0}+re^{i\theta})\,d\theta\),
+de donde se obtiene:
+\begin{displaymath}
+|f(z_{0})|\leq\frac{1}{2\pi}\int_{0}^{2\pi}|f(z_{0}+re^{i\theta})|\,d\theta.
+\end{displaymath}
+\item Por lo que:
+\begin{displaymath}
+0 \leq\frac{1}{2\pi}\int_{0}^{2\pi} (|f(z_{0}+re^{i\theta})|-|f(z_{0})|)\,d\theta.
+\end{displaymath}
+\item Pero por nuestra hipótesis, el integrando es \(\leq 0\), por lo
+que la integral es también \(\leq 0\), y por lo tanto, igual a
+cero. Como el integrando es continuo, se tiene
+\(|f(z_{0}+re^{i\theta})|=|f(z_{0})|\) para toda \(\theta\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{Demostración (continuación)}
+\begin{itemize}
+\item Como \(r<\delta\) es arbitrario, hemos demostrado entonces que
+\(|f|\) es una función constante en \(D(z_{0},\delta)\). Pero una
+de las consecuencias de las ecuaciones de Cauchy-Riemman dice que
+entonces \(f\) es constante en el mismo disco.
+\item Se deduce entonces que \(f\) coincide con una constante en el
+disco, por lo tanto es constante en todo su dominio \(D\), lo
+cual contradice nuestra hipótesis de que \(f\) no es constante.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-4]{Un corolario}
+\begin{block}{Corolario}
+Si \(f\) es analítica y no constante en un disco \(D(a,\delta)\) y
+continua en el disco cerrado, entonces \(|f|\) alcanza su máximo
+en la frontera del disco.
+\end{block}
+\end{frame}
+
+\begin{frame}[label=sec-1-5]{Teorema del módulo mínimo}
+\begin{theorem}[Módulo mínimo]
+Sean \(D\) abierto y \(f\colon D\to \mathbb{C}\) analítica y no
+constante. Entonces, para cada \(z_{0}\in D\) y \(\delta>0\),
+existe \(z\in D(z_{0},\delta)\cap D\) tal que
+\(|f(z)|<|f(z_{0})|\), a menos que \(|f(z_{0})|=0\).
+\end{theorem}
+
+\begin{block}{Demostración}
+Si \(|f|\) alcanzara un mínimo local en \(z_{0}\ne 0\), entonces
+\(g=\frac{1}{f}\) sería tal que \(|g|\) alcanza un máximo local en
+\(z_{0}\), lo cual contradice que \(f\) no es constante.
+\end{block}
+\end{frame}
+
+
+\begin{frame}[label=sec-1-6]{Lema de Schwarz}
+\begin{theorem}
+\begin{itemize}
+\item Sea \(f\) analítica para \(|z|<1\) tal que: \(|f(z)|\leq 1\) y
+\(f(0)=0\). Entonces se obtiene que \(|f(z)|\leq|z|\) para toda
+\(|z|<1\) y que \(|f'(0)|\leq 1\).
+\item Si además se tiene que \(|f(z)|=|z|\) para algún \(z\ne 0\), o
+bien que \(|f'(0)|=1\), entonces \(f(z)=cz\) para algún \(c\)
+tal que \(|c|=1\).
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+
+\section{Teorema del mapeo abierto}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{theorem}[Mapeo abierto]
+Si \(U\subseteq\Omega\) es abierto, y \(f\colon\Omega\to
+    \mathbb{C}\) es analítica y no constante, entonces \(f(U)\subseteq
+    \mathbb{C}\) es abierto. 
+\end{theorem}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}

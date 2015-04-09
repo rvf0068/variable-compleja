@@ -5,13 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>El Plano Complejo - Variable compleja</title>
+  <title>Teoremas Del Módulo Máximo Y Del Mapeo Abierto - Variable compleja</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="El plano complejo El plano complejo Cada número complejo se puede describir en un plano
-por el punto con coordenadas . En este plano complejo el
-eje &hellip;">
+  <meta name="description" content="Teorema del módulo máximo Módulo máximo Sean abierto y analítica y no
+constante. Entonces, para cada y ,
+existe tal que
+. Demostración Si no es &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +21,7 @@ eje &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo">
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/04/06/modulo-maximo">
   <link href="/variable-compleja/favicon.png" rel="icon">
   <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
@@ -99,7 +100,7 @@ eje &hellip;">
   
   <header>
     
-      <h1 class="entry-title">El Plano Complejo</h1>
+      <h1 class="entry-title">Teoremas Del Módulo Máximo Y Del Mapeo Abierto</h1>
     
     
       <p class="meta">
@@ -115,85 +116,128 @@ eje &hellip;">
   
 
 
-<time datetime="2015-01-22T15:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-04-06T09:00:00-05:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1 id="el-plano-complejo">El plano complejo</h1>
-
-<h2 id="el-plano-complejo-1">El plano complejo</h2>
+<div class="entry-content"><h1 id="teorema-del-mdulo-mximo">Teorema del módulo máximo</h1>
 
 <ul>
-  <li>Cada número complejo <script type="math/tex">z=(x,y)=x+iy</script> se puede describir en un plano
-por el punto con coordenadas <script type="math/tex">x,y</script>. En este <strong>plano complejo</strong> el
-eje horizontal se llama <strong>eje real</strong> y el vertical se llama <strong>eje imaginario</strong>.</li>
-  <li>En este plano, <script type="math/tex">z</script> y <script type="math/tex">\overline{z}</script> son reflejados por el eje
-real. También <script type="math/tex">\vert z\vert </script> representa la distancia al origen.</li>
-  <li>Todo complejo distinto de cero se puede escribir como producto de
-un número real y un complejo de módulo uno, a saber:
-<script type="math/tex">z=\vert z\vert \frac{z}{\vert z\vert }</script>.</li>
-  <li>Los complejos de módulo uno se dibujan en el plano complejo en la
-<strong>circunferencia unitaria</strong>: <script type="math/tex">\{z\in \mathbb{C}\mid \vert z\vert =1\}</script>.</li>
   <li>
-    <p>Si <script type="math/tex">\theta</script> es un ángulo tal que <script type="math/tex">\cos\theta=\frac{x}{\vert z\vert }</script> y
-<script type="math/tex">\sin\theta=\frac{y}{\vert z\vert }</script>, entonces el complejo <script type="math/tex">z\ne 0</script> se
-escribe como:</p>
+    <p>Módulo máximo</p>
 
-    <script type="math/tex; mode=display">
-z=|z|(\cos \theta+i\sin\theta)
-</script>
-
-    <p>llamada <strong>forma polar</strong> del número complejo.</p>
+    <p>Sean <script type="math/tex">D</script> abierto y <script type="math/tex">f\colon D\to \mathbb{C}</script> analítica y no
+constante. Entonces, para cada <script type="math/tex">z_{0}\in D</script> y <script type="math/tex">\delta>0</script>,
+existe <script type="math/tex">z\in D(z_{0},\delta)\cap D</script> tal que
+<script type="math/tex">\vert f(z)\vert >\vert f(z_{0})\vert </script>.</p>
   </li>
 </ul>
 
-<h1 id="argumento-de-un-nmero-complejo">Argumento de un número complejo.</h1>
-
-<h2 id="puntos-en-la-circunferencia-unitaria">Puntos en la circunferencia unitaria</h2>
-
-<p><img class="center" src="/variable-compleja/images/plano-complejo-1.png" /></p>
-
-<p>Cualquier ángulo <script type="math/tex">\theta</script> que cumpla que
-<script type="math/tex">z=\cos\theta+i\sin\theta</script> se llama <strong>argumento</strong> de <script type="math/tex">z</script>.</p>
-
-<h2 id="ejemplos">Ejemplos</h2>
-
-<p>Para un complejo <script type="math/tex">z\ne 0</script>, definimos su <strong>argumento</strong> <script type="math/tex">\arg z</script> como
-el argumento de <script type="math/tex">\frac{z}{\vert z\vert }</script>.</p>
-
-<p>Por ejemplo:</p>
+<h2 id="demostracin">Demostración</h2>
 
 <ul>
-  <li><script type="math/tex">\arg i=90^{\circ}=\frac{\pi}{2}</script>,</li>
-  <li><script type="math/tex">\arg(i+1)=\frac{\pi}{4}</script>,</li>
-  <li><script type="math/tex">\arg(-1)=\pi</script>.</li>
-  <li>También <script type="math/tex">3\pi</script>, <script type="math/tex">-\pi</script>, etc. son valores de <script type="math/tex">\arg(-1)</script>.</li>
+  <li>Si no es cierto, existen <script type="math/tex">z_{0}\in D</script> y <script type="math/tex">\delta>0</script> tal que
+para todo <script type="math/tex">z\in D(z_{0},\delta)</script> se tiene que
+<script type="math/tex">\vert f(z)\vert \leq \vert f(z_{0})\vert </script>.</li>
+  <li>
+    <p>Sea <script type="math/tex">% <![CDATA[
+r<\delta %]]></script>. Tenemos que
+<script type="math/tex">f(z_{0})=\frac{1}{2\pi}\int_{0}^{2\pi}f(z_{0}+re^{i\theta})\,d\theta</script>,
+de donde se obtiene:</p>
+
+    <script type="math/tex; mode=display">
+|f(z_{0})|\leq\frac{1}{2\pi}\int_{0}^{2\pi}|f(z_{0}+re^{i\theta})|\,d\theta.
+</script>
+  </li>
+  <li>
+    <p>Por lo que:</p>
+
+    <script type="math/tex; mode=display">
+0 \leq\frac{1}{2\pi}\int_{0}^{2\pi} (|f(z_{0}+re^{i\theta})|-|f(z_{0})|)\,d\theta.
+</script>
+  </li>
+  <li>Pero por nuestra hipótesis, el integrando es <script type="math/tex">\leq 0</script>, por lo
+que la integral es también <script type="math/tex">\leq 0</script>, y por lo tanto, igual a
+cero. Como el integrando es continuo, se tiene
+<script type="math/tex">\vert f(z_{0}+re^{i\theta})\vert =\vert f(z_{0})\vert </script> para toda <script type="math/tex">\theta</script>.</li>
 </ul>
 
-<h2 id="propiedades-del-argumento">Propiedades del argumento</h2>
+<h2 id="demostracin-continuacin">Demostración (continuación)</h2>
+
+<ul>
+  <li>Como <script type="math/tex">% <![CDATA[
+r<\delta %]]></script> es arbitrario, hemos demostrado entonces que
+<script type="math/tex">\vert f\vert </script> es una función constante en <script type="math/tex">D(z_{0},\delta)</script>. Pero una
+de las consecuencias de las ecuaciones de Cauchy-Riemman dice que
+entonces <script type="math/tex">f</script> es constante en el mismo disco.</li>
+  <li>Se deduce entonces que <script type="math/tex">f</script> coincide con una constante en el
+disco, por lo tanto es constante en todo su dominio <script type="math/tex">D</script>, lo
+cual contradice nuestra hipótesis de que <script type="math/tex">f</script> no es constante.</li>
+</ul>
+
+<h2 id="un-corolario">Un corolario</h2>
 
 <ul>
   <li>
-    <p>Si <script type="math/tex">z_{1}=\cos\theta+i\sin\theta</script> y
-<script type="math/tex">z_{2}=\cos\psi+i\sin\psi</script>, entonces </p>
+    <p>Corolario</p>
 
-    <script type="math/tex; mode=display">
-z_{1}z_{2}=\cos(\theta+\psi)+i\sin(\theta+\psi).
-</script>
+    <p>Si <script type="math/tex">f</script> es analítica y no constante en un disco <script type="math/tex">D(a,\delta)</script> y
+continua en el disco cerrado, entonces <script type="math/tex">\vert f\vert </script> alcanza su máximo
+en la frontera del disco.</p>
+  </li>
+</ul>
+
+<h2 id="teorema-del-mdulo-mnimo">Teorema del módulo mínimo</h2>
+
+<ul>
+  <li>
+    <p>Módulo mínimo</p>
+
+    <p>Sean <script type="math/tex">D</script> abierto y <script type="math/tex">f\colon D\to \mathbb{C}</script> analítica y no
+constante. Entonces, para cada <script type="math/tex">z_{0}\in D</script> y <script type="math/tex">\delta>0</script>,
+existe <script type="math/tex">z\in D(z_{0},\delta)\cap D</script> tal que
+<script type="math/tex">% <![CDATA[
+\vert f(z)\vert <\vert f(z_{0})\vert  %]]></script>, a menos que <script type="math/tex">\vert f(z_{0})\vert =0</script>.</p>
   </li>
   <li>
-    <p>Por lo tanto, se obtiene la <strong>fórmula de DeMoivre</strong>:</p>
+    <p>Demostración</p>
 
-    <script type="math/tex; mode=display">
-(\cos\theta+i\sin\theta)^{n}=\cos n\theta+i\sin n\theta
-</script>
+    <p>Si <script type="math/tex">\vert f\vert </script> alcanzara un mínimo local en <script type="math/tex">z_{0}\ne 0</script>, entonces
+<script type="math/tex">g=\frac{1}{f}</script> sería tal que <script type="math/tex">\vert g\vert </script> alcanza un máximo local en
+<script type="math/tex">z_{0}</script>, lo cual contradice que <script type="math/tex">f</script> no es constante.</p>
   </li>
+</ul>
+
+<h2 id="lema-de-schwarz">Lema de Schwarz</h2>
+
+<ul>
   <li>
-    <p>La fórmula de DeMoivre se puede usar además para extraer raíces a
-números complejos.</p>
+
+    <ul>
+      <li>Sea <script type="math/tex">f</script> analítica para <script type="math/tex">% <![CDATA[
+\vert z\vert <1 %]]></script> tal que: <script type="math/tex">\vert f(z)\vert \leq 1</script> y
+<script type="math/tex">f(0)=0</script>. Entonces se obtiene que <script type="math/tex">\vert f(z)\vert \leq\vert z\vert </script> para toda
+<script type="math/tex">% <![CDATA[
+\vert z\vert <1 %]]></script> y que <script type="math/tex">\vert f'(0)\vert \leq 1</script>.</li>
+      <li>Si además se tiene que <script type="math/tex">\vert f(z)\vert =\vert z\vert </script> para algún <script type="math/tex">z\ne 0</script>, o
+bien que <script type="math/tex">\vert f'(0)\vert =1</script>, entonces <script type="math/tex">f(z)=cz</script> para algún <script type="math/tex">c</script>
+tal que <script type="math/tex">\vert c\vert =1</script>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="teorema-del-mapeo-abierto">Teorema del mapeo abierto</h1>
+
+<ul>
+  <li>
+    <p>Mapeo abierto</p>
+
+    <p>Si <script type="math/tex">U\subseteq\Omega</script> es abierto, y <script type="math/tex">f\colon\Omega\to
+    \mathbb{C}</script> es analítica y no constante, entonces <script type="math/tex">f(U)\subseteq
+    \mathbb{C}</script> es abierto.</p>
   </li>
 </ul>
 </div>
@@ -218,7 +262,7 @@ números complejos.</p>
   
 
 
-<time datetime="2015-01-22T15:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-04-06T09:00:00-05:00" pubdate data-updated="true"></time>
       
 
 
@@ -226,7 +270,7 @@ números complejos.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/04/06/modulo-maximo/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/04/06/modulo-maximo/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -239,10 +283,10 @@ números complejos.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/variable-compleja/blog/2015/01/19/los-numeros-complejos/" title="Previous Post: Los números complejos">&laquo; Los números complejos</a>
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/" title="Previous Post: Teoremas sobre integrales">&laquo; Teoremas sobre integrales</a>
       
       
-        <a class="basic-alignment right" href="/variable-compleja/blog/2015/01/23/topologia-del-plano-complejo/" title="Next Post: Topología del plano complejo">Topología del plano complejo &raquo;</a>
+        <a class="basic-alignment right" href="/variable-compleja/blog/2015/04/10/singularidades/" title="Next Post: Clasificación de singularidades">Clasificación de singularidades &raquo;</a>
       
     </p>
   </footer>
@@ -309,8 +353,8 @@ números complejos.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/';
-        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/01/22/el-plano-complejo/';
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/06/modulo-maximo/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/06/modulo-maximo/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -1,0 +1,197 @@
+% Created 2015-04-09 jue 18:57
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-04-10 7:00}
+\title{Clasificación de singularidades}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Definición}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{Singularidades aisladas}
+\begin{definition}[Singularidad]
+Si \(a\in \mathbb{C}\) es tal que la función compleja \(f\) es
+analítica en \(\{z\in \mathbb{C}\mid 0<|z-a|<\delta\}\) para algún
+\(\delta>0\), decimos que \(a\) es \alert{singularidad (aislada)} de
+\(f\).
+\end{definition}
+
+\begin{block}{}
+Si \(\lim_{z\to a}(z-a)f(z)=0\), entonces podemos definir el valor
+de \(f\) en \(a\), de modo que \(f\) es analítica en toda una
+vecindad de \(a\). En tal caso, se dice que \(a\) es \alert{singularidad
+removible}. 
+\end{block}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{Polos}
+\begin{definition}[Polo]
+Si \(a\) es una singularidad aislada, y \(\lim_{z\to
+    a}f(z)=\infty\), decimos que \(a\) es \alert{polo} de \(f\).
+\end{definition}
+
+\begin{exampleblock}{Ejemplo}
+Por ejemplo, \(f(z)=\frac{1}{(z+i)^{2}}\) tiene un polo en
+\(z=-i\). 
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{}
+\begin{block}{Observaciones}
+\begin{itemize}
+\item Si \(a\) es polo, existe \(\delta'\leq\delta\) tal que \(f(z)\ne
+      0\) para \(z\) tal que \(0<|z-a|<\delta'\).
+\item En tal dominio, la función \(g(z)=\frac{1}{f(z)}\) está definida
+y es analítica, más aún, \(a\) es singularidad removible y \(g\)
+se puede definir como \(g(a)=0\).
+\item Como \(g\) no es idénticamente cero, podemos suponer que el cero
+\(a\) tiene un orden \(h\), es decir,
+\(g(z)=(z-a)^{h}g_{h}(z)\), donde \(g_{h}(a)\ne 0\).
+\item En tal caso, 
+\begin{displaymath}
+f(z)=\frac{f_{h}(z)}{(z-a)^{h}},
+\end{displaymath}
+donde \(f_{h}(z)=\frac{1}{g_{h}(z)}\).
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[label=sec-1-4]{Funciones meromorfas}
+\begin{definition}
+Si \(f\) es analítica en una región \(\Omega\), salvo por polos,
+decimos que \(f\) es \alert{meromorfa} en \(\Omega\).
+\end{definition}
+
+\begin{block}{Observación}
+La suma, producto y cociente de funciones meromorfas es
+meromorfas, siempre que el divisor de un cociente no sea la
+función idénticamente cero. 
+\end{block}
+\end{frame}
+
+\section{Clasificación de singularidades}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{Condiciones}
+Consideremos las siguientes propiedades acerca de la función \(f\)
+con una singularidad aislada \(a\), y \(\alpha\in \mathbb{R}\):
+
+\begin{description}
+\item[{Condición 1:}] \(\lim_{z\to a}|z-a|^{\alpha}|f(z)|=0\),
+\item[{Condición 2:}] \(\lim_{z\to a}|z-a|^{\alpha}|f(z)|=\infty\).
+\end{description}
+\end{frame}
+
+\begin{frame}[label=sec-2-2]{}
+\begin{itemize}
+\item Supongamos que la condición 1 se cumple para cierta \(\alpha\).
+\item Entonces, también se cumple para toda \(\alpha'>\alpha\), y por
+lo tanto, para algún entero \(m\).
+\item En tal caso, \((z-a)^{m}f(z)\) tiene una singularidad removible
+en \(a\), si \(f(z)\) no es idénticamente cero, \(a\) es un cero,
+digamos de orden \(k\).
+\item Entonces \((z-a)^{m}f(z)=(z-a)^{k}f_{k}(z)\). Escribimos
+\begin{displaymath}
+(z-a)^{m-k}f(z)=f_{k}(z),
+\end{displaymath}
+de donde se obtiene que, si \(\alpha>m-k\), se cumple la condición
+1, y si \(\alpha<m-k\), se cumple la condición 2.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-2-3]{}
+\begin{itemize}
+\item Supongamos ahora que la condición 2 se cumple para cierta \(\alpha\).
+\item Entonces, también se cumple para toda \(\alpha'<\alpha\), y por
+lo tanto, para algún entero \(n\).
+\item En tal caso, \((z-a)^{n}f(z)\) tiene un polo en \(a\), digamos
+de orden \(l\), es decir \((z-a)^{n}f(z)=\frac{f_{l}(z)}{(z-a)^{l}}\).
+\item Podemos escribir entonces
+\begin{displaymath}
+(z-a)^{n+l}f(z)=f_{l}(z).
+\end{displaymath}
+\item De lo anterior, se obiente que si \(\alpha>n+l\), se cumple la condición
+1, y si \(\alpha<n+l\), se cumple la condición 2.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-2-4]{Singularidades esenciales}
+\begin{definition}[Singularidad esencial]
+Si \(a\) es una singularidad aislada tal que no se cumple la
+condición 1 ni la condición 2 para ninguna \(\alpha\in
+    \mathbb{R}\), decimos que \(a\) es \alert{singularidad esencial} de \(f\).
+\end{definition}
+
+\begin{theorem}[Casorati–Weierstrass]
+Si \(a\) es una singularidad esencial de \(f\), entonces para toda
+\(0<\delta'<\delta\), se tiene que \(f(D(a,\delta'))\) es denso en
+\(\mathbb{C}\). 
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-2-5]{Demostración}
+\begin{itemize}
+\item Si el teorema no fuera cierto, existirían un número complejo
+\(A\) y un \(r>0\) tal que \(|f(z)-A|>r\) para todo \(z\) en
+alguna vecindad perforada de \(a\).
+\item Para \(\alpha<0\), entonces \(\lim_{z\to
+     a}|z-a|^{\alpha}|f(z)-A|=\infty\), lo cual implica que \(a\) no
+es singularidad esencial de \(f(z)-A\).
+\item Existe \(\beta>0\) tal que \(\lim_{z\to
+     a}|z-a|^{\beta}|f(z)-A|=0\), además \(\lim_{z\to a}|z-a|^{\beta}|A|=0\).
+\item De lo anterior, se obtiene que
+\begin{displaymath}
+\lim_{z\to a}|z-a|^{\beta}|f(z)|=0,
+\end{displaymath}
+lo cual contradice que \(a\) es singularidad esencial.
+\end{itemize}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}
