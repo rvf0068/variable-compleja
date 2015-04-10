@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-04-09T18:57:48-05:00</updated>
+  <updated>2015-04-10T12:07:22-05:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -86,6 +86,7 @@ f(z)=\frac{f_{h}(z)}{(z-a)^{h}},
 
 <ul>
   <li>
+    <p>Función meromorfa</p>
 
     <p>Si <script type="math/tex">f</script> es analítica en una región <script type="math/tex">\Omega</script>, salvo por polos,
 decimos que <script type="math/tex">f</script> es <strong>meromorfa</strong> en <script type="math/tex">\Omega</script>.</p>
@@ -161,8 +162,8 @@ condición 1 ni la condición 2 para ninguna <script type="math/tex">\alpha\in
 
     <p>Si <script type="math/tex">a</script> es una singularidad esencial de <script type="math/tex">f</script>, entonces para toda
 <script type="math/tex">% &lt;![CDATA[
-0<\delta'<\delta %]]&gt;</script>, se tiene que <script type="math/tex">f(D(a,\delta'))</script> es denso en
-<script type="math/tex">\mathbb{C}</script>. </p>
+0<\delta'<\delta %]]&gt;</script>, se tiene que <script type="math/tex">f(D(a,\delta')-\{a\})</script> es
+denso en <script type="math/tex">\mathbb{C}</script>.</p>
   </li>
 </ul>
 

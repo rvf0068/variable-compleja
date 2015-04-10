@@ -70,7 +70,7 @@
 
 ** Funciones meromorfas
 
-*** 							       :B_definition:
+*** Función meromorfa 					       :B_definition:
     :PROPERTIES:
     :BEAMER_env: definition
     :END:
@@ -81,6 +81,7 @@
     La suma, producto y cociente de funciones meromorfas es
     meromorfas, siempre que el divisor de un cociente no sea la
     función idénticamente cero. 
+
 
 * Clasificación de singularidades
 
@@ -134,8 +135,8 @@
     :BEAMER_env: theorem
     :END:
     Si \(a\) es una singularidad esencial de \(f\), entonces para toda
-    \(0<\delta'<\delta\), se tiene que \(f(D(a,\delta'))\) es denso en
-    \(\mathbb{C}\). 
+    \(0<\delta'<\delta\), se tiene que \(f(D(a,\delta')-\{a\})\) es
+    denso en \(\mathbb{C}\).
 
 ** Demostración
 
