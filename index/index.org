@@ -74,6 +74,7 @@
   - 
   - 6 de abril. [[pres:2015-04-06-modulo-maximo][Teorema del módulo máximo]]
   - 10 de abril. [[pres:2015-04-10-singularidades][Clasificación de singularidades]]
+  - 17 de abril. [[pres:2015-04-17-series][Series]]
 
 * Exámenes
 

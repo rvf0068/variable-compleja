@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-04-10T12:07:22-05:00</updated>
+  <updated>2015-04-16T18:46:55-05:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,221 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Series De Funciones Analíticas]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/04/17/series/"/>
+    <updated>2015-04-17T07:00:00-05:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/04/17/series</id>
+    <content type="html"><![CDATA[<h1 id="repaso-de-sucesiones-y-series">Repaso de sucesiones y series</h1>
+
+<h2 id="definiciones">Definiciones</h2>
+
+<ul>
+  <li>
+    <p>Convergencia</p>
+
+    <ul>
+      <li>
+        <p>Decimos que la sucesión de números complejos <script type="math/tex">z_{n}</script> <strong>converge</strong>
+      a <script type="math/tex">z_{0}\in \mathbb{C}</script> si para todo <script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N>0</script>
+      tal que </p>
+
+        <script type="math/tex; mode=display">% &lt;![CDATA[
+
+n\geq N \text{ implica } |z_{n}-z_{0}|<\epsilon.
+ %]]&gt;</script>
+
+        <p>En tal caso, escribimos <script type="math/tex">z_{n}\to z_{0}</script>.</p>
+      </li>
+      <li>
+        <p>La serie <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> de números complejos <strong>converge</strong>
+a <script type="math/tex">S</script> si la sucesión de sumas parciales
+<script type="math/tex">s_{n}=\sum_{k=1}^{n}a_{k}</script> converge a <script type="math/tex">S</script>. En tal caso
+escribimos <script type="math/tex">\sum_{k=1}^{\infty}a_{k}=S</script>.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Criterio de Cauchy</p>
+
+    <ul>
+      <li><script type="math/tex">z_{n}</script> converge si y solo si para todo <script type="math/tex">\epsilon>0</script> existe
+<script type="math/tex">N>0</script> tal que si <script type="math/tex">n,m\geq N</script> entonces <script type="math/tex">% &lt;![CDATA[
+\vert z_{n}-z_{m}\vert <\epsilon %]]&gt;</script>.</li>
+      <li>
+        <p><script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> converge si y solo si para todo
+<script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N</script> tal que si <script type="math/tex">n\geq N</script>, entonces</p>
+
+        <script type="math/tex; mode=display">% &lt;![CDATA[
+
+\left| \sum_{k=n+1}^{n+p}a_{k} \right|<\epsilon\text{ para \(p=1,2,\ldots\)}
+ %]]&gt;</script>
+      </li>
+    </ul>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> converge, entonces <script type="math/tex">a_{n}\to 0</script>.</p>
+  </li>
+  <li>
+    <p>Convergencia absoluta</p>
+
+    <p>Si <script type="math/tex">\sum_{k=1}^{\infty}\vert a_{k}\vert </script> converge, decimos que
+<script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> <strong>converge absolutamente</strong>.</p>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> converge absolutamente, entonces
+converge. </p>
+  </li>
+</ul>
+
+<h2 id="criterios-de-convergencia">Criterios de convergencia</h2>
+
+<ul>
+  <li>
+
+    <ul>
+      <li>Si <script type="math/tex">% &lt;![CDATA[
+\vert r\vert <1 %]]&gt;</script>, entonces <script type="math/tex">\sum_{n=0}^{\infty}r^{n}</script> converge a
+<script type="math/tex">\frac{1}{1-r}</script>. Si <script type="math/tex">\vert r\vert \geq 1</script>, la serie <em>diverge</em>.</li>
+      <li>Si <script type="math/tex">\sum_{k=1}^{\infty}b_{k}</script> converge y <script type="math/tex">0\leq a_{k}\leq
+      b_{k}</script> converge, entonces <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script>
+      converge. (Resultado dual para divergencia).</li>
+      <li><script type="math/tex">\sum_{n=1}^{\infty}\frac{1}{n^{p}}</script> converge si <script type="math/tex">p>1</script>. Si
+<script type="math/tex">p\leq 1</script>, la serie <em>diverge a <script type="math/tex">\infty</script></em>.</li>
+      <li>Si <script type="math/tex">\frac{\vert a_{n+1}\vert }{\vert a_{n}\vert }\to r</script> con <script type="math/tex">% &lt;![CDATA[
+r<1 %]]&gt;</script>, entonces
+<script type="math/tex">\sum_{n=1}^{\infty}a_{n}</script> converge absolutamente. Si <script type="math/tex">r>1</script>,
+la serie diverge.</li>
+      <li>Si <script type="math/tex">\vert a_{n}\vert ^{\frac{1}{n}}\to r</script> y <script type="math/tex">% &lt;![CDATA[
+r<1 %]]&gt;</script>, entonces
+<script type="math/tex">\sum_{n=1}^{\infty}a_{n}</script> converge absolutamente. Si <script type="math/tex">r>1</script>,
+la serie diverge.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="sucesiones-de-funciones">Sucesiones de funciones</h2>
+
+<ul>
+  <li>
+
+    <ul>
+      <li>Sea <script type="math/tex">f_{n}\colon D\to \mathbb{C}</script> una sucesión de funciones
+definidas en <script type="math/tex">D</script>. Si existe <script type="math/tex">f\colon D\to \mathbb{C}</script> tal
+que <script type="math/tex">f_{n}(z)\to f(z)</script> para todo <script type="math/tex">z\in D</script>, decimos que
+<script type="math/tex">f_{n}</script> <strong>converge puntualmente</strong> a <script type="math/tex">f</script>. En este caso,
+escribimos <script type="math/tex">f_{n}\to f</script>.</li>
+      <li>Si para todo <script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N>0</script> tal que <script type="math/tex">n\geq N</script>
+implica <script type="math/tex">% &lt;![CDATA[
+\vert f_{n}(z)-f(z)\vert <\epsilon %]]&gt;</script> para todo <script type="math/tex">z\in D</script>,
+decimos que <script type="math/tex">f_{n}</script> <strong>converge uniformemente</strong> a <script type="math/tex">f</script>.</li>
+      <li>Se dice que la serie <script type="math/tex">\sum_{k=1}^{\infty}g_{k}(z)</script> converge
+puntualmente (uniformemente) si la sucesión de sumas parciales
+converge puntualmente (uniformemente).</li>
+    </ul>
+  </li>
+  <li>
+    <p>Criterio de Cauchy</p>
+
+    <ul>
+      <li><script type="math/tex">f_{n}(z)</script> converge uniformemente si y solo si para todo <script type="math/tex">\epsilon>0</script> existe
+<script type="math/tex">N>0</script> tal que si <script type="math/tex">n\geq N</script> entonces
+<script type="math/tex">% &lt;![CDATA[
+\vert f_{n}-f_{n+p}\vert <\epsilon %]]&gt;</script> para todo <script type="math/tex">p=1,2,\ldots</script>.</li>
+      <li>
+        <p><script type="math/tex">\sum_{k=1}^{\infty}g_{k}</script> converge uniformemente en <script type="math/tex">D</script> si y solo si para todo
+<script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N</script> tal que si <script type="math/tex">n\geq N</script>, entonces</p>
+
+        <script type="math/tex; mode=display">% &lt;![CDATA[
+
+\left| \sum_{k=n+1}^{n+p}g_{k}(z) \right|<\epsilon\text{ para \(z\in D\) y \(p=1,2,\ldots\)}
+ %]]&gt;</script>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="lmite-uniforme">Límite uniforme</h2>
+
+<ul>
+  <li>
+
+    <p>Si cada <script type="math/tex">f_{n}</script> es continua y <script type="math/tex">f_{n}\to f</script> uniformemente,
+entonces <script type="math/tex">f</script> es continua.</p>
+  </li>
+</ul>
+
+<h2 id="criterio-de-weierstrass">Criterio de Weierstrass</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">g_{n}\colon D\to \mathbb{C}</script> una sucesión de
+funciones. Supongamos que existe una sucesión <script type="math/tex">M_{n}</script> de reales
+<script type="math/tex">M_{n}\geq 0</script> tal que:</p>
+
+    <ul>
+      <li><script type="math/tex">\vert g_{n}(z)\vert \leq M_{n}</script> para <script type="math/tex">z\in D</script>,</li>
+      <li><script type="math/tex">\sum_{n=1}^{\infty}M_{n}</script> converge</li>
+    </ul>
+
+    <p>Entonces, <script type="math/tex">\sum_{n=1}^{\infty}g_{n}</script> converge absoluta y
+uniformemente en <script type="math/tex">D</script>.</p>
+  </li>
+</ul>
+
+<h1 id="convergencia-de-funciones-analticas">Convergencia de funciones analíticas</h1>
+
+<ul>
+  <li>
+
+    <ul>
+      <li>
+        <p>Sea <script type="math/tex">\gamma\colon [a,b]\to D</script> una curva en la región <script type="math/tex">D</script>, y
+sea <script type="math/tex">f_{n}\colon \gamma([a,b])\to \mathbb{C}</script> una sucesión de
+funciones continuas, tal que <script type="math/tex">f_{n}\to f</script> uniformemente, donde
+<script type="math/tex">f\colon \gamma([a,b])\to \mathbb{C}</script>. Entonces:</p>
+
+        <script type="math/tex; mode=display">
+\int_{\gamma}f_{n}\,dz\to \int_{\gamma}f\,dz.
+</script>
+      </li>
+      <li>
+        <p>Si <script type="math/tex">\sum_{n=1}^{\infty}g_{n}</script> converge uniformemente en
+<script type="math/tex">\gamma([a,b])</script>, entonces:</p>
+
+        <script type="math/tex; mode=display">
+\int_{\gamma}\left(\sum_{n=1}^{\infty}g_{n}(z)\right)dz=\sum_{n=1}^{\infty}\left(\int_{\gamma} g_{n}(z)\,dz\right).
+</script>
+      </li>
+    </ul>
+  </li>
+  <li>
+
+    <ul>
+      <li>
+        <p>Sean <script type="math/tex">D</script> abierto y <script type="math/tex">f_{n}\colon D\to \mathbb{C}</script> una
+sucesión de funciones analíticas. Si <script type="math/tex">f_{n}\to f</script>
+uniformemente en cada disco cerrado contenido en <script type="math/tex">D</script>, entonces
+<script type="math/tex">f</script> es analítica. Además <script type="math/tex">f_{n}'\to f'</script> puntualmente en
+<script type="math/tex">D</script> y uniformemente en cada disco cerrado contenido en <script type="math/tex">D</script>.</p>
+      </li>
+      <li>
+        <p>Sea <script type="math/tex">g_{k}\colon D\to \mathbb{C}</script> una sucesión de funciones
+analíticas tal que <script type="math/tex">g(z)=\sum_{k=1}^{\infty}g_{k}(z)</script> con
+convergencia uniforme en cada disco cerrado contenido en
+<script type="math/tex">D</script>. Entonces <script type="math/tex">g\colon D\to \mathbb{C}</script> es analítica, y
+<script type="math/tex">g'(z)=\sum_{k=1}^{\infty}g_{k}'(z)</script> puntualmente en <script type="math/tex">D</script> y
+uniformemente en cada disco cerrado contenido en <script type="math/tex">D</script>.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Clasificación De Singularidades]]></title>
@@ -311,7 +526,31 @@ tal que <script type="math/tex">\vert c\vert =1</script>.</li>
 
     <p>Si <script type="math/tex">U\subseteq\Omega</script> es abierto, y <script type="math/tex">f\colon\Omega\to
     \mathbb{C}</script> es analítica y no constante, entonces <script type="math/tex">f(U)\subseteq
-    \mathbb{C}</script> es abierto.</p>
+    \mathbb{C}</script> es abierto. </p>
+  </li>
+  <li>
+    <p>Demostración</p>
+
+    <ul>
+      <li>Veremos que si <script type="math/tex">f</script> no es constante, y es analítica en <script type="math/tex">a</script>,
+la imagen de un disco centrado en <script type="math/tex">a</script> contiene un disco
+centrado en <script type="math/tex">f(a)</script>. Sin perder generalidad, <script type="math/tex">f(a)=0</script>.</li>
+      <li>Sea <script type="math/tex">C</script> una circunferencia centrada en <script type="math/tex">a</script> tal que <script type="math/tex">f(z)\ne
+      0</script> para <script type="math/tex">z\in C</script>. Sea <script type="math/tex">\epsilon=\min_{z\in C}\frac{\vert f(z)\vert }{2}</script>.</li>
+      <li>
+        <p>Sean <script type="math/tex">w\in D(0,\epsilon)</script>, <script type="math/tex">z\in C</script>. Entonces:</p>
+
+        <script type="math/tex; mode=display">
+|f(z)-w|\geq |f(z)|-|w|\geq 2\epsilon-\epsilon=\epsilon
+</script>
+
+        <p>mientras que <script type="math/tex">% &lt;![CDATA[
+\vert f(a)-w\vert =\vert -w\vert <\epsilon %]]&gt;</script>.</p>
+      </li>
+      <li>Por lo tanto, la función <script type="math/tex">\vert f(z)-w\vert </script> alcanza su mínimo dentro
+de <script type="math/tex">C</script>. Por el teorema de módulo mínimo, existe <script type="math/tex">z_{0}</script>
+dentro de <script type="math/tex">C</script> tal que <script type="math/tex">\vert f(z_{0})-w\vert =0</script>, es decir, <script type="math/tex">f(z_{0})=w</script>.</li>
+    </ul>
   </li>
 </ul>
 ]]></content>

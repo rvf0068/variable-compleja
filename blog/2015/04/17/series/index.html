@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Series De Funciones Analíticas - Variable compleja</title>
+  <meta name="author" content="Rafael Villarroel">
+
+  
+  <meta name="description" content="Repaso de sucesiones y series Definiciones Convergencia Decimos que la sucesión de números complejos converge a si para todo existe tal que En tal &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/04/17/series">
+  <link href="/variable-compleja/favicon.png" rel="icon">
+  <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
+  <script src="/variable-compleja/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/variable-compleja/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/variable-compleja/">Variable compleja</a></h1>
+  
+    <h2>LIMA, UAEH, enero-junio 2015</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/variable-compleja/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rvf0068.github.io/variable-compleja" />
+    <input class="search" type="text" name="q" results="0" placeholder="Buscar"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/variable-compleja/">Inicio</a></li>
+  <li><a href="/variable-compleja/blog/archives">Archivo</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Series De Funciones Analíticas</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-17T07:00:00-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1 id="repaso-de-sucesiones-y-series">Repaso de sucesiones y series</h1>
+
+<h2 id="definiciones">Definiciones</h2>
+
+<ul>
+  <li>
+    <p>Convergencia</p>
+
+    <ul>
+      <li>
+        <p>Decimos que la sucesión de números complejos <script type="math/tex">z_{n}</script> <strong>converge</strong>
+      a <script type="math/tex">z_{0}\in \mathbb{C}</script> si para todo <script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N>0</script>
+      tal que </p>
+
+        <script type="math/tex; mode=display">% <![CDATA[
+
+n\geq N \text{ implica } |z_{n}-z_{0}|<\epsilon.
+ %]]></script>
+
+        <p>En tal caso, escribimos <script type="math/tex">z_{n}\to z_{0}</script>.</p>
+      </li>
+      <li>
+        <p>La serie <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> de números complejos <strong>converge</strong>
+a <script type="math/tex">S</script> si la sucesión de sumas parciales
+<script type="math/tex">s_{n}=\sum_{k=1}^{n}a_{k}</script> converge a <script type="math/tex">S</script>. En tal caso
+escribimos <script type="math/tex">\sum_{k=1}^{\infty}a_{k}=S</script>.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Criterio de Cauchy</p>
+
+    <ul>
+      <li><script type="math/tex">z_{n}</script> converge si y solo si para todo <script type="math/tex">\epsilon>0</script> existe
+<script type="math/tex">N>0</script> tal que si <script type="math/tex">n,m\geq N</script> entonces <script type="math/tex">% <![CDATA[
+\vert z_{n}-z_{m}\vert <\epsilon %]]></script>.</li>
+      <li>
+        <p><script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> converge si y solo si para todo
+<script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N</script> tal que si <script type="math/tex">n\geq N</script>, entonces</p>
+
+        <script type="math/tex; mode=display">% <![CDATA[
+
+\left| \sum_{k=n+1}^{n+p}a_{k} \right|<\epsilon\text{ para \(p=1,2,\ldots\)}
+ %]]></script>
+      </li>
+    </ul>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> converge, entonces <script type="math/tex">a_{n}\to 0</script>.</p>
+  </li>
+  <li>
+    <p>Convergencia absoluta</p>
+
+    <p>Si <script type="math/tex">\sum_{k=1}^{\infty}\vert a_{k}\vert </script> converge, decimos que
+<script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> <strong>converge absolutamente</strong>.</p>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script> converge absolutamente, entonces
+converge. </p>
+  </li>
+</ul>
+
+<h2 id="criterios-de-convergencia">Criterios de convergencia</h2>
+
+<ul>
+  <li>
+
+    <ul>
+      <li>Si <script type="math/tex">% <![CDATA[
+\vert r\vert <1 %]]></script>, entonces <script type="math/tex">\sum_{n=0}^{\infty}r^{n}</script> converge a
+<script type="math/tex">\frac{1}{1-r}</script>. Si <script type="math/tex">\vert r\vert \geq 1</script>, la serie <em>diverge</em>.</li>
+      <li>Si <script type="math/tex">\sum_{k=1}^{\infty}b_{k}</script> converge y <script type="math/tex">0\leq a_{k}\leq
+      b_{k}</script> converge, entonces <script type="math/tex">\sum_{k=1}^{\infty}a_{k}</script>
+      converge. (Resultado dual para divergencia).</li>
+      <li><script type="math/tex">\sum_{n=1}^{\infty}\frac{1}{n^{p}}</script> converge si <script type="math/tex">p>1</script>. Si
+<script type="math/tex">p\leq 1</script>, la serie <em>diverge a <script type="math/tex">\infty</script></em>.</li>
+      <li>Si <script type="math/tex">\frac{\vert a_{n+1}\vert }{\vert a_{n}\vert }\to r</script> con <script type="math/tex">% <![CDATA[
+r<1 %]]></script>, entonces
+<script type="math/tex">\sum_{n=1}^{\infty}a_{n}</script> converge absolutamente. Si <script type="math/tex">r>1</script>,
+la serie diverge.</li>
+      <li>Si <script type="math/tex">\vert a_{n}\vert ^{\frac{1}{n}}\to r</script> y <script type="math/tex">% <![CDATA[
+r<1 %]]></script>, entonces
+<script type="math/tex">\sum_{n=1}^{\infty}a_{n}</script> converge absolutamente. Si <script type="math/tex">r>1</script>,
+la serie diverge.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="sucesiones-de-funciones">Sucesiones de funciones</h2>
+
+<ul>
+  <li>
+
+    <ul>
+      <li>Sea <script type="math/tex">f_{n}\colon D\to \mathbb{C}</script> una sucesión de funciones
+definidas en <script type="math/tex">D</script>. Si existe <script type="math/tex">f\colon D\to \mathbb{C}</script> tal
+que <script type="math/tex">f_{n}(z)\to f(z)</script> para todo <script type="math/tex">z\in D</script>, decimos que
+<script type="math/tex">f_{n}</script> <strong>converge puntualmente</strong> a <script type="math/tex">f</script>. En este caso,
+escribimos <script type="math/tex">f_{n}\to f</script>.</li>
+      <li>Si para todo <script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N>0</script> tal que <script type="math/tex">n\geq N</script>
+implica <script type="math/tex">% <![CDATA[
+\vert f_{n}(z)-f(z)\vert <\epsilon %]]></script> para todo <script type="math/tex">z\in D</script>,
+decimos que <script type="math/tex">f_{n}</script> <strong>converge uniformemente</strong> a <script type="math/tex">f</script>.</li>
+      <li>Se dice que la serie <script type="math/tex">\sum_{k=1}^{\infty}g_{k}(z)</script> converge
+puntualmente (uniformemente) si la sucesión de sumas parciales
+converge puntualmente (uniformemente).</li>
+    </ul>
+  </li>
+  <li>
+    <p>Criterio de Cauchy</p>
+
+    <ul>
+      <li><script type="math/tex">f_{n}(z)</script> converge uniformemente si y solo si para todo <script type="math/tex">\epsilon>0</script> existe
+<script type="math/tex">N>0</script> tal que si <script type="math/tex">n\geq N</script> entonces
+<script type="math/tex">% <![CDATA[
+\vert f_{n}-f_{n+p}\vert <\epsilon %]]></script> para todo <script type="math/tex">p=1,2,\ldots</script>.</li>
+      <li>
+        <p><script type="math/tex">\sum_{k=1}^{\infty}g_{k}</script> converge uniformemente en <script type="math/tex">D</script> si y solo si para todo
+<script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N</script> tal que si <script type="math/tex">n\geq N</script>, entonces</p>
+
+        <script type="math/tex; mode=display">% <![CDATA[
+
+\left| \sum_{k=n+1}^{n+p}g_{k}(z) \right|<\epsilon\text{ para \(z\in D\) y \(p=1,2,\ldots\)}
+ %]]></script>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="lmite-uniforme">Límite uniforme</h2>
+
+<ul>
+  <li>
+
+    <p>Si cada <script type="math/tex">f_{n}</script> es continua y <script type="math/tex">f_{n}\to f</script> uniformemente,
+entonces <script type="math/tex">f</script> es continua.</p>
+  </li>
+</ul>
+
+<h2 id="criterio-de-weierstrass">Criterio de Weierstrass</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">g_{n}\colon D\to \mathbb{C}</script> una sucesión de
+funciones. Supongamos que existe una sucesión <script type="math/tex">M_{n}</script> de reales
+<script type="math/tex">M_{n}\geq 0</script> tal que:</p>
+
+    <ul>
+      <li><script type="math/tex">\vert g_{n}(z)\vert \leq M_{n}</script> para <script type="math/tex">z\in D</script>,</li>
+      <li><script type="math/tex">\sum_{n=1}^{\infty}M_{n}</script> converge</li>
+    </ul>
+
+    <p>Entonces, <script type="math/tex">\sum_{n=1}^{\infty}g_{n}</script> converge absoluta y
+uniformemente en <script type="math/tex">D</script>.</p>
+  </li>
+</ul>
+
+<h1 id="convergencia-de-funciones-analticas">Convergencia de funciones analíticas</h1>
+
+<ul>
+  <li>
+
+    <ul>
+      <li>
+        <p>Sea <script type="math/tex">\gamma\colon [a,b]\to D</script> una curva en la región <script type="math/tex">D</script>, y
+sea <script type="math/tex">f_{n}\colon \gamma([a,b])\to \mathbb{C}</script> una sucesión de
+funciones continuas, tal que <script type="math/tex">f_{n}\to f</script> uniformemente, donde
+<script type="math/tex">f\colon \gamma([a,b])\to \mathbb{C}</script>. Entonces:</p>
+
+        <script type="math/tex; mode=display">
+\int_{\gamma}f_{n}\,dz\to \int_{\gamma}f\,dz.
+</script>
+      </li>
+      <li>
+        <p>Si <script type="math/tex">\sum_{n=1}^{\infty}g_{n}</script> converge uniformemente en
+<script type="math/tex">\gamma([a,b])</script>, entonces:</p>
+
+        <script type="math/tex; mode=display">
+\int_{\gamma}\left(\sum_{n=1}^{\infty}g_{n}(z)\right)dz=\sum_{n=1}^{\infty}\left(\int_{\gamma} g_{n}(z)\,dz\right).
+</script>
+      </li>
+    </ul>
+  </li>
+  <li>
+
+    <ul>
+      <li>
+        <p>Sean <script type="math/tex">D</script> abierto y <script type="math/tex">f_{n}\colon D\to \mathbb{C}</script> una
+sucesión de funciones analíticas. Si <script type="math/tex">f_{n}\to f</script>
+uniformemente en cada disco cerrado contenido en <script type="math/tex">D</script>, entonces
+<script type="math/tex">f</script> es analítica. Además <script type="math/tex">f_{n}'\to f'</script> puntualmente en
+<script type="math/tex">D</script> y uniformemente en cada disco cerrado contenido en <script type="math/tex">D</script>.</p>
+      </li>
+      <li>
+        <p>Sea <script type="math/tex">g_{k}\colon D\to \mathbb{C}</script> una sucesión de funciones
+analíticas tal que <script type="math/tex">g(z)=\sum_{k=1}^{\infty}g_{k}(z)</script> con
+convergencia uniforme en cada disco cerrado contenido en
+<script type="math/tex">D</script>. Entonces <script type="math/tex">g\colon D\to \mathbb{C}</script> es analítica, y
+<script type="math/tex">g'(z)=\sum_{k=1}^{\infty}g_{k}'(z)</script> puntualmente en <script type="math/tex">D</script> y
+uniformemente en cada disco cerrado contenido en <script type="math/tex">D</script>.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rafael Villarroel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-17T07:00:00-05:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/04/17/series/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/04/17/series/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/04/10/singularidades/" title="Previous Post: Clasificación de singularidades">&laquo; Clasificación de singularidades</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comentarios</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Entradas recientes</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/04/17/series/">Series De Funciones Analíticas</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/04/10/singularidades/">Clasificación De Singularidades</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/04/06/modulo-maximo/">Teoremas Del Módulo Máximo Y Del Mapeo Abierto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/">Teoremas Sobre Integrales</a>
+      </li>
+    
+      <li class="post">
+        <a href="/variable-compleja/blog/2015/02/13/integrales/">Integrales</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rafael Villarroel -
+  <span class="credit">Designed by <a href="http://stchangg.com">@stchangg</a></span> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mateclases';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/17/series/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/17/series/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

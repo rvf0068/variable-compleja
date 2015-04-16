@@ -1,4 +1,4 @@
-% Created 2015-04-09 jue 18:57
+% Created 2015-04-16 jue 18:46
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -145,6 +145,26 @@ Si \(U\subseteq\Omega\) es abierto, y \(f\colon\Omega\to
     \mathbb{C}\) es analítica y no constante, entonces \(f(U)\subseteq
     \mathbb{C}\) es abierto. 
 \end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-2-2]{}
+\begin{block}{Demostración}
+\begin{itemize}
+\item Veremos que si \(f\) no es constante, y es analítica en \(a\),
+la imagen de un disco centrado en \(a\) contiene un disco
+centrado en \(f(a)\). Sin perder generalidad, \(f(a)=0\).
+\item Sea \(C\) una circunferencia centrada en \(a\) tal que \(f(z)\ne
+      0\) para \(z\in C\). Sea \(\epsilon=\min_{z\in C}\frac{|f(z)|}{2}\).
+\item Sean \(w\in D(0,\epsilon)\), \(z\in C\). Entonces:
+\begin{displaymath}
+|f(z)-w|\geq |f(z)|-|w|\geq 2\epsilon-\epsilon=\epsilon
+\end{displaymath}
+mientras que \(|f(a)-w|=|-w|<\epsilon\).
+\item Por lo tanto, la función \(|f(z)-w|\) alcanza su mínimo dentro
+de \(C\). Por el teorema de módulo mínimo, existe \(z_{0}\)
+dentro de \(C\) tal que \(|f(z_{0})-w|=0\), es decir, \(f(z_{0})=w\).
+\end{itemize}
+\end{block}
 \end{frame}
 % Emacs 24.3.1 (Org mode N/A)
 \end{document}

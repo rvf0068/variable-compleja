@@ -1,0 +1,196 @@
+#+title: Series de funciones analíticas
+#+author: 
+#+date: 2015-04-17 7:00
+   
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Repaso de sucesiones y series
+
+** Definiciones
+
+*** Convergencia					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    - Decimos que la sucesión de números complejos \(z_{n}\) *converge*
+      a \(z_{0}\in \mathbb{C}\) si para todo \(\epsilon>0\) existe \(N>0\)
+      tal que 
+      \begin{displaymath}
+      n\geq N \text{ implica } |z_{n}-z_{0}|<\epsilon.
+      \end{displaymath}
+      En tal caso, escribimos \(z_{n}\to z_{0}\).
+    - La serie \(\sum_{k=1}^{\infty}a_{k}\) de números complejos *converge*
+      a \(S\) si la sucesión de sumas parciales
+      \(s_{n}=\sum_{k=1}^{n}a_{k}\) converge a \(S\). En tal caso
+      escribimos \(\sum_{k=1}^{\infty}a_{k}=S\).
+
+** 
+
+*** Criterio de Cauchy						  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    - \(z_{n}\) converge si y solo si para todo \(\epsilon>0\) existe
+      \(N>0\) tal que si \(n,m\geq N\) entonces \(|z_{n}-z_{m}|<\epsilon\).
+    - \(\sum_{k=1}^{\infty}a_{k}\) converge si y solo si para todo
+      \(\epsilon>0\) existe \(N\) tal que si \(n\geq N\), entonces
+      \begin{displaymath}
+      \left| \sum_{k=n+1}^{n+p}a_{k} \right|<\epsilon\text{ para \(p=1,2,\ldots\)}
+      \end{displaymath}
+
+*** 								:B_corollary:
+    :PROPERTIES:
+    :BEAMER_env: corollary
+    :END:
+    Si \(\sum_{k=1}^{\infty}a_{k}\) converge, entonces \(a_{n}\to 0\).
+
+** 
+
+*** Convergencia absoluta				       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Si \(\sum_{k=1}^{\infty}|a_{k}|\) converge, decimos que
+    \(\sum_{k=1}^{\infty}a_{k}\) *converge absolutamente*.
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Si \(\sum_{k=1}^{\infty}a_{k}\) converge absolutamente, entonces
+    converge. 
+
+** Criterios de convergencia
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+
+    - Si \(|r|<1\), entonces \(\sum_{n=0}^{\infty}r^{n}\) converge a
+      \(\frac{1}{1-r}\). Si \(|r|\geq 1\), la serie /diverge/.
+    - Si \(\sum_{k=1}^{\infty}b_{k}\) converge y \(0\leq a_{k}\leq
+      b_{k}\) converge, entonces \(\sum_{k=1}^{\infty}a_{k}\)
+      converge. (Resultado dual para divergencia).
+    - \(\sum_{n=1}^{\infty}\frac{1}{n^{p}}\) converge si \(p>1\). Si
+      \(p\leq 1\), la serie /diverge a \(\infty\)/.
+    - Si \(\frac{|a_{n+1}|}{|a_{n}|}\to r\) con \(r<1\), entonces
+      \(\sum_{n=1}^{\infty}a_{n}\) converge absolutamente. Si \(r>1\),
+      la serie diverge.
+    - Si \(|a_{n}|^{\frac{1}{n}}\to r\) y \(r<1\), entonces
+      \(\sum_{n=1}^{\infty}a_{n}\) converge absolutamente. Si \(r>1\),
+      la serie diverge.
+
+
+** Sucesiones de funciones
+
+*** 							       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+
+    - Sea \(f_{n}\colon D\to \mathbb{C}\) una sucesión de funciones
+      definidas en \(D\). Si existe \(f\colon D\to \mathbb{C}\) tal
+      que \(f_{n}(z)\to f(z)\) para todo \(z\in D\), decimos que
+      \(f_{n}\) *converge puntualmente* a \(f\). En este caso,
+      escribimos \(f_{n}\to f\).
+    - Si para todo \(\epsilon>0\) existe \(N>0\) tal que \(n\geq N\)
+      implica \(|f_{n}(z)-f(z)|<\epsilon\) para todo \(z\in D\),
+      decimos que \(f_{n}\) *converge uniformemente* a \(f\).
+    - Se dice que la serie \(\sum_{k=1}^{\infty}g_{k}(z)\) converge
+      puntualmente (uniformemente) si la sucesión de sumas parciales
+      converge puntualmente (uniformemente).
+
+** 
+
+*** Criterio de Cauchy						  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    - \(f_{n}(z)\) converge uniformemente si y solo si para todo \(\epsilon>0\) existe
+      \(N>0\) tal que si \(n\geq N\) entonces
+      \(|f_{n}-f_{n+p}|<\epsilon\) para todo \(p=1,2,\ldots\).
+    - \(\sum_{k=1}^{\infty}g_{k}\) converge uniformemente en \(D\) si y solo si para todo
+      \(\epsilon>0\) existe \(N\) tal que si \(n\geq N\), entonces
+      \begin{displaymath}
+      \left| \sum_{k=n+1}^{n+p}g_{k}(z) \right|<\epsilon\text{ para \(z\in D\) y \(p=1,2,\ldots\)}
+      \end{displaymath}
+
+** Límite uniforme
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Si cada \(f_{n}\) es continua y \(f_{n}\to f\) uniformemente,
+    entonces \(f\) es continua.
+
+** Criterio de Weierstrass
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(g_{n}\colon D\to \mathbb{C}\) una sucesión de
+    funciones. Supongamos que existe una sucesión \(M_{n}\) de reales
+    \(M_{n}\geq 0\) tal que:
+
+    - \(|g_{n}(z)|\leq M_{n}\) para \(z\in D\),
+    - \(\sum_{n=1}^{\infty}M_{n}\) converge
+    
+    Entonces, \(\sum_{n=1}^{\infty}g_{n}\) converge absoluta y
+    uniformemente en \(D\).
+
+
+* Convergencia de funciones analíticas
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    - Sea \(\gamma\colon [a,b]\to D\) una curva en la región \(D\), y
+      sea \(f_{n}\colon \gamma([a,b])\to \mathbb{C}\) una sucesión de
+      funciones continuas, tal que \(f_{n}\to f\) uniformemente, donde
+      \(f\colon \gamma([a,b])\to \mathbb{C}\). Entonces:
+      \begin{displaymath}
+      \int_{\gamma}f_{n}\,dz\to \int_{\gamma}f\,dz.
+      \end{displaymath}
+    - Si \(\sum_{n=1}^{\infty}g_{n}\) converge uniformemente en
+      \(\gamma([a,b])\), entonces:
+      \begin{displaymath}
+      \int_{\gamma}\left(\sum_{n=1}^{\infty}g_{n}(z)\right)dz=\sum_{n=1}^{\infty}\left(\int_{\gamma} g_{n}(z)\,dz\right).
+      \end{displaymath}
+
+** 
+
+*** 								  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+
+    - Sean \(D\) abierto y \(f_{n}\colon D\to \mathbb{C}\) una
+      sucesión de funciones analíticas. Si \(f_{n}\to f\)
+      uniformemente en cada disco cerrado contenido en \(D\), entonces
+      \(f\) es analítica. Además \(f_{n}'\to f'\) puntualmente en
+      \(D\) y uniformemente en cada disco cerrado contenido en \(D\). 
+
+    - Sea \(g_{k}\colon D\to \mathbb{C}\) una sucesión de funciones
+      analíticas tal que \(g(z)=\sum_{k=1}^{\infty}g_{k}(z)\) con
+      convergencia uniforme en cada disco cerrado contenido en
+      \(D\). Entonces \(g\colon D\to \mathbb{C}\) es analítica, y
+      \(g'(z)=\sum_{k=1}^{\infty}g_{k}'(z)\) puntualmente en \(D\) y
+      uniformemente en cada disco cerrado contenido en \(D\).
+

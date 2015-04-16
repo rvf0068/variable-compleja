@@ -108,3 +108,21 @@
     Si \(U\subseteq\Omega\) es abierto, y \(f\colon\Omega\to
     \mathbb{C}\) es analítica y no constante, entonces \(f(U)\subseteq
     \mathbb{C}\) es abierto. 
+
+** 
+
+*** Demostración
+
+    - Veremos que si \(f\) no es constante, y es analítica en \(a\),
+      la imagen de un disco centrado en \(a\) contiene un disco
+      centrado en \(f(a)\). Sin perder generalidad, \(f(a)=0\).
+    - Sea \(C\) una circunferencia centrada en \(a\) tal que \(f(z)\ne
+      0\) para \(z\in C\). Sea \(\epsilon=\min_{z\in C}\frac{|f(z)|}{2}\).
+    - Sean \(w\in D(0,\epsilon)\), \(z\in C\). Entonces:
+      \begin{displaymath}
+      |f(z)-w|\geq |f(z)|-|w|\geq 2\epsilon-\epsilon=\epsilon
+      \end{displaymath}
+      mientras que \(|f(a)-w|=|-w|<\epsilon\).
+    - Por lo tanto, la función \(|f(z)-w|\) alcanza su mínimo dentro
+      de \(C\). Por el teorema de módulo mínimo, existe \(z_{0}\)
+      dentro de \(C\) tal que \(|f(z_{0})-w|=0\), es decir, \(f(z_{0})=w\).

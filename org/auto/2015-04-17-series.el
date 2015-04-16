@@ -1,5 +1,5 @@
 (TeX-add-style-hook
- "2015-04-06-modulo-maximo"
+ "2015-04-17-series"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("beamer" "spanish" "presentation")))

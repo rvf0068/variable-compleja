@@ -1,0 +1,225 @@
+% Created 2015-04-16 jue 18:46
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-04-17 7:00}
+\title{Series de funciones analíticas}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Repaso de sucesiones y series}
+\label{sec-1}
+
+\begin{frame}[label=sec-1-1]{Definiciones}
+\begin{definition}[Convergencia]
+\begin{itemize}
+\item Decimos que la sucesión de números complejos \(z_{n}\) \alert{converge}
+      a \(z_{0}\in \mathbb{C}\) si para todo \(\epsilon>0\) existe \(N>0\)
+      tal que 
+\begin{displaymath}
+n\geq N \text{ implica } |z_{n}-z_{0}|<\epsilon.
+\end{displaymath}
+En tal caso, escribimos \(z_{n}\to z_{0}\).
+\item La serie \(\sum_{k=1}^{\infty}a_{k}\) de números complejos \alert{converge}
+a \(S\) si la sucesión de sumas parciales
+\(s_{n}=\sum_{k=1}^{n}a_{k}\) converge a \(S\). En tal caso
+escribimos \(\sum_{k=1}^{\infty}a_{k}=S\).
+\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{}
+\begin{theorem}[Criterio de Cauchy]
+\begin{itemize}
+\item \(z_{n}\) converge si y solo si para todo \(\epsilon>0\) existe
+\(N>0\) tal que si \(n,m\geq N\) entonces \(|z_{n}-z_{m}|<\epsilon\).
+\item \(\sum_{k=1}^{\infty}a_{k}\) converge si y solo si para todo
+\(\epsilon>0\) existe \(N\) tal que si \(n\geq N\), entonces
+\begin{displaymath}
+\left| \sum_{k=n+1}^{n+p}a_{k} \right|<\epsilon\text{ para \(p=1,2,\ldots\)}
+\end{displaymath}
+\end{itemize}
+\end{theorem}
+
+\begin{corollary}
+Si \(\sum_{k=1}^{\infty}a_{k}\) converge, entonces \(a_{n}\to 0\).
+\end{corollary}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{}
+\begin{definition}[Convergencia absoluta]
+Si \(\sum_{k=1}^{\infty}|a_{k}|\) converge, decimos que
+\(\sum_{k=1}^{\infty}a_{k}\) \alert{converge absolutamente}.
+\end{definition}
+
+\begin{theorem}
+Si \(\sum_{k=1}^{\infty}a_{k}\) converge absolutamente, entonces
+converge. 
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-4]{Criterios de convergencia}
+\begin{theorem}
+\begin{itemize}
+\item Si \(|r|<1\), entonces \(\sum_{n=0}^{\infty}r^{n}\) converge a
+\(\frac{1}{1-r}\). Si \(|r|\geq 1\), la serie \emph{diverge}.
+\item Si \(\sum_{k=1}^{\infty}b_{k}\) converge y \(0\leq a_{k}\leq
+      b_{k}\) converge, entonces \(\sum_{k=1}^{\infty}a_{k}\)
+      converge. (Resultado dual para divergencia).
+\item \(\sum_{n=1}^{\infty}\frac{1}{n^{p}}\) converge si \(p>1\). Si
+\(p\leq 1\), la serie \emph{diverge a \(\infty\)}.
+\item Si \(\frac{|a_{n+1}|}{|a_{n}|}\to r\) con \(r<1\), entonces
+\(\sum_{n=1}^{\infty}a_{n}\) converge absolutamente. Si \(r>1\),
+la serie diverge.
+\item Si \(|a_{n}|^{\frac{1}{n}}\to r\) y \(r<1\), entonces
+\(\sum_{n=1}^{\infty}a_{n}\) converge absolutamente. Si \(r>1\),
+la serie diverge.
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+
+\begin{frame}[label=sec-1-5]{Sucesiones de funciones}
+\begin{definition}
+\begin{itemize}
+\item Sea \(f_{n}\colon D\to \mathbb{C}\) una sucesión de funciones
+definidas en \(D\). Si existe \(f\colon D\to \mathbb{C}\) tal
+que \(f_{n}(z)\to f(z)\) para todo \(z\in D\), decimos que
+\(f_{n}\) \alert{converge puntualmente} a \(f\). En este caso,
+escribimos \(f_{n}\to f\).
+\item Si para todo \(\epsilon>0\) existe \(N>0\) tal que \(n\geq N\)
+implica \(|f_{n}(z)-f(z)|<\epsilon\) para todo \(z\in D\),
+decimos que \(f_{n}\) \alert{converge uniformemente} a \(f\).
+\item Se dice que la serie \(\sum_{k=1}^{\infty}g_{k}(z)\) converge
+puntualmente (uniformemente) si la sucesión de sumas parciales
+converge puntualmente (uniformemente).
+\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame}[label=sec-1-6]{}
+\begin{theorem}[Criterio de Cauchy]
+\begin{itemize}
+\item \(f_{n}(z)\) converge uniformemente si y solo si para todo \(\epsilon>0\) existe
+\(N>0\) tal que si \(n\geq N\) entonces
+\(|f_{n}-f_{n+p}|<\epsilon\) para todo \(p=1,2,\ldots\).
+\item \(\sum_{k=1}^{\infty}g_{k}\) converge uniformemente en \(D\) si y solo si para todo
+\(\epsilon>0\) existe \(N\) tal que si \(n\geq N\), entonces
+\begin{displaymath}
+\left| \sum_{k=n+1}^{n+p}g_{k}(z) \right|<\epsilon\text{ para \(z\in D\) y \(p=1,2,\ldots\)}
+\end{displaymath}
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-7]{Límite uniforme}
+\begin{theorem}
+Si cada \(f_{n}\) es continua y \(f_{n}\to f\) uniformemente,
+entonces \(f\) es continua.
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-8]{Criterio de Weierstrass}
+\begin{theorem}
+Sea \(g_{n}\colon D\to \mathbb{C}\) una sucesión de
+funciones. Supongamos que existe una sucesión \(M_{n}\) de reales
+\(M_{n}\geq 0\) tal que:
+
+\begin{itemize}
+\item \(|g_{n}(z)|\leq M_{n}\) para \(z\in D\),
+\item \(\sum_{n=1}^{\infty}M_{n}\) converge
+\end{itemize}
+
+Entonces, \(\sum_{n=1}^{\infty}g_{n}\) converge absoluta y
+uniformemente en \(D\).
+\end{theorem}
+\end{frame}
+
+
+\section{Convergencia de funciones analíticas}
+\label{sec-2}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{theorem}
+\begin{itemize}
+\item Sea \(\gamma\colon [a,b]\to D\) una curva en la región \(D\), y
+sea \(f_{n}\colon \gamma([a,b])\to \mathbb{C}\) una sucesión de
+funciones continuas, tal que \(f_{n}\to f\) uniformemente, donde
+\(f\colon \gamma([a,b])\to \mathbb{C}\). Entonces:
+\begin{displaymath}
+\int_{\gamma}f_{n}\,dz\to \int_{\gamma}f\,dz.
+\end{displaymath}
+\item Si \(\sum_{n=1}^{\infty}g_{n}\) converge uniformemente en
+\(\gamma([a,b])\), entonces:
+\begin{displaymath}
+\int_{\gamma}\left(\sum_{n=1}^{\infty}g_{n}(z)\right)dz=\sum_{n=1}^{\infty}\left(\int_{\gamma} g_{n}(z)\,dz\right).
+\end{displaymath}
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-2-2]{}
+\begin{theorem}
+\begin{itemize}
+\item Sean \(D\) abierto y \(f_{n}\colon D\to \mathbb{C}\) una
+sucesión de funciones analíticas. Si \(f_{n}\to f\)
+uniformemente en cada disco cerrado contenido en \(D\), entonces
+\(f\) es analítica. Además \(f_{n}'\to f'\) puntualmente en
+\(D\) y uniformemente en cada disco cerrado contenido en \(D\).
+
+\item Sea \(g_{k}\colon D\to \mathbb{C}\) una sucesión de funciones
+analíticas tal que \(g(z)=\sum_{k=1}^{\infty}g_{k}(z)\) con
+convergencia uniforme en cada disco cerrado contenido en
+\(D\). Entonces \(g\colon D\to \mathbb{C}\) es analítica, y
+\(g'(z)=\sum_{k=1}^{\infty}g_{k}'(z)\) puntualmente en \(D\) y
+uniformemente en cada disco cerrado contenido en \(D\).
+\end{itemize}
+\end{theorem}
+\end{frame}
+% Emacs 24.3.1 (Org mode N/A)
+\end{document}

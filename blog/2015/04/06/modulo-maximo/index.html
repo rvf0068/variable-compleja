@@ -237,7 +237,31 @@ tal que <script type="math/tex">\vert c\vert =1</script>.</li>
 
     <p>Si <script type="math/tex">U\subseteq\Omega</script> es abierto, y <script type="math/tex">f\colon\Omega\to
     \mathbb{C}</script> es analítica y no constante, entonces <script type="math/tex">f(U)\subseteq
-    \mathbb{C}</script> es abierto.</p>
+    \mathbb{C}</script> es abierto. </p>
+  </li>
+  <li>
+    <p>Demostración</p>
+
+    <ul>
+      <li>Veremos que si <script type="math/tex">f</script> no es constante, y es analítica en <script type="math/tex">a</script>,
+la imagen de un disco centrado en <script type="math/tex">a</script> contiene un disco
+centrado en <script type="math/tex">f(a)</script>. Sin perder generalidad, <script type="math/tex">f(a)=0</script>.</li>
+      <li>Sea <script type="math/tex">C</script> una circunferencia centrada en <script type="math/tex">a</script> tal que <script type="math/tex">f(z)\ne
+      0</script> para <script type="math/tex">z\in C</script>. Sea <script type="math/tex">\epsilon=\min_{z\in C}\frac{\vert f(z)\vert }{2}</script>.</li>
+      <li>
+        <p>Sean <script type="math/tex">w\in D(0,\epsilon)</script>, <script type="math/tex">z\in C</script>. Entonces:</p>
+
+        <script type="math/tex; mode=display">
+|f(z)-w|\geq |f(z)|-|w|\geq 2\epsilon-\epsilon=\epsilon
+</script>
+
+        <p>mientras que <script type="math/tex">% <![CDATA[
+\vert f(a)-w\vert =\vert -w\vert <\epsilon %]]></script>.</p>
+      </li>
+      <li>Por lo tanto, la función <script type="math/tex">\vert f(z)-w\vert </script> alcanza su mínimo dentro
+de <script type="math/tex">C</script>. Por el teorema de módulo mínimo, existe <script type="math/tex">z_{0}</script>
+dentro de <script type="math/tex">C</script> tal que <script type="math/tex">\vert f(z_{0})-w\vert =0</script>, es decir, <script type="math/tex">f(z_{0})=w</script>.</li>
+    </ul>
   </li>
 </ul>
 </div>
@@ -307,6 +331,10 @@ tal que <script type="math/tex">\vert c\vert =1</script>.</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/variable-compleja/blog/2015/04/17/series/">Series De Funciones Analíticas</a>
+      </li>
+    
+      <li class="post">
         <a href="/variable-compleja/blog/2015/04/10/singularidades/">Clasificación De Singularidades</a>
       </li>
     
@@ -320,10 +348,6 @@ tal que <script type="math/tex">\vert c\vert =1</script>.</li>
     
       <li class="post">
         <a href="/variable-compleja/blog/2015/02/13/integrales/">Integrales</a>
-      </li>
-    
-      <li class="post">
-        <a href="/variable-compleja/blog/2015/02/09/funcion-exponencial/">La Función Exponencial</a>
       </li>
     
   </ul>
