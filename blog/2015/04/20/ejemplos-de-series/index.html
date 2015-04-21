@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Funciones Derivables - Variable compleja</title>
+  <title>Ejemplos De Series - Variable compleja</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Definición Derivada Sean y en el interior de
-. Decimos que es derivable en si el límite existe. En caso de existir, al valor del límite lo denotamos &hellip;">
+  <meta name="description" content="Ejemplos Ejemplo converge uniformemente en para cada . converge puntualmente en . no converge uniformemente en . Ejemplo converge puntualmente a en &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/01/30/funciones-derivables">
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/04/20/ejemplos-de-series">
   <link href="/variable-compleja/favicon.png" rel="icon">
   <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
@@ -98,7 +97,7 @@
   
   <header>
     
-      <h1 class="entry-title">Funciones Derivables</h1>
+      <h1 class="entry-title">Ejemplos De Series</h1>
     
     
       <p class="meta">
@@ -114,125 +113,124 @@
   
 
 
-<time datetime="2015-01-30T07:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-04-20T09:00:00-05:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1 id="definicin">Definición</h1>
+<div class="entry-content"><h1 id="ejemplos">Ejemplos</h1>
 
-<h2 id="derivada">Derivada</h2>
+<h2 id="ejemplo">Ejemplo</h2>
 
 <ul>
-  <li>
-
-    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z_{0}</script> en el interior de
-<script type="math/tex">A</script>. Decimos que <script type="math/tex">f\colon A\to \mathbb{C}</script> es <strong>derivable en
-<script type="math/tex">z_{0}</script></strong> si el límite</p>
-
-    <script type="math/tex; mode=display">
-\lim_{z\to z_{0}}\frac{f(z)-f(z_{0})}{z-z_{0}}
-</script>
-
-    <p>existe. En caso de existir, al valor del límite lo denotamos por
-<script type="math/tex">f'(z_{0})</script>. </p>
-  </li>
+  <li><script type="math/tex">g(z)=\sum_{n=1}^{\infty}\frac{z^{n}}{n}</script> converge uniformemente en
+<script type="math/tex">D_{r}=\overline{D}(0,r)</script> para cada <script type="math/tex">% <![CDATA[
+r<1 %]]></script>.</li>
+  <li><script type="math/tex">g(z)</script> converge puntualmente en <script type="math/tex">D(0,1)</script>.</li>
+  <li><script type="math/tex">g(z)</script> no converge uniformemente en <script type="math/tex">D(0,1)</script>.</li>
 </ul>
 
-<h2 id="equivalencias-de-la-definicin">Equivalencias de la definición</h2>
+<h2 id="ejemplo-1">Ejemplo</h2>
+
+<ul>
+  <li><script type="math/tex">\sum_{n=0}^{\infty}z^{n}</script> converge puntualmente a
+<script type="math/tex">f(z)=\frac{1}{1-z}</script> en <script type="math/tex">D=D(0,1)</script>.</li>
+  <li>La convergencia es absoluta en <script type="math/tex">D_{r}=\overline{D}(0,r)</script> para
+cada <script type="math/tex">% <![CDATA[
+r<1 %]]></script>.</li>
+  <li><script type="math/tex">\sum_{n=1}^{\infty}nz^{n-1}=\sum_{n=0}^{\infty}(n+1)z^{n}</script>
+converge puntualmente en <script type="math/tex">D</script> a <script type="math/tex">\frac{1}{(1-z)^{2}}</script> y
+absolutamente en <script type="math/tex">D_{r}=\overline{D}(0,r)</script> para cada <script type="math/tex">% <![CDATA[
+r<1 %]]></script>.</li>
+</ul>
+
+<h2 id="logaritmo">Logaritmo</h2>
 
 <ul>
   <li>
 
-    <p>Dados <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z_{0}</script> en el interior de
-<script type="math/tex">A</script>, son equivalentes:</p>
+    <p><script type="math/tex">\sum_{n=1}^{\infty}(-1)^{n-1}\frac{z^{n}}{n}</script> converge
+ uniformemente a <script type="math/tex">\log(1+z)</script> en todo disco cerrado centrado en
+ el origen contenido en <script type="math/tex">D=D(0,1)</script>.</p>
+  </li>
+  <li>
 
     <ul>
-      <li><script type="math/tex">f</script> es derivable en <script type="math/tex">z_{0}</script>.</li>
+      <li>Sabemos que si <script type="math/tex">w=\rho e^{i\theta}\in D(1,1)</script>, entonces
+<script type="math/tex">\mathrm{Log}(w)=\int_{\gamma}\frac{1}{\xi}d\xi=\log
+      \rho+i\theta</script>, donde <script type="math/tex">\mathrm{Log}</script> es la rama principal del
+logaritmo y <script type="math/tex">\gamma</script> es cualquier camino contenido en
+<script type="math/tex">D(1,1)</script> que va de <script type="math/tex">1</script> a <script type="math/tex">w</script>.</li>
       <li>
-        <p>El límite </p>
+        <p>Haciendo el cambio de variable <script type="math/tex">\xi=\eta+1</script>, obtenemos que </p>
 
         <script type="math/tex; mode=display">
-\lim_{h\to 0}\frac{f(z_{0}+h)-f(z_{0})}{h}
+\int_{\gamma}\frac{1}{\xi}d\xi=\int_{\beta}\frac{1}{\eta+1}d\eta, 
 </script>
 
-        <p>existe.</p>
-      </li>
-      <li>
-        <p>Existen <script type="math/tex">c\in \mathbb{C}</script> y una función <script type="math/tex">E\colon A\to
-      \mathbb{C}</script> tal que</p>
-
-        <script type="math/tex; mode=display">
-f(z)=f(z_{0})+c(z-z_{0})+E(z)
-</script>
-
-        <p>con <script type="math/tex">\lim_{z\to z_{0}}\frac{E(z)}{z-z_{0}}=0</script>.</p>
+        <p>donde <script type="math/tex">\beta=\gamma-1</script> es un camino de <script type="math/tex">0</script> a <script type="math/tex">w-1</script>.</p>
       </li>
     </ul>
   </li>
-</ul>
-
-<h2 id="observaciones">Observaciones</h2>
-
-<ul>
-  <li>Dada <script type="math/tex">f\colon A\to \mathbb{C}</script>, se define <script type="math/tex">f'\colon B\to
-     \mathbb{C}</script>, donde <script type="math/tex">B\subseteq A</script> es el conjunto de puntos
-donde <script type="math/tex">f</script> es derivable.</li>
-  <li>Si <script type="math/tex">f</script> es derivable en <script type="math/tex">z_{0}</script>, entonces es continua en <script type="math/tex">z_{0}</script>.</li>
-</ul>
-
-<h1 id="reglas-de-derivacin">Reglas de derivación</h1>
-
-<ul>
   <li>
-
-    <p>Supongamos que <script type="math/tex">f,g\colon A\to \mathbb{C}</script> son derivables en
-<script type="math/tex">z_{0}\in A</script> y <script type="math/tex">c\in \mathbb{C}</script>. Entonces <script type="math/tex">cf</script>, <script type="math/tex">f+g</script>,
-<script type="math/tex">fg</script> son derivables en <script type="math/tex">z_{0}</script>. También <script type="math/tex">\frac{f}{g}</script> es
-derivable en <script type="math/tex">z_{0}</script> si <script type="math/tex">g(z_{0})\ne 0</script>. Además:</p>
-
-    <ul>
-      <li><script type="math/tex">(cf)'(z_{0})=cf'(z_{0})</script>,</li>
-      <li><script type="math/tex">(f+g)(z_{0})=f(z_{0})+g(z_{0})</script>,</li>
-      <li><script type="math/tex">(fg)'(z_{0})=f'(z_{0})g(z_{0})+f(z_{0})g'(z_{0})</script>,</li>
-      <li><script type="math/tex">(\frac{f}{g})'(z_{0})=\frac{f'(z_{0})g(z_{0})-f(z_{0})g'(z_{0})}{g(z_{0})^{2}}</script>.</li>
-    </ul>
-  </li>
-  <li>
-
-    <p>Para todo <script type="math/tex">z\in \mathbb{Z}</script> se tiene que <script type="math/tex">f(z)=z^{n}</script> es
-diferenciable y <script type="math/tex">f'(z)=nz^{n-1}</script>.</p>
-  </li>
-</ul>
-
-<h2 id="regla-de-la-cadena">Regla de la cadena</h2>
-
-<ul>
-  <li>
-
-    <p>Sean <script type="math/tex">f\colon A\to \mathbb{C}</script> y <script type="math/tex">g\colon B\to \mathbb{C}</script>
-funciones tales que <script type="math/tex">f(A)\subseteq B</script>. Sean <script type="math/tex">f</script> derivable en
-<script type="math/tex">z_{0}\in A</script> y <script type="math/tex">g</script> derivable en <script type="math/tex">f(z_{0})</script>. Entonces
-<script type="math/tex">g\circ f</script> es derivable en <script type="math/tex">z_{0}</script>, y <script type="math/tex">(g\circ
-    f)'(z_{0})=g'(f(z_{0}))</script>. </p>
-  </li>
-</ul>
-
-<h1 id="ecuaciones-de-cauchy-riemann">Ecuaciones de Cauchy-Riemann</h1>
-
-<ul>
-  <li>
-    <p>Ecuaciones de Cauchy-Riemann</p>
-
-    <p>Sea <script type="math/tex">f\colon A\to \mathbb{C}</script> derivable en <script type="math/tex">z_{0}</script>. Si
-<script type="math/tex">f=u+iv</script>, entonces</p>
+    <p>Tenemos que <script type="math/tex">\frac{1}{\eta+1}=1-\eta+\eta^{2}-\eta^{3}+\cdots</script>
+uniformemente en discos cerrados contenidos en <script type="math/tex">D(0,1)</script>, por lo
+que:</p>
 
     <script type="math/tex; mode=display">
-u_{x}(z_{0})=v_{y}(z_{0}),\qquad u_{y}(z_{0})=-v_{x}(z_{0}).
+\mathrm{Log}(w)=\int_{\beta}\frac{1}{\eta+1}d\eta =
+\int_{\beta}(1-\eta+\eta^{2}-\eta^{3}+\cdots)\,d\eta
 </script>
   </li>
+  <li>
+    <p>Lo último es igual a </p>
+
+    <script type="math/tex; mode=display">
+\sum_{k=0}^{\infty}(-1)^{k}\int_{\beta}\eta^{k}\,d\eta=
+\sum_{k=0}^{\infty}(-1)^{k}\left.\frac{\eta^{k+1}}{k+1}\right|_{0}^{w-1}.
+</script>
+  </li>
+  <li>
+    <p>Lo anterior, resulta ser igual a
+<script type="math/tex">\sum_{k=1}^{\infty}(-1)^{k-1}\frac{(w-1)^{k}}{k}</script>. Sustituyendo
+<script type="math/tex">w-1=z</script>, resulta:</p>
+
+    <script type="math/tex; mode=display">
+\mathrm{Log}(1+z)=\sum_{n=1}^{\infty}(-1)^{n-1}\frac{z^{n}}{n}.
+</script>
+
+    <p>y como en el primer ejemplo, se demuestra la convergencia
+uniforme en <script type="math/tex">\overline{D_{r}}</script>.</p>
+  </li>
+</ul>
+
+<h2 id="funcin-zeta-de-riemann">Función <script type="math/tex">\zeta</script> de Riemann</h2>
+
+<ul>
+  <li>
+    <p>La función</p>
+
+    <script type="math/tex; mode=display">
+\zeta(z)=\sum_{n=1}^{\infty}\frac{1}{n^{z}}
+</script>
+
+    <p>es analítica en <script type="math/tex">A=\{z\mid\Re z>1\}</script>.</p>
+  </li>
+  <li>
+    <p>Tenemos que </p>
+
+    <script type="math/tex; mode=display">
+|n^{-z}|=|e^{-z\log n}|=|e^{-x\log n-iy\log n}|=e^{-x\log n}=n^{-x}.
+</script>
+  </li>
+  <li>Sea <script type="math/tex">B\subseteq A</script> un disco cerrado. Sea <script type="math/tex">\delta</script> la
+distancia entre <script type="math/tex">B</script> y el complemento de <script type="math/tex">A</script>. Entonces, si
+<script type="math/tex">z\in B</script>, se tiene que <script type="math/tex">x\geq 1+\delta</script>, por lo que
+<script type="math/tex">n^{-x}\leq n^{-(1+\delta)}</script>.</li>
+  <li>Tomando <script type="math/tex">M_{n}=n^{-(1+\delta)}</script>, se obtiene la convergencia
+uniforme de la serie en <script type="math/tex">B</script>.</li>
 </ul>
 </div>
 
@@ -256,7 +254,7 @@ u_{x}(z_{0})=v_{y}(z_{0}),\qquad u_{y}(z_{0})=-v_{x}(z_{0}).
   
 
 
-<time datetime="2015-01-30T07:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-04-20T09:00:00-05:00" pubdate data-updated="true"></time>
       
 
 
@@ -264,7 +262,7 @@ u_{x}(z_{0})=v_{y}(z_{0}),\qquad u_{y}(z_{0})=-v_{x}(z_{0}).
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/01/30/funciones-derivables/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/01/30/funciones-derivables/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/04/20/ejemplos-de-series/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/04/20/ejemplos-de-series/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -277,10 +275,8 @@ u_{x}(z_{0})=v_{y}(z_{0}),\qquad u_{y}(z_{0})=-v_{x}(z_{0}).
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/variable-compleja/blog/2015/01/26/continuidad-y-limites/" title="Previous Post: Continuidad y límites">&laquo; Continuidad y límites</a>
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/04/17/series/" title="Previous Post: Series de funciones analíticas">&laquo; Series de funciones analíticas</a>
       
-      
-        <a class="basic-alignment right" href="/variable-compleja/blog/2015/02/06/cauchy-riemann/" title="Next Post: Consecuencias de las ecuaciones de Cauchy-Riemann">Consecuencias de las ecuaciones de Cauchy-Riemann &raquo;</a>
       
     </p>
   </footer>
@@ -347,8 +343,8 @@ u_{x}(z_{0})=v_{y}(z_{0}),\qquad u_{y}(z_{0})=-v_{x}(z_{0}).
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/01/30/funciones-derivables/';
-        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/01/30/funciones-derivables/';
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/20/ejemplos-de-series/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/20/ejemplos-de-series/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -9,9 +9,9 @@
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="El plano complejo El plano complejo Cada número complejo se puede describir en un plano
-por el punto con coordenadas . En este plano complejo el
-eje &hellip;">
+  <meta name="description" content="Definiciones básicas Discos Disco Sean y un real positivo. Definimos el
+disco con centro en y radio , denotado , como
+el conjunto: Disco cerrado Sean &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,313 @@ eje &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/variable-compleja/blog/2015/01/23/topologia-del-plano-complejo/">Topología Del Plano Complejo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-23T07:00:00-06:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1 id="definiciones-bsicas">Definiciones básicas</h1>
+
+<h2 id="discos">Discos</h2>
+
+<ul>
+  <li>
+    <p>Disco</p>
+
+    <p>Sean <script type="math/tex">z_{0}\in\mathbb{C}</script> y <script type="math/tex">r</script> un real positivo. Definimos el
+<strong>disco</strong> con centro en <script type="math/tex">z_{0}</script> y radio <script type="math/tex">r</script>, denotado <script type="math/tex">D(z_{0},r)</script>, como
+el conjunto:</p>
+
+    <script type="math/tex; mode=display">% <![CDATA[
+
+D(z_{0},r)=\{z\in\mathbb{C}\mid |z-z_{0}|<r\}.
+ %]]></script>
+  </li>
+  <li>
+    <p>Disco cerrado</p>
+
+    <p>Sean <script type="math/tex">z_{0}\in\mathbb{C}</script> y <script type="math/tex">r</script> un real positivo. Definimos el
+<strong>disco cerrado</strong> con centro en <script type="math/tex">z_{0}</script> y radio <script type="math/tex">r</script>, denotado <script type="math/tex">\overline{D}(z_{0},r)</script>, como
+el conjunto:</p>
+
+    <script type="math/tex; mode=display">
+\overline{D}(z_{0},r)=\{z\in\mathbb{C}\mid |z-z_{0}|\leq r\}.
+</script>
+  </li>
+</ul>
+
+<h2 id="conjuntos-abiertos">Conjuntos abiertos</h2>
+
+<ul>
+  <li>
+    <p>Punto interior</p>
+
+    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z\in \mathbb{C}</script>. Decimos que
+<script type="math/tex">z</script> es <strong>punto interior</strong> de <script type="math/tex">A</script> si existe <script type="math/tex">r>0</script> tal que
+<script type="math/tex">D(z,r)\subseteq A</script>.</p>
+  </li>
+  <li>
+    <p>Conjunto abierto</p>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. Decimos que <script type="math/tex">A</script> es un <strong>conjunto
+abierto</strong> si todo punto de <script type="math/tex">A</script> es punto interior de <script type="math/tex">A</script>.</p>
+  </li>
+  <li>
+    <p>Propiedades de conjuntos abiertos</p>
+
+    <ul>
+      <li>Si <script type="math/tex">\{U_{\alpha}\}_{\alpha\in I}</script> es una colección de
+conjuntos abiertos, entonces <script type="math/tex">\cup_{\alpha\in I}U_{\alpha}</script> es un
+conjunto abierto.</li>
+      <li>Si <script type="math/tex">U_{1},U_{2}</script> son abiertos, entonces <script type="math/tex">U_{1}\cap U_{2}</script> es
+abierto.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ejemplos-de-conjuntos-abiertos">Ejemplos de conjuntos abiertos</h2>
+
+<ul>
+  <li>
+
+    <ul>
+      <li><script type="math/tex">\mathbb{C}</script> es abierto.</li>
+      <li><script type="math/tex">\emptyset</script> es abierto.</li>
+      <li>Para todo <script type="math/tex">z\in \mathbb{C}</script>, <script type="math/tex">r>0</script>, se tiene que <script type="math/tex">D(z,r)</script>
+      es abierto.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="conjuntos-cerrados">Conjuntos cerrados</h2>
+
+<ul>
+  <li>
+    <p>Conjunto cerrado</p>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. Decimos que <script type="math/tex">A</script> es cerrado si su
+complemento en <script type="math/tex">\mathbb{C}</script>, es decir, <script type="math/tex">\mathbb{C}-A</script>, es un
+conjunto abierto.</p>
+  </li>
+  <li>
+
+    <ul>
+      <li><script type="math/tex">\mathbb{C}</script> y <script type="math/tex">\emptyset</script> son cerrados.</li>
+      <li>Para todo <script type="math/tex">z\in \mathbb{C}</script>, <script type="math/tex">r>0</script>, se tiene que <script type="math/tex">\overline{D}(z,r)</script>
+      es cerrado.</li>
+      <li>La circunferencia unitaria <script type="math/tex">\{z\in \mathbb{C}\mid \vert z\vert =1\}</script> es cerrada.</li>
+    </ul>
+  </li>
+  <li>
+
+    <ul>
+      <li>Si <script type="math/tex">\{F_{\alpha}\}_{\alpha\in I}</script> es una colección de
+conjuntos cerrados, entonces <script type="math/tex">\cap_{\alpha\in I}F_{\alpha}</script> es un
+conjunto cerrado.</li>
+      <li>Si <script type="math/tex">F_{1},F_{2}</script> son cerrados, entonces <script type="math/tex">F_{1}\cap F_{2}</script> es
+cerrado.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="frontera">Frontera</h2>
+
+<ul>
+  <li>
+    <p>Punto frontera</p>
+
+    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z\in \mathbb{C}</script>. Decimos que <script type="math/tex">z</script> es
+un <strong>punto frontera</strong> de <script type="math/tex">A</script> si para todo <script type="math/tex">r>0</script> se tiene que
+<script type="math/tex">A\cap D(z,r)\not=\emptyset</script> y <script type="math/tex">(\mathbb{C}-A)\cap
+    D(z,r)\not=\emptyset</script>. </p>
+  </li>
+  <li>
+
+    <p>El conjunto de puntos frontera de <script type="math/tex">A</script> se denota con <script type="math/tex">\partial A</script>.</p>
+  </li>
+  <li>
+    <p>Ejemplo</p>
+
+    <script type="math/tex; mode=display">\partial D(z_{0},r)=\partial \overline{D}(z_{0},r)=\{z\in \mathbb{C}\mid \vert z-z_{0}\vert =r\}</script>
+  </li>
+</ul>
+
+<h2 id="ejercicios">Ejercicios</h2>
+
+<ul>
+  <li>Demuestra que <script type="math/tex">A\subseteq \mathbb{C}</script> es abierto si y solo si <script type="math/tex">\partial A\cap A=\emptyset</script>.</li>
+  <li>Demuestra que <script type="math/tex">A\subseteq \mathbb{C}</script> es cerrado si y solo si <script type="math/tex">\partial A\subseteq A</script>.</li>
+  <li>Demuestra que para todo <script type="math/tex">A\subseteq \mathbb{C}</script> se tiene que <script type="math/tex">\partial A</script> es un
+conjunto cerrado.</li>
+</ul>
+
+<h2 id="cerradura">Cerradura</h2>
+
+<ul>
+  <li>
+    <p>Cerradura</p>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. La <strong>cerradura</strong> de <script type="math/tex">A</script>, denotada
+<script type="math/tex">\overline{A}</script>, se define como:</p>
+
+    <script type="math/tex; mode=display">
+\overline{A}=A\cup\partial A.
+</script>
+  </li>
+  <li>
+
+    <p>Por ejemplo, <script type="math/tex">\overline{D(z,r)}=\overline{D}(z,r)</script>.</p>
+  </li>
+  <li>
+    <p>Ejercicios</p>
+
+    <ul>
+      <li>Demuestra que <script type="math/tex">z\in \overline{A}</script> si y solo si <script type="math/tex">D(z,r)\cap
+      A\ne\emptyset</script> para todo <script type="math/tex">r>0</script>.</li>
+      <li>Demuestra que <script type="math/tex">\overline{A}</script> es cerrado para todo <script type="math/tex">A\subseteq \mathbb{C}</script>.</li>
+      <li>Demuestra que <script type="math/tex">A\subseteq \mathbb{C}</script> es cerrado si y solo si <script type="math/tex">A=\overline{A}</script>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="sucesiones">Sucesiones</h1>
+
+<h2 id="definicin-y-notacin">Definición y notación</h2>
+
+<ul>
+  <li>
+    <p>Sucesión</p>
+
+    <p>Una <strong>sucesión</strong> en un conjunto <script type="math/tex">A</script> es una función
+<script type="math/tex">a\colon\mathbb{N}\to A</script>. Denotaremos <script type="math/tex">a(n)</script> como <script type="math/tex">a_{n}</script> y
+a <script type="math/tex">a</script> como <script type="math/tex">\{a_{n}\}</script>.</p>
+  </li>
+  <li>
+    <p>Convergencia</p>
+
+    <p>Decimos que la sucesión <script type="math/tex">\{a_{n}\}\subseteq \mathbb{C}</script> <strong>converge</strong>
+a <script type="math/tex">z\in\mathbb{C}</script> si para todo <script type="math/tex">\epsilon>0</script> existe <script type="math/tex">N</script> tal
+que <script type="math/tex">a_{n}\in D(z,\epsilon)</script> para todo <script type="math/tex">n\geq N</script>. Escribimos
+<script type="math/tex">\lim_{n\to\infty}a_{n}=z</script>. </p>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p><script type="math/tex">\lim_{n\to\infty}a_{n}=z</script> si y solo si <script type="math/tex">\lim_{n\to\infty}\vert a_{n}-z\vert =0</script>.</p>
+  </li>
+</ul>
+
+<h2 id="propiedades">Propiedades</h2>
+
+<ul>
+  <li>
+
+    <p><script type="math/tex">\lim_{n\to\infty}a_{n}=z</script> si y solo si <script type="math/tex">\lim_{n\to\infty}\Re
+    a_{n}=\Re z</script> y <script type="math/tex">\lim_{n\to\infty}\Im a_{n}=\Im z</script></p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">\{a_{n}\}</script>, <script type="math/tex">\{b_{n}\}</script> dos sucesiones de números
+complejos tales que <script type="math/tex">a_{n}\to z</script> y <script type="math/tex">b_{n}\to w</script>. Entonces:</p>
+
+    <ul>
+      <li><script type="math/tex">ca_{n}\to cz</script> para todo <script type="math/tex">c\in \mathbb{C}</script>,</li>
+      <li><script type="math/tex">\overline{a_{n}}\to \overline{z}</script>, <script type="math/tex">\vert a_{n}\vert \to \vert z\vert </script>,</li>
+      <li><script type="math/tex">a_{n}+b_{n}\to z+w</script>, <script type="math/tex">a_{n}b_{n}\to zw</script>.</li>
+      <li>Si <script type="math/tex">w\ne 0</script>, entonces <script type="math/tex">b_{n}= 0</script> a lo más para una cantidad
+finita de valores de <script type="math/tex">n</script>, y <script type="math/tex">\frac{a_{n}}{b_{n}}\to
+      \frac{z}{w}</script>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="puntos-de-acumulacin-y-sucesiones">Puntos de acumulación y sucesiones</h1>
+
+<h2 id="punto-de-acumulacin">Punto de acumulación</h2>
+
+<ul>
+  <li>
+    <p>Punto de acumulación</p>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. Decimos que <script type="math/tex">z\in \mathbb{C}</script> es
+<strong>punto de acumulación</strong> de <script type="math/tex">A</script> si para todo <script type="math/tex">\epsilon>0</script> existe
+un punto en <script type="math/tex">D(z,\epsilon)\cap A</script> <em>distinto de <script type="math/tex">z</script></em>.</p>
+  </li>
+  <li>
+    <p>Punto de acumulación de una sucesión</p>
+
+    <p>Sea <script type="math/tex">\{a_{n}\}</script> una sucesión en <script type="math/tex">\mathbb{C}</script>. Decimos que
+<script type="math/tex">z\in \mathbb{C}</script> es <strong>punto de acumulación</strong> de <script type="math/tex">a_{n}</script> si para
+todo <script type="math/tex">\epsilon>0</script> existe una infinidad de valores de <script type="math/tex">n</script> tales
+que <script type="math/tex">a_{n}\in D(z,\epsilon)</script>.</p>
+  </li>
+  <li>
+    <p>Subsucesión</p>
+
+    <p>Se dice que la sucesión <script type="math/tex">\{b_{k}\}</script> es una <strong>subsucesión</strong> de
+<script type="math/tex">\{a_{n}\}</script> si existe una sucesión creciente en <script type="math/tex">\mathbb{N}</script></p>
+
+    <script type="math/tex; mode=display">% <![CDATA[
+
+n_{1}<n_{2}<\cdots
+ %]]></script>
+
+    <p>tal que <script type="math/tex">a_{n_{k}}=b_{k}</script> para <script type="math/tex">k=1,2,\ldots</script>.</p>
+  </li>
+  <li>
+
+    <p>El complejo <script type="math/tex">z\in \mathbb{C}</script> es punto de acumulación de la
+sucesión <script type="math/tex">a=\{a_{n}\}</script> si y solo si existe una subsucesión
+<script type="math/tex">\{a_{n_{k}}\}</script> de <script type="math/tex">a</script> tal que <script type="math/tex">\lim a_{n_{k}}=z</script>.</p>
+  </li>
+  <li>
+
+    <p>Si una sucesión <script type="math/tex">a=\{a_{n}\}</script> tiene límite <script type="math/tex">z</script>, entonces toda
+subsucesión de <script type="math/tex">a</script> tiene límite <script type="math/tex">z</script>.</p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z\in \mathbb{C}</script>. Entonces
+<script type="math/tex">z\in \overline{A}</script> si y solo si existe una sucesión en <script type="math/tex">A</script>
+con límite <script type="math/tex">z</script>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script>. Entonces <script type="math/tex">A</script> es cerrado si y solo
+si <script type="math/tex">A</script> contiene todo punto de acumulación de toda sucesión en
+<script type="math/tex">A</script>.</p>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -436,6 +743,10 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/variable-compleja/blog/2015/04/20/ejemplos-de-series/">Ejemplos De Series</a>
+      </li>
+    
+      <li class="post">
         <a href="/variable-compleja/blog/2015/04/17/series/">Series De Funciones Analíticas</a>
       </li>
     
@@ -449,10 +760,6 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
     
       <li class="post">
         <a href="/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/">Teoremas Sobre Integrales</a>
-      </li>
-    
-      <li class="post">
-        <a href="/variable-compleja/blog/2015/02/13/integrales/">Integrales</a>
       </li>
     
   </ul>
