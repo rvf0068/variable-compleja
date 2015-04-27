@@ -1,0 +1,186 @@
+% Created 2015-04-27 Mon 11:08
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-04-20 9:00}
+\title{Series de potencias}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Series de potencias},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.3.1 (Org mode 8.3beta)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Definición}
+\label{orgheadline1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{definition}[Serie de potencias]
+Una \alert{serie de potencias} es una serie de la forma:
+\begin{displaymath}
+\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n},
+\end{displaymath}
+donde los \(a_{n}\) y \(z_{0}\) son números complejos.
+\end{definition}
+\end{frame}
+
+
+\section{Teoremas}
+\label{orgheadline1}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{lemma}[Abel-Weierstrass]
+Sean \(r_{0}\geq0\) y \(M\) una constante tal que
+\(|a_{n}|r_{0}^{n}\leq M\) para todo \(n\geq0\). Entonces, para
+cada \(r<r_{0}\) la serie
+\(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\) converge uniformemente y
+absolutamente en \(D_{r}=\{z\in \mathbb{C}\mid |z-z_{0}|\leq r\}\).
+\end{lemma}
+
+\begin{theorem}[Convergencia de series de potencias]
+Dada una serie de potencias
+\(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\), existe un único número
+\(R\geq0\), (posiblemente \(+\infty\)), llamado \alert{radio de
+convergencia}, tal que si \(|z-z_{0}|<R\) la serie converge, y si
+\(|z-z_{0}|>R\), la serie diverge. Además, la convergencia es
+uniforme en cada disco cerrado contenido en \(D=\{z\in
+    \mathbb{C}\mid |z-z_{0}|< R\}\). 
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-2-2]{Corolario}
+\begin{corollary}[Serie es analítica]
+Una serie de potencias \(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\)
+es una función analítica en su \emph{círculo de convergencia} \(D=\{z\in
+    \mathbb{C}\mid |z-z_{0}|< R\}\). 
+\end{corollary}
+\end{frame}
+
+\begin{frame}[label=sec-2-3]{}
+\begin{theorem}[Derivación de series de potencias]
+Sea
+\begin{displaymath}
+f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n},
+\end{displaymath}
+una función analítica dada por una serie de potencias en su
+círculo de convergencia. Entonces:
+\begin{itemize}
+\item \(f'(z)=\sum_{n=1}^{\infty}na_{n}(z-z_{0})^{n-1}\) y la
+serie para \(f'(z)\) tiene el mismo radio de convergencia que la
+serie para \(f(z)\).
+\item Además, \(a_{n}=\frac{f^{(n)}(z_{0})}{n!}\).
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-2-4]{}
+\begin{corollary}[Unicidad]
+Si
+\begin{displaymath}
+\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}=f(z)=\sum_{n=0}^{\infty}b_{n}(z-z_{0})^{n}
+\end{displaymath}
+para todo \(z\) en \(D(z_{0},r)\) con \(r>0\), entonces
+\(a_{n}=b_{n}\) para toda \(n\).
+\end{corollary}
+\end{frame}
+
+\begin{frame}[label=sec-2-5]{}
+\begin{theorem}[Cálculo del radio de convergencia]
+Dada la serie de potencias
+\(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\):
+
+\begin{itemize}
+\item si
+\begin{displaymath}
+\lim_{n\to\infty}\frac{|a_{n}|}{|a_{n+1}|}
+\end{displaymath}
+existe, es igual a \(R\), el radio de convergencia de la serie.
+\item Si \(\rho=\lim_{n\to\infty} \sqrt[n]{|a_{n}|}\) existe, entonces
+\(R=\frac{1}{\rho}\) es el radio de convergencia. (\(R=\infty\)
+si \(\rho=0\)).
+\end{itemize}
+\end{theorem}
+\end{frame}
+
+\section{Teorema de Taylor}
+\label{orgheadline1}
+
+\begin{frame}[label=sec-3-1]{}
+\begin{theorem}[Taylor]
+Sea \(f\colon A\to \mathbb{C}\) analítica con \(A\subseteq
+    \mathbb{C}\) abierto. Sean \(z_{0}\in A\) y \(r>0\) tal que
+\(D_{r}=\{z\mid |z-z_{0}|<r\}\subseteq A\). Entonces, para cada
+\(z\in D_{r}\), la serie:
+\begin{displaymath}
+\sum_{n=0}^{\infty} \frac{f^{n}(z_{0})}{n!}(z-z_{0})^{n}
+\end{displaymath}
+converge en \(A\), y además: \(\sum_{n=0}^{\infty}
+    \frac{f^{n}(z_{0})}{n!}(z-z_{0})^{n}=f(z)\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-3-2]{}
+\begin{corollary}[Desarrollo en series de potencias]
+Sea \(A\subseteq \mathbb{C}\) abierto y sea \(f\colon A\to
+    \mathbb{C}\). Entonces \(f\) es analítica en \(A\) si y solo si
+para cada \(z_{0}\in A\) existe \(r>0\) tal que
+\(D(z_{0},r)\subseteq A\) y \(f\) es igual a una serie de
+potencias convergente en \(D(z_{0},r)\).
+\end{corollary}
+
+\begin{block}{}
+\begin{itemize}
+\item \(e^{z}=\sum_{n=0}^{\infty}\frac{z^{n}}{n!}\),
+\item \(\sin z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-1}}{(2n-1)!}\)
+\end{itemize}
+\end{block}
+\end{frame}
+\end{document}

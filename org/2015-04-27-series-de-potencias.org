@@ -1,0 +1,151 @@
+#+title: Series de potencias
+#+author: 
+#+date: 2015-04-20 9:00
+   
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Definición
+
+** 
+
+*** Serie de potencias					       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Una *serie de potencias* es una serie de la forma:
+    \begin{displaymath}
+    \sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n},
+    \end{displaymath}
+    donde los \(a_{n}\) y \(z_{0}\) son números complejos.
+
+
+* Teoremas
+
+** 
+
+*** Abel-Weierstrass 							    :B_lemma:
+    :PROPERTIES:
+    :BEAMER_env: lemma
+    :END:
+    Sean \(r_{0}\geq0\) y \(M\) una constante tal que
+    \(|a_{n}|r_{0}^{n}\leq M\) para todo \(n\geq0\). Entonces, para
+    cada \(r<r_{0}\) la serie
+    \(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\) converge uniformemente y
+    absolutamente en \(D_{r}=\{z\in \mathbb{C}\mid |z-z_{0}|\leq r\}\).
+
+*** Convergencia de series de potencias 			  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Dada una serie de potencias
+    \(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\), existe un único número
+    \(R\geq0\), (posiblemente \(+\infty\)), llamado *radio de
+    convergencia*, tal que si \(|z-z_{0}|<R\) la serie converge, y si
+    \(|z-z_{0}|>R\), la serie diverge. Además, la convergencia es
+    uniforme en cada disco cerrado contenido en \(D=\{z\in
+    \mathbb{C}\mid |z-z_{0}|< R\}\). 
+
+** Corolario
+
+*** Serie es analítica 						:B_corollary:
+    :PROPERTIES:
+    :BEAMER_env: corollary
+    :END:
+    Una serie de potencias \(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\)
+    es una función analítica en su /círculo de convergencia/ \(D=\{z\in
+    \mathbb{C}\mid |z-z_{0}|< R\}\). 
+
+** 
+
+*** Derivación de series de potencias				  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea
+    \begin{displaymath}
+    f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n},
+    \end{displaymath}
+    una función analítica dada por una serie de potencias en su
+    círculo de convergencia. Entonces:
+    - \(f'(z)=\sum_{n=1}^{\infty}na_{n}(z-z_{0})^{n-1}\) y la
+      serie para \(f'(z)\) tiene el mismo radio de convergencia que la
+      serie para \(f(z)\).
+    - Además, \(a_{n}=\frac{f^{(n)}(z_{0})}{n!}\).
+
+** 
+
+*** Unicidad 							:B_corollary:
+    :PROPERTIES:
+    :BEAMER_env: corollary
+    :END:
+    Si
+    \begin{displaymath}
+    \sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}=f(z)=\sum_{n=0}^{\infty}b_{n}(z-z_{0})^{n}
+    \end{displaymath}
+    para todo \(z\) en \(D(z_{0},r)\) con \(r>0\), entonces
+    \(a_{n}=b_{n}\) para toda \(n\).
+
+** 
+
+*** Cálculo del radio de convergencia 				  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Dada la serie de potencias
+    \(\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}\):
+
+    - si
+      \begin{displaymath}
+      \lim_{n\to\infty}\frac{|a_{n}|}{|a_{n+1}|}
+      \end{displaymath}
+      existe, es igual a \(R\), el radio de convergencia de la serie.
+    - Si \(\rho=\lim_{n\to\infty} \sqrt[n]{|a_{n}|}\) existe, entonces
+      \(R=\frac{1}{\rho}\) es el radio de convergencia. (\(R=\infty\)
+      si \(\rho=0\)).
+
+* Teorema de Taylor
+
+** 
+
+*** Taylor							  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+
+    Sea \(f\colon A\to \mathbb{C}\) analítica con \(A\subseteq
+    \mathbb{C}\) abierto. Sean \(z_{0}\in A\) y \(r>0\) tal que
+    \(D_{r}=\{z\mid |z-z_{0}|<r\}\subseteq A\). Entonces, para cada
+    \(z\in D_{r}\), la serie:
+    \begin{displaymath}
+    \sum_{n=0}^{\infty} \frac{f^{n}(z_{0})}{n!}(z-z_{0})^{n}
+    \end{displaymath}
+    converge en \(A\), y además: \(\sum_{n=0}^{\infty}
+    \frac{f^{n}(z_{0})}{n!}(z-z_{0})^{n}=f(z)\).
+
+** 
+
+*** Desarrollo en series de potencias 				:B_corollary:
+    :PROPERTIES:
+    :BEAMER_env: corollary
+    :END:
+
+    Sea \(A\subseteq \mathbb{C}\) abierto y sea \(f\colon A\to
+    \mathbb{C}\). Entonces \(f\) es analítica en \(A\) si y solo si
+    para cada \(z_{0}\in A\) existe \(r>0\) tal que
+    \(D(z_{0},r)\subseteq A\) y \(f\) es igual a una serie de
+    potencias convergente en \(D(z_{0},r)\).
+
+*** 
+    - \(e^{z}=\sum_{n=0}^{\infty}\frac{z^{n}}{n!}\),
+    - \(\sin z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-1}}{(2n-1)!}\)

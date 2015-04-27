@@ -9,9 +9,7 @@
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Definiciones básicas Discos Disco Sean y un real positivo. Definimos el
-disco con centro en y radio , denotado , como
-el conjunto: Disco cerrado Sean &hellip;">
+  <meta name="description" content="Funciones continuas Continuidad Continuidad en un punto Sean , y una función. Decimos que es continua en si y solo si para cada existe tal que: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +94,159 @@ el conjunto: Disco cerrado Sean &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/variable-compleja/blog/2015/01/26/continuidad-y-limites/">Continuidad Y Límites</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-26T09:00:00-06:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1 id="funciones-continuas">Funciones continuas</h1>
+
+<h2 id="continuidad">Continuidad</h2>
+
+<ul>
+  <li>
+    <p>Continuidad en un punto</p>
+
+    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script>, <script type="math/tex">a\in A</script> y <script type="math/tex">f\colon A\to
+    \mathbb{C}</script> una función. Decimos que <script type="math/tex">f</script> es <strong>continua en
+<script type="math/tex">a</script></strong> si y solo si para cada <script type="math/tex">\epsilon>0</script> existe
+<script type="math/tex">\delta>0</script> tal que:</p>
+
+    <script type="math/tex; mode=display">
+f(A\cap D(a,\delta))\subseteq D(f(a),\epsilon).
+</script>
+  </li>
+  <li>
+
+    <p>Decimos que <script type="math/tex">f\colon A\to \mathbb{C}</script> es <strong>continua</strong> si es continua
+en <script type="math/tex">a</script> para todo <script type="math/tex">a\in A</script>.</p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script>, <script type="math/tex">a\in A</script> y <script type="math/tex">f\colon A\to
+    \mathbb{C}</script> una función. Entonces <script type="math/tex">f</script> es continua en <script type="math/tex">a</script>
+si y solo si para toda sucesión <script type="math/tex">z_{n}</script> en <script type="math/tex">A</script> tal que
+<script type="math/tex">z_{n}\to a</script>, se tiene que <script type="math/tex">f(z_{n})\to f(a)</script>.</p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">f,g\colon A\to \mathbb{C}</script> funciones continuas en <script type="math/tex">a\in
+    A</script>. Entonces <script type="math/tex">cf</script>, <script type="math/tex">\Re f</script>, <script type="math/tex">\Im f</script>, <script type="math/tex">\overline{f}</script>,
+<script type="math/tex">f+g</script>, <script type="math/tex">fg</script> son continuas en <script type="math/tex">a</script>. En particular si <script type="math/tex">f,g</script> son
+continuas, entonces cada una de las funciones listadas son
+continuas.</p>
+  </li>
+  <li>
+
+    <p>Si <script type="math/tex">g(a)\ne 0</script>, entonces <script type="math/tex">\frac{f}{g}</script> es continua en
+<script type="math/tex">a</script>. Si <script type="math/tex">g(a)\ne 0</script> para todo <script type="math/tex">a\in A</script>, entonces
+<script type="math/tex">\frac{f}{g}</script> es continua. </p>
+  </li>
+  <li>
+
+    <p>Sean <script type="math/tex">f\colon A\to \mathbb{C}</script>, <script type="math/tex">g\colon B\to \mathbb{C}</script>
+funciones tales que <script type="math/tex">f(A)\subseteq B</script>. Si <script type="math/tex">f</script> es continua en
+<script type="math/tex">a\in A</script> y <script type="math/tex">g</script> es continua en <script type="math/tex">f(a)</script>, entonces <script type="math/tex">g\circ f</script>
+es continua en <script type="math/tex">a</script>. En particular, si <script type="math/tex">f</script> y <script type="math/tex">g</script> son
+continuas, entonces <script type="math/tex">g\circ f</script> es continua.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">U\subseteq \mathbb{C}</script> abierto. Una función <script type="math/tex">f\colon U\to
+    \mathbb{C}</script> es continua si y solo si para todo abierto
+<script type="math/tex">V\subseteq \mathbb{C}</script> se tiene que el conjunto</p>
+
+    <script type="math/tex; mode=display">
+f^{-1}(V)=\{z\in U\mid f(z)\in V\},
+</script>
+
+    <p>es abierto.</p>
+  </li>
+</ul>
+
+<h1 id="lmites">Límites</h1>
+
+<h2 id="definicin-de-lmite">Definición de límite</h2>
+
+<ul>
+  <li>
+
+    <p>Dados <script type="math/tex">a\in \mathbb{C}</script> y <script type="math/tex">r>0</script>, denotaremos con
+<script type="math/tex">D^{*}(a,r)</script> al conjunto <script type="math/tex">D(a,r)-\{a\}</script>.</p>
+  </li>
+  <li>
+    <p>Límite</p>
+
+    <p>Sean <script type="math/tex">f\colon A\to \mathbb{C}</script> una función y <script type="math/tex">a\in \mathbb{C}</script>
+un punto de acumulación de <script type="math/tex">A</script>. Decimos que <script type="math/tex">c\in \mathbb{C}</script>
+es <strong>límite de <script type="math/tex">f</script> en <script type="math/tex">a</script></strong>, denotado <script type="math/tex">\lim_{z\to a}f(z)=c</script>, si
+para todo <script type="math/tex">\epsilon>0</script> existe <script type="math/tex">\delta>0</script> tal que:</p>
+
+    <script type="math/tex; mode=display">
+f(A\cap D^{*}(a,\delta))\subseteq D(c,\epsilon).
+</script>
+  </li>
+</ul>
+
+<h2 id="relacin-con-continuidad">Relación con continuidad</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">a\in A</script> tal que <script type="math/tex">a</script> es punto de acumulación de
+<script type="math/tex">A</script>. Entonces <script type="math/tex">f\colon A\to \mathbb{C}</script> es continua en <script type="math/tex">a</script>
+si y solo si <script type="math/tex">\lim_{z\to a}f(z)=f(a)</script>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">a</script> punto de acumulación de <script type="math/tex">A\in \mathbb{C}</script>. Entonces
+<script type="math/tex">f\colon A\to \mathbb{C}</script> tiene límite <script type="math/tex">c</script> en <script type="math/tex">a</script> si y solo
+si para toda sucesión <script type="math/tex">z_{n}</script> en <script type="math/tex">A-\{a\}</script> con límite <script type="math/tex">a</script> se
+tiene que <script type="math/tex">f(z_{n})</script> converge a <script type="math/tex">c</script>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">a</script> un punto de acumulación de
+<script type="math/tex">A</script>. Sean <script type="math/tex">f,g\colon A\to \mathbb{C}</script> funciones tales que
+<script type="math/tex">\lim_{z\to a}f(z)=l_{1}</script> y <script type="math/tex">\lim_{z\to
+    a}g(z)=l_{2}</script>. Entonces <script type="math/tex">cf</script>, <script type="math/tex">\Re f</script>, <script type="math/tex">\Im f</script>,
+<script type="math/tex">\overline{f}</script>, <script type="math/tex">f+g</script>, <script type="math/tex">fg</script> tienen todas límite cuando
+<script type="math/tex">z\to a</script>, y su valor es <script type="math/tex">cl_{1}</script>, <script type="math/tex">\Re l_{1}</script>, <script type="math/tex">\Im
+    l_{1}</script>, <script type="math/tex">\overline{l_{1}}</script>, <script type="math/tex">l_{1}+l_{2}</script> y <script type="math/tex">l_{1}l_{2}</script>,
+respectivamente. Si <script type="math/tex">l_{2}\ne 0</script>, entonces <script type="math/tex">\lim_{z\to
+    a}\frac{f}{g}</script> existe y es igual a <script type="math/tex">\frac{l_{1}}{l_{2}}</script>.</p>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -743,6 +894,10 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/variable-compleja/blog/2015/04/20/series-de-potencias/">Series De Potencias</a>
+      </li>
+    
+      <li class="post">
         <a href="/variable-compleja/blog/2015/04/20/ejemplos-de-series/">Ejemplos De Series</a>
       </li>
     
@@ -756,10 +911,6 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
     
       <li class="post">
         <a href="/variable-compleja/blog/2015/04/06/modulo-maximo/">Teoremas Del Módulo Máximo Y Del Mapeo Abierto</a>
-      </li>
-    
-      <li class="post">
-        <a href="/variable-compleja/blog/2015/02/16/teoremas-sobre-integrales/">Teoremas Sobre Integrales</a>
       </li>
     
   </ul>

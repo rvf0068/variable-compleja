@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Consecuencias De Las Ecuaciones De Cauchy-Riemann - Variable compleja</title>
+  <title>Series De Potencias - Variable compleja</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Consecuencias Condición suficiente para derivabilidad Sea donde es
-abierto. Supongamos que existen en
-, son continuas en , y satisfacen allí las &hellip;">
+  <meta name="description" content="Definición Serie de potencias Una serie de potencias es una serie de la forma: donde los y son números complejos. Teoremas Abel-Weierstrass Sean y &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ abierto. Supongamos que existen en
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann">
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/04/20/series-de-potencias">
   <link href="/variable-compleja/favicon.png" rel="icon">
   <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
@@ -99,7 +97,7 @@ abierto. Supongamos que existen en
   
   <header>
     
-      <h1 class="entry-title">Consecuencias De Las Ecuaciones De Cauchy-Riemann</h1>
+      <h1 class="entry-title">Series De Potencias</h1>
     
     
       <p class="meta">
@@ -115,87 +113,160 @@ abierto. Supongamos que existen en
   
 
 
-<time datetime="2015-02-06T07:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-04-20T09:00:00-05:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1 id="consecuencias">Consecuencias</h1>
-
-<h2 id="condicin-suficiente-para-derivabilidad">Condición suficiente para derivabilidad</h2>
+<div class="entry-content"><h1 id="definicin">Definición</h1>
 
 <ul>
   <li>
+    <p>Serie de potencias</p>
 
-    <p>Sea <script type="math/tex">f=u+iv\colon U\to \mathbb{C}</script> donde <script type="math/tex">U</script> es
-abierto. Supongamos que <script type="math/tex">u_{x},u_{y},v_{x},v_{y}</script> existen en
-<script type="math/tex">U</script>, son continuas en <script type="math/tex">z_{0}\in U</script>, y satisfacen allí las
-ecuaciones de Cauchy-Riemann, es decir,
-<script type="math/tex">u_{x}(z_{0})=v_{y}(z_{0})</script> y
-<script type="math/tex">v_{x}(z_{0})=-u_{y}(z_{0})</script>. Entonces <script type="math/tex">f</script> es derivable en
-<script type="math/tex">z_{0}</script>, y <script type="math/tex">f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})</script>.</p>
-  </li>
-</ul>
-
-<h2 id="dominios">Dominios</h2>
-
-<ul>
-  <li>
-
-    <p>Si <script type="math/tex">D\subseteq \mathbb{C}</script> es abierto y conexo, decimos que
-<script type="math/tex">D</script> es un <strong>dominio</strong>.</p>
-  </li>
-  <li>
-
-    <p>Sea <script type="math/tex">u\colon D\subseteq \mathbb{C}\to \mathbb{R}</script> donde <script type="math/tex">D</script> es
-un dominio. Si <script type="math/tex">u_{x}(z)=u_{y}(z)=0</script> para todo <script type="math/tex">z\in D</script>,
-entonces <script type="math/tex">u</script> es constante.</p>
-  </li>
-</ul>
-
-<h2 id="funciones-analticas">Funciones analíticas</h2>
-
-<ul>
-  <li>
-
-    <p>Sea <script type="math/tex">U\subseteq \mathbb{C}</script> un abierto. Si <script type="math/tex">f</script> es derivable en
-todo <script type="math/tex">z\in U</script>, decimos que <script type="math/tex">f</script> es <strong>analítica</strong> en <script type="math/tex">U</script>.</p>
-  </li>
-  <li>
-
-    <p>Sea <script type="math/tex">f</script> una función analítica en un dominio <script type="math/tex">D\subseteq
-    \mathbb{C}</script>. Si <script type="math/tex">f'(z)=0</script> para todo <script type="math/tex">z\in D</script>, entonces <script type="math/tex">f</script>
-es constante.</p>
-  </li>
-  <li>
-
-    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
-    \mathbb{C}</script>. Si alguna de las funciones <script type="math/tex">u,v,\vert f\vert </script> es constante
-en <script type="math/tex">D</script>, entonces <script type="math/tex">f</script> es constante en <script type="math/tex">D</script>.</p>
-  </li>
-</ul>
-
-<h2 id="funciones-armnicas">Funciones armónicas</h2>
-
-<ul>
-  <li>
-
-    <p>Sea <script type="math/tex">u\colon D\to \mathbb{R}</script>. El <strong>laplaciano</strong> de <script type="math/tex">u</script> es</p>
+    <p>Una <strong>serie de potencias</strong> es una serie de la forma:</p>
 
     <script type="math/tex; mode=display">
-\bigtriangleup u=\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}
+\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n},
 </script>
 
-    <p>La función <script type="math/tex">u</script> es <strong>armónica</strong> si <script type="math/tex">\bigtriangleup u=0</script></p>
+    <p>donde los <script type="math/tex">a_{n}</script> y <script type="math/tex">z_{0}</script> son números complejos.</p>
+  </li>
+</ul>
+
+<h1 id="teoremas">Teoremas</h1>
+
+<ul>
+  <li>
+    <p>Abel-Weierstrass</p>
+
+    <p>Sean <script type="math/tex">r_{0}\geq0</script> y <script type="math/tex">M</script> una constante tal que
+<script type="math/tex">\vert a_{n}\vert r_{0}^{n}\leq M</script> para todo <script type="math/tex">n\geq0</script>. Entonces, para
+cada <script type="math/tex">% <![CDATA[
+r<r_{0} %]]></script> la serie
+<script type="math/tex">\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}</script> converge uniformemente y
+absolutamente en <script type="math/tex">D_{r}=\{z\in \mathbb{C}\mid \vert z-z_{0}\vert \leq r\}</script>.</p>
+  </li>
+  <li>
+    <p>Convergencia de series de potencias</p>
+
+    <p>Dada una serie de potencias
+<script type="math/tex">\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}</script>, existe un único número
+<script type="math/tex">R\geq0</script>, (posiblemente <script type="math/tex">+\infty</script>), llamado <strong>radio de
+convergencia</strong>, tal que si <script type="math/tex">% <![CDATA[
+\vert z-z_{0}\vert <R %]]></script> la serie converge, y si
+<script type="math/tex">\vert z-z_{0}\vert >R</script>, la serie diverge. Además, la convergencia es
+uniforme en cada disco cerrado contenido en <script type="math/tex">% <![CDATA[
+D=\{z\in
+    \mathbb{C}\mid \vert z-z_{0}\vert < R\} %]]></script>. </p>
+  </li>
+</ul>
+
+<h2 id="corolario">Corolario</h2>
+
+<ul>
+  <li>
+    <p>Serie es analítica</p>
+
+    <p>Una serie de potencias <script type="math/tex">\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}</script>
+es una función analítica en su <em>círculo de convergencia</em> <script type="math/tex">% <![CDATA[
+D=\{z\in
+    \mathbb{C}\mid \vert z-z_{0}\vert < R\} %]]></script>. </p>
+  </li>
+  <li>
+    <p>Derivación de series de potencias</p>
+
+    <p>Sea</p>
+
+    <script type="math/tex; mode=display">
+f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n},
+</script>
+
+    <p>una función analítica dada por una serie de potencias en su
+círculo de convergencia. Entonces:</p>
+
+    <ul>
+      <li><script type="math/tex">f'(z)=\sum_{n=1}^{\infty}na_{n}(z-z_{0})^{n-1}</script> y la
+serie para <script type="math/tex">f'(z)</script> tiene el mismo radio de convergencia que la
+serie para <script type="math/tex">f(z)</script>.</li>
+      <li>Además, <script type="math/tex">a_{n}=\frac{f^{(n)}(z_{0})}{n!}</script>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Unicidad</p>
+
+    <p>Si</p>
+
+    <script type="math/tex; mode=display">
+\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}=f(z)=\sum_{n=0}^{\infty}b_{n}(z-z_{0})^{n}
+</script>
+
+    <p>para todo <script type="math/tex">z</script> en <script type="math/tex">D(z_{0},r)</script> con <script type="math/tex">r>0</script>, entonces
+<script type="math/tex">a_{n}=b_{n}</script> para toda <script type="math/tex">n</script>.</p>
+  </li>
+  <li>
+    <p>Cálculo del radio de convergencia</p>
+
+    <p>Dada la serie de potencias
+<script type="math/tex">\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}</script>:</p>
+
+    <ul>
+      <li>
+        <p>si</p>
+
+        <script type="math/tex; mode=display">
+\lim_{n\to\infty}\frac{|a_{n}|}{|a_{n+1}|}
+</script>
+
+        <p>existe, es igual a <script type="math/tex">R</script>, el radio de convergencia de la serie.</p>
+      </li>
+      <li>
+        <p>Si <script type="math/tex">\rho=\lim_{n\to\infty} \sqrt[n]{\vert a_{n}\vert }</script> existe, entonces
+<script type="math/tex">R=\frac{1}{\rho}</script> es el radio de convergencia. (<script type="math/tex">R=\infty</script>
+si <script type="math/tex">\rho=0</script>).</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="teorema-de-taylor">Teorema de Taylor</h1>
+
+<ul>
+  <li>
+    <p>Taylor</p>
+
+    <p>Sea <script type="math/tex">f\colon A\to \mathbb{C}</script> analítica con <script type="math/tex">A\subseteq
+    \mathbb{C}</script> abierto. Sean <script type="math/tex">z_{0}\in A</script> y <script type="math/tex">r>0</script> tal que
+<script type="math/tex">% <![CDATA[
+D_{r}=\{z\mid \vert z-z_{0}\vert <r\}\subseteq A %]]></script>. Entonces, para cada
+<script type="math/tex">z\in D_{r}</script>, la serie:</p>
+
+    <script type="math/tex; mode=display">
+\sum_{n=0}^{\infty} \frac{f^{n}(z_{0})}{n!}(z-z_{0})^{n}
+</script>
+
+    <p>converge en <script type="math/tex">A</script>, y además: <script type="math/tex">\sum_{n=0}^{\infty}
+    \frac{f^{n}(z_{0})}{n!}(z-z_{0})^{n}=f(z)</script>.</p>
+  </li>
+  <li>
+    <p>Desarrollo en series de potencias</p>
+
+    <p>Sea <script type="math/tex">A\subseteq \mathbb{C}</script> abierto y sea <script type="math/tex">f\colon A\to
+    \mathbb{C}</script>. Entonces <script type="math/tex">f</script> es analítica en <script type="math/tex">A</script> si y solo si
+para cada <script type="math/tex">z_{0}\in A</script> existe <script type="math/tex">r>0</script> tal que
+<script type="math/tex">D(z_{0},r)\subseteq A</script> y <script type="math/tex">f</script> es igual a una serie de
+potencias convergente en <script type="math/tex">D(z_{0},r)</script>.</p>
   </li>
   <li>
 
-    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
-    \mathbb{C}</script>. Demostraremos más adelante que <script type="math/tex">u,v</script> son funciones
-de clase <script type="math/tex">C^{\infty}</script>. Suponiendo eso, se tiene que <script type="math/tex">u,v</script> son
-armónicas.</p>
+    <ul>
+      <li><script type="math/tex">e^{z}=\sum_{n=0}^{\infty}\frac{z^{n}}{n!}</script>,</li>
+      <li>
+        <script type="math/tex; mode=display">\sin z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-1}}{(2n-1)!}</script>
+      </li>
+    </ul>
   </li>
 </ul>
 </div>
@@ -220,7 +291,7 @@ armónicas.</p>
   
 
 
-<time datetime="2015-02-06T07:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-04-20T09:00:00-05:00" pubdate data-updated="true"></time>
       
 
 
@@ -228,7 +299,7 @@ armónicas.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/04/20/series-de-potencias/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/04/20/series-de-potencias/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -241,10 +312,8 @@ armónicas.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/variable-compleja/blog/2015/01/30/funciones-derivables/" title="Previous Post: Funciones derivables">&laquo; Funciones derivables</a>
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/04/20/ejemplos-de-series/" title="Previous Post: Ejemplos de series">&laquo; Ejemplos de series</a>
       
-      
-        <a class="basic-alignment right" href="/variable-compleja/blog/2015/02/09/funcion-exponencial/" title="Next Post: La función exponencial">La función exponencial &raquo;</a>
       
     </p>
   </footer>
@@ -311,8 +380,8 @@ armónicas.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/';
-        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/';
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/20/series-de-potencias/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/04/20/series-de-potencias/';
         var disqus_script = 'embed.js';
       
     (function () {

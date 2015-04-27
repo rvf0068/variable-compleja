@@ -23,7 +23,7 @@
 #+latex_header: \usepackage[spanish,mexico,es-noshorthands]{babel}
 # ver http://foro.migui.com/vb/showthread.php/9209-error-en-arrows-del-tikz
 
-#+options: H:2 toc:nil
+#+options: H:2 toc:nil tags:nil
 
 #+latex_header: % remove space between margin and lists
 #+latex_header: \usepackage{enumitem}
