@@ -1,4 +1,4 @@
-% Created 2015-04-27 Mon 11:25
+% Created 2015-05-04 Mon 09:01
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -60,7 +60,7 @@ label=\protect\usebeamerfont{enumerate item}%
 \tableofcontents
 
 \section{Definición}
-\label{orgheadline1}
+\label{sec:orgheadline1}
 
 \begin{frame}[label=sec-1-1]{}
 \begin{definition}[Serie de potencias]
@@ -72,9 +72,8 @@ donde los \(a_{n}\) y \(z_{0}\) son números complejos.
 \end{definition}
 \end{frame}
 
-
 \section{Teoremas}
-\label{orgheadline1}
+\label{sec:orgheadline1}
 
 \begin{frame}[label=sec-2-1]{}
 \begin{lemma}[Abel-Weierstrass]
@@ -151,7 +150,7 @@ si \(\rho=0\)).
 \end{frame}
 
 \section{Teorema de Taylor}
-\label{orgheadline1}
+\label{sec:orgheadline1}
 
 \begin{frame}[label=sec-3-1]{}
 \begin{theorem}[Taylor]
@@ -181,6 +180,12 @@ potencias convergente en \(D(z_{0},r)\).
 \item \(e^{z}=\sum_{n=0}^{\infty}\frac{z^{n}}{n!}\),
 \item \(\sin z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-1}}{(2n-1)!}\).
 \end{itemize}
+\end{block}
+
+\begin{block}{Observación}
+Se obtiene otra demostración de que si \(f\) tiene un cero de
+orden \(k\) en \(z_{0}\), entonces existe una función analítica
+\(g\) tal que \(f(z)=(z-z_{0})^{k}g(z)\), donde \(g(z_{0})\ne0\).
 \end{block}
 \end{frame}
 \end{document}

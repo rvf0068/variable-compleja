@@ -1,0 +1,117 @@
+% Created 2015-05-07 jue 16:19
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-05-04 9:00}
+\title{Series de Laurent}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Series de Laurent},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.3.1 (Org mode N/A)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Definición}
+\label{orgheadline1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{theorem}[Expansión de Laurent]
+Sean \(r_{1},r_{2}\) tales que \(0\leq r_{1}<r_{2}\), \(z_{0}\in
+    \mathbb{C}\). Sea \(A=\{z\in \mathbb{C}\mid
+    r_{1}<|z-z_{0}|<r_{2}\}\). Sea \(f\) analítica en \(A\). Entonces
+existen \(a_{n},b_{n}\in \mathbb{C}\) tales que:
+\begin{displaymath}
+f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{(z-z_{0})^{n}},
+\end{displaymath}
+donde ambas series del lado derecho convergen absolutamente en
+\(A\) y uniformemente en conjuntos de la forma
+\(B_{\rho_{1},\rho_{2}}=\{z\in \mathbb{C}\mid
+    \rho_{1}\leq|z-z_{0}|\leq\rho_{2}\}\), donde
+\(r_{1}<\rho_{1}<\rho_{2}<r_{2}\).
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{}
+\begin{theorem}[Continuación]
+Si \(\gamma\) es un círculo centrado en \(z_{0}\) de radio \(r\),
+con \(r_{1}<r<r_{2}\), los coeficientes \(a_{n},b_{n}\) están
+dados por:
+\begin{displaymath}
+a_{n}=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\xi)}{(\xi-z_{0})^{n+1}}d\xi,
+\end{displaymath}
+\begin{displaymath}
+b_{n}=\frac{1}{2\pi i}\int_{\gamma}f(\xi)(\xi-z_{0})^{n-1}\,d\xi
+\end{displaymath}
+Además, la \emph{expansión de Laurent} de \(f\) en \(A\) es única.
+\end{theorem}
+\end{frame}
+
+\section{}
+\label{orgheadline1}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{block}{Observación}
+La expansión de Laurent con \(r_{1}=0\) se utiliza para el estudio
+de singularidades.
+\end{block}
+\end{frame}
+
+\section{}
+\label{orgheadline1}
+\begin{frame}[label=sec-3-1]{}
+\begin{block}{Residuo}
+Si \(f\) tiene una singularidad aislada en \(z_{0}\), el valor del
+coeficiente \(b_{1}\) en la serie de Laurent definida en un disco
+perforado alrededor de \(z_{0}\) se llama el \emph{residuo}
+de \(f\) en \(z_{0}\).
+\end{block}
+\end{frame}
+\end{document}

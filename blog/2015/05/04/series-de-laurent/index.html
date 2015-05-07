@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Consecuencias De Las Ecuaciones De Cauchy-Riemann - Variable compleja</title>
+  <title>Series De Laurent - Variable compleja</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Consecuencias Condición suficiente para derivabilidad Sea donde es
-abierto. Supongamos que existen en
-, son continuas en , y satisfacen allí las &hellip;">
+  <meta name="description" content="Definición Expansión de Laurent Sean tales que , . Sea . Sea analítica en . Entonces
+existen tales que: donde ambas series del lado derecho convergen &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ abierto. Supongamos que existen en
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann">
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/05/04/series-de-laurent">
   <link href="/variable-compleja/favicon.png" rel="icon">
   <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
@@ -99,7 +98,7 @@ abierto. Supongamos que existen en
   
   <header>
     
-      <h1 class="entry-title">Consecuencias De Las Ecuaciones De Cauchy-Riemann</h1>
+      <h1 class="entry-title">Series De Laurent</h1>
     
     
       <p class="meta">
@@ -115,87 +114,68 @@ abierto. Supongamos que existen en
   
 
 
-<time datetime="2015-02-06T07:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-05-04T09:00:00-05:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1 id="consecuencias">Consecuencias</h1>
-
-<h2 id="condicin-suficiente-para-derivabilidad">Condición suficiente para derivabilidad</h2>
+<div class="entry-content"><h1 id="definicin">Definición</h1>
 
 <ul>
   <li>
+    <p>Expansión de Laurent</p>
 
-    <p>Sea <script type="math/tex">f=u+iv\colon U\to \mathbb{C}</script> donde <script type="math/tex">U</script> es
-abierto. Supongamos que <script type="math/tex">u_{x},u_{y},v_{x},v_{y}</script> existen en
-<script type="math/tex">U</script>, son continuas en <script type="math/tex">z_{0}\in U</script>, y satisfacen allí las
-ecuaciones de Cauchy-Riemann, es decir,
-<script type="math/tex">u_{x}(z_{0})=v_{y}(z_{0})</script> y
-<script type="math/tex">v_{x}(z_{0})=-u_{y}(z_{0})</script>. Entonces <script type="math/tex">f</script> es derivable en
-<script type="math/tex">z_{0}</script>, y <script type="math/tex">f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})</script>.</p>
-  </li>
-</ul>
-
-<h2 id="dominios">Dominios</h2>
-
-<ul>
-  <li>
-
-    <p>Si <script type="math/tex">D\subseteq \mathbb{C}</script> es abierto y conexo, decimos que
-<script type="math/tex">D</script> es un <strong>dominio</strong>.</p>
-  </li>
-  <li>
-
-    <p>Sea <script type="math/tex">u\colon D\subseteq \mathbb{C}\to \mathbb{R}</script> donde <script type="math/tex">D</script> es
-un dominio. Si <script type="math/tex">u_{x}(z)=u_{y}(z)=0</script> para todo <script type="math/tex">z\in D</script>,
-entonces <script type="math/tex">u</script> es constante.</p>
-  </li>
-</ul>
-
-<h2 id="funciones-analticas">Funciones analíticas</h2>
-
-<ul>
-  <li>
-
-    <p>Sea <script type="math/tex">U\subseteq \mathbb{C}</script> un abierto. Si <script type="math/tex">f</script> es derivable en
-todo <script type="math/tex">z\in U</script>, decimos que <script type="math/tex">f</script> es <strong>analítica</strong> en <script type="math/tex">U</script>.</p>
-  </li>
-  <li>
-
-    <p>Sea <script type="math/tex">f</script> una función analítica en un dominio <script type="math/tex">D\subseteq
-    \mathbb{C}</script>. Si <script type="math/tex">f'(z)=0</script> para todo <script type="math/tex">z\in D</script>, entonces <script type="math/tex">f</script>
-es constante.</p>
-  </li>
-  <li>
-
-    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
-    \mathbb{C}</script>. Si alguna de las funciones <script type="math/tex">u,v,\vert f\vert </script> es constante
-en <script type="math/tex">D</script>, entonces <script type="math/tex">f</script> es constante en <script type="math/tex">D</script>.</p>
-  </li>
-</ul>
-
-<h2 id="funciones-armnicas">Funciones armónicas</h2>
-
-<ul>
-  <li>
-
-    <p>Sea <script type="math/tex">u\colon D\to \mathbb{R}</script>. El <strong>laplaciano</strong> de <script type="math/tex">u</script> es</p>
+    <p>Sean <script type="math/tex">r_{1},r_{2}</script> tales que <script type="math/tex">% <![CDATA[
+0\leq r_{1}<r_{2} %]]></script>, <script type="math/tex">z_{0}\in
+    \mathbb{C}</script>. Sea <script type="math/tex">% <![CDATA[
+A=\{z\in \mathbb{C}\mid
+    r_{1}<\vert z-z_{0}\vert <r_{2}\} %]]></script>. Sea <script type="math/tex">f</script> analítica en <script type="math/tex">A</script>. Entonces
+existen <script type="math/tex">a_{n},b_{n}\in \mathbb{C}</script> tales que:</p>
 
     <script type="math/tex; mode=display">
-\bigtriangleup u=\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}
+f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{(z-z_{0})^{n}},
 </script>
 
-    <p>La función <script type="math/tex">u</script> es <strong>armónica</strong> si <script type="math/tex">\bigtriangleup u=0</script></p>
+    <p>donde ambas series del lado derecho convergen absolutamente en
+<script type="math/tex">A</script> y uniformemente en conjuntos de la forma
+<script type="math/tex">B_{\rho_{1},\rho_{2}}=\{z\in \mathbb{C}\mid
+    \rho_{1}\leq\vert z-z_{0}\vert \leq\rho_{2}\}</script>, donde
+<script type="math/tex">% <![CDATA[
+r_{1}<\rho_{1}<\rho_{2}<r_{2} %]]></script>.</p>
   </li>
   <li>
+    <p>Continuación</p>
 
-    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
-    \mathbb{C}</script>. Demostraremos más adelante que <script type="math/tex">u,v</script> son funciones
-de clase <script type="math/tex">C^{\infty}</script>. Suponiendo eso, se tiene que <script type="math/tex">u,v</script> son
-armónicas.</p>
+    <p>Si <script type="math/tex">\gamma</script> es un círculo centrado en <script type="math/tex">z_{0}</script> de radio <script type="math/tex">r</script>,
+con <script type="math/tex">% <![CDATA[
+r_{1}<r<r_{2} %]]></script>, los coeficientes <script type="math/tex">a_{n},b_{n}</script> están
+dados por:</p>
+
+    <script type="math/tex; mode=display">
+a_{n}=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\xi)}{(\xi-z_{0})^{n+1}}d\xi,
+</script>
+
+    <script type="math/tex; mode=display">
+b_{n}=\frac{1}{2\pi i}\int_{\gamma}f(\xi)(\xi-z_{0})^{n-1}\,d\xi
+</script>
+
+    <p>Además, la <em>expansión de Laurent</em> de <script type="math/tex">f</script> en <script type="math/tex">A</script> es única.</p>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>La expansión de Laurent con <script type="math/tex">r_{1}=0</script> se utiliza para el estudio
+de singularidades.</p>
+  </li>
+  <li>
+    <p>Residuo</p>
+
+    <p>Si <script type="math/tex">f</script> tiene una singularidad aislada en <script type="math/tex">z_{0}</script>, el valor del
+coeficiente <script type="math/tex">b_{1}</script> en la serie de Laurent definida en un disco
+perforado alrededor de <script type="math/tex">z_{0}</script> se llama el <em>residuo</em>
+de <script type="math/tex">f</script> en <script type="math/tex">z_{0}</script>.</p>
   </li>
 </ul>
 </div>
@@ -220,7 +200,7 @@ armónicas.</p>
   
 
 
-<time datetime="2015-02-06T07:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-05-04T09:00:00-05:00" pubdate data-updated="true"></time>
       
 
 
@@ -228,7 +208,7 @@ armónicas.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/05/04/series-de-laurent/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/05/04/series-de-laurent/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -241,10 +221,8 @@ armónicas.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/variable-compleja/blog/2015/01/30/funciones-derivables/" title="Previous Post: Funciones derivables">&laquo; Funciones derivables</a>
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/04/20/series-de-potencias/" title="Previous Post: Series de potencias">&laquo; Series de potencias</a>
       
-      
-        <a class="basic-alignment right" href="/variable-compleja/blog/2015/02/09/funcion-exponencial/" title="Next Post: La función exponencial">La función exponencial &raquo;</a>
       
     </p>
   </footer>
@@ -311,8 +289,8 @@ armónicas.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/';
-        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/06/cauchy-riemann/';
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/05/04/series-de-laurent/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/05/04/series-de-laurent/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -29,7 +29,6 @@
     \end{displaymath}
     donde los \(a_{n}\) y \(z_{0}\) son números complejos.
 
-
 * Teoremas
 
 ** 
@@ -149,3 +148,8 @@
 *** 
     - \(e^{z}=\sum_{n=0}^{\infty}\frac{z^{n}}{n!}\),
     - \(\sin z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-1}}{(2n-1)!}\).
+
+*** Observación
+    Se obtiene otra demostración de que si \(f\) tiene un cero de
+    orden \(k\) en \(z_{0}\), entonces existe una función analítica
+    \(g\) tal que \(f(z)=(z-z_{0})^{k}g(z)\), donde \(g(z_{0})\ne0\).

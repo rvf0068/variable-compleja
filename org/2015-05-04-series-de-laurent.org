@@ -1,0 +1,70 @@
+#+title: Series de Laurent
+#+author: 
+#+date: 2015-05-04 9:00
+    
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Definición
+
+** 
+
+*** Expansión de Laurent 					  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sean \(r_{1},r_{2}\) tales que \(0\leq r_{1}<r_{2}\), \(z_{0}\in
+    \mathbb{C}\). Sea \(A=\{z\in \mathbb{C}\mid
+    r_{1}<|z-z_{0}|<r_{2}\}\). Sea \(f\) analítica en \(A\). Entonces
+    existen \(a_{n},b_{n}\in \mathbb{C}\) tales que:
+    \begin{displaymath}
+    f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{(z-z_{0})^{n}},
+    \end{displaymath}
+    donde ambas series del lado derecho convergen absolutamente en
+    \(A\) y uniformemente en conjuntos de la forma
+    \(B_{\rho_{1},\rho_{2}}=\{z\in \mathbb{C}\mid
+    \rho_{1}\leq|z-z_{0}|\leq\rho_{2}\}\), donde
+    \(r_{1}<\rho_{1}<\rho_{2}<r_{2}\).
+
+** 
+
+*** Continuación 						  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Si \(\gamma\) es un círculo centrado en \(z_{0}\) de radio \(r\),
+    con \(r_{1}<r<r_{2}\), los coeficientes \(a_{n},b_{n}\) están
+    dados por:
+    \begin{displaymath}
+    a_{n}=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\xi)}{(\xi-z_{0})^{n+1}}d\xi,
+    \end{displaymath}
+    \begin{displaymath}
+    b_{n}=\frac{1}{2\pi i}\int_{\gamma}f(\xi)(\xi-z_{0})^{n-1}\,d\xi
+    \end{displaymath}
+    Además, la /expansión de Laurent/ de \(f\) en \(A\) es única.
+
+* 
+
+** 
+
+*** Observación
+    La expansión de Laurent con \(r_{1}=0\) se utiliza para el estudio
+    de singularidades.
+
+* 
+** 
+*** Residuo
+    Si \(f\) tiene una singularidad aislada en \(z_{0}\), el valor del
+    coeficiente \(b_{1}\) en la serie de Laurent definida en un disco
+    perforado alrededor de \(z_{0}\) se llama el /residuo/
+    de \(f\) en \(z_{0}\).

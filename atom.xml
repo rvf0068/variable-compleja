@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-04-27T11:26:37-05:00</updated>
+  <updated>2015-05-07T16:20:22-05:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Series De Laurent]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/05/04/series-de-laurent/"/>
+    <updated>2015-05-04T09:00:00-05:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/05/04/series-de-laurent</id>
+    <content type="html"><![CDATA[<h1 id="definicin">Definición</h1>
+
+<ul>
+  <li>
+    <p>Expansión de Laurent</p>
+
+    <p>Sean <script type="math/tex">r_{1},r_{2}</script> tales que <script type="math/tex">% &lt;![CDATA[
+0\leq r_{1}<r_{2} %]]&gt;</script>, <script type="math/tex">z_{0}\in
+    \mathbb{C}</script>. Sea <script type="math/tex">% &lt;![CDATA[
+A=\{z\in \mathbb{C}\mid
+    r_{1}<\vert z-z_{0}\vert <r_{2}\} %]]&gt;</script>. Sea <script type="math/tex">f</script> analítica en <script type="math/tex">A</script>. Entonces
+existen <script type="math/tex">a_{n},b_{n}\in \mathbb{C}</script> tales que:</p>
+
+    <script type="math/tex; mode=display">
+f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}+\sum_{n=1}^{\infty}\frac{b_{n}}{(z-z_{0})^{n}},
+</script>
+
+    <p>donde ambas series del lado derecho convergen absolutamente en
+<script type="math/tex">A</script> y uniformemente en conjuntos de la forma
+<script type="math/tex">B_{\rho_{1},\rho_{2}}=\{z\in \mathbb{C}\mid
+    \rho_{1}\leq\vert z-z_{0}\vert \leq\rho_{2}\}</script>, donde
+<script type="math/tex">% &lt;![CDATA[
+r_{1}<\rho_{1}<\rho_{2}<r_{2} %]]&gt;</script>.</p>
+  </li>
+  <li>
+    <p>Continuación</p>
+
+    <p>Si <script type="math/tex">\gamma</script> es un círculo centrado en <script type="math/tex">z_{0}</script> de radio <script type="math/tex">r</script>,
+con <script type="math/tex">% &lt;![CDATA[
+r_{1}<r<r_{2} %]]&gt;</script>, los coeficientes <script type="math/tex">a_{n},b_{n}</script> están
+dados por:</p>
+
+    <script type="math/tex; mode=display">
+a_{n}=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\xi)}{(\xi-z_{0})^{n+1}}d\xi,
+</script>
+
+    <script type="math/tex; mode=display">
+b_{n}=\frac{1}{2\pi i}\int_{\gamma}f(\xi)(\xi-z_{0})^{n-1}\,d\xi
+</script>
+
+    <p>Además, la <em>expansión de Laurent</em> de <script type="math/tex">f</script> en <script type="math/tex">A</script> es única.</p>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>La expansión de Laurent con <script type="math/tex">r_{1}=0</script> se utiliza para el estudio
+de singularidades.</p>
+  </li>
+  <li>
+    <p>Residuo</p>
+
+    <p>Si <script type="math/tex">f</script> tiene una singularidad aislada en <script type="math/tex">z_{0}</script>, el valor del
+coeficiente <script type="math/tex">b_{1}</script> en la serie de Laurent definida en un disco
+perforado alrededor de <script type="math/tex">z_{0}</script> se llama el <em>residuo</em>
+de <script type="math/tex">f</script> en <script type="math/tex">z_{0}</script>.</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Series De Potencias]]></title>
@@ -163,6 +228,13 @@ potencias convergente en <script type="math/tex">D(z_{0},r)</script>.</p>
       <li><script type="math/tex">e^{z}=\sum_{n=0}^{\infty}\frac{z^{n}}{n!}</script>,</li>
       <li><script type="math/tex">\sin z=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{z^{2n-1}}{(2n-1)!}</script>.</li>
     </ul>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>Se obtiene otra demostración de que si <script type="math/tex">f</script> tiene un cero de
+orden <script type="math/tex">k</script> en <script type="math/tex">z_{0}</script>, entonces existe una función analítica
+<script type="math/tex">g</script> tal que <script type="math/tex">f(z)=(z-z_{0})^{k}g(z)</script>, donde <script type="math/tex">g(z_{0})\ne0</script>.</p>
   </li>
 </ul>
 ]]></content>

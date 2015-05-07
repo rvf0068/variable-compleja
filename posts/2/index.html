@@ -9,7 +9,8 @@
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Funciones continuas Continuidad Continuidad en un punto Sean , y una función. Decimos que es continua en si y solo si para cada existe tal que: &hellip;">
+  <meta name="description" content="Definición Derivada Sean y en el interior de
+. Decimos que es derivable en si el límite existe. En caso de existir, al valor del límite lo denotamos &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +95,154 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/variable-compleja/blog/2015/01/30/funciones-derivables/">Funciones Derivables</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-30T07:00:00-06:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1 id="definicin">Definición</h1>
+
+<h2 id="derivada">Derivada</h2>
+
+<ul>
+  <li>
+
+    <p>Sean <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z_{0}</script> en el interior de
+<script type="math/tex">A</script>. Decimos que <script type="math/tex">f\colon A\to \mathbb{C}</script> es <strong>derivable en
+<script type="math/tex">z_{0}</script></strong> si el límite</p>
+
+    <script type="math/tex; mode=display">
+\lim_{z\to z_{0}}\frac{f(z)-f(z_{0})}{z-z_{0}}
+</script>
+
+    <p>existe. En caso de existir, al valor del límite lo denotamos por
+<script type="math/tex">f'(z_{0})</script>. </p>
+  </li>
+</ul>
+
+<h2 id="equivalencias-de-la-definicin">Equivalencias de la definición</h2>
+
+<ul>
+  <li>
+
+    <p>Dados <script type="math/tex">A\subseteq \mathbb{C}</script> y <script type="math/tex">z_{0}</script> en el interior de
+<script type="math/tex">A</script>, son equivalentes:</p>
+
+    <ul>
+      <li><script type="math/tex">f</script> es derivable en <script type="math/tex">z_{0}</script>.</li>
+      <li>
+        <p>El límite </p>
+
+        <script type="math/tex; mode=display">
+\lim_{h\to 0}\frac{f(z_{0}+h)-f(z_{0})}{h}
+</script>
+
+        <p>existe.</p>
+      </li>
+      <li>
+        <p>Existen <script type="math/tex">c\in \mathbb{C}</script> y una función <script type="math/tex">E\colon A\to
+      \mathbb{C}</script> tal que</p>
+
+        <script type="math/tex; mode=display">
+f(z)=f(z_{0})+c(z-z_{0})+E(z)
+</script>
+
+        <p>con <script type="math/tex">\lim_{z\to z_{0}}\frac{E(z)}{z-z_{0}}=0</script>.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="observaciones">Observaciones</h2>
+
+<ul>
+  <li>Dada <script type="math/tex">f\colon A\to \mathbb{C}</script>, se define <script type="math/tex">f'\colon B\to
+     \mathbb{C}</script>, donde <script type="math/tex">B\subseteq A</script> es el conjunto de puntos
+donde <script type="math/tex">f</script> es derivable.</li>
+  <li>Si <script type="math/tex">f</script> es derivable en <script type="math/tex">z_{0}</script>, entonces es continua en <script type="math/tex">z_{0}</script>.</li>
+</ul>
+
+<h1 id="reglas-de-derivacin">Reglas de derivación</h1>
+
+<ul>
+  <li>
+
+    <p>Supongamos que <script type="math/tex">f,g\colon A\to \mathbb{C}</script> son derivables en
+<script type="math/tex">z_{0}\in A</script> y <script type="math/tex">c\in \mathbb{C}</script>. Entonces <script type="math/tex">cf</script>, <script type="math/tex">f+g</script>,
+<script type="math/tex">fg</script> son derivables en <script type="math/tex">z_{0}</script>. También <script type="math/tex">\frac{f}{g}</script> es
+derivable en <script type="math/tex">z_{0}</script> si <script type="math/tex">g(z_{0})\ne 0</script>. Además:</p>
+
+    <ul>
+      <li><script type="math/tex">(cf)'(z_{0})=cf'(z_{0})</script>,</li>
+      <li><script type="math/tex">(f+g)(z_{0})=f(z_{0})+g(z_{0})</script>,</li>
+      <li><script type="math/tex">(fg)'(z_{0})=f'(z_{0})g(z_{0})+f(z_{0})g'(z_{0})</script>,</li>
+      <li><script type="math/tex">(\frac{f}{g})'(z_{0})=\frac{f'(z_{0})g(z_{0})-f(z_{0})g'(z_{0})}{g(z_{0})^{2}}</script>.</li>
+    </ul>
+  </li>
+  <li>
+
+    <p>Para todo <script type="math/tex">z\in \mathbb{Z}</script> se tiene que <script type="math/tex">f(z)=z^{n}</script> es
+diferenciable y <script type="math/tex">f'(z)=nz^{n-1}</script>.</p>
+  </li>
+</ul>
+
+<h2 id="regla-de-la-cadena">Regla de la cadena</h2>
+
+<ul>
+  <li>
+
+    <p>Sean <script type="math/tex">f\colon A\to \mathbb{C}</script> y <script type="math/tex">g\colon B\to \mathbb{C}</script>
+funciones tales que <script type="math/tex">f(A)\subseteq B</script>. Sean <script type="math/tex">f</script> derivable en
+<script type="math/tex">z_{0}\in A</script> y <script type="math/tex">g</script> derivable en <script type="math/tex">f(z_{0})</script>. Entonces
+<script type="math/tex">g\circ f</script> es derivable en <script type="math/tex">z_{0}</script>, y <script type="math/tex">(g\circ
+    f)'(z_{0})=g'(f(z_{0}))</script>. </p>
+  </li>
+</ul>
+
+<h1 id="ecuaciones-de-cauchy-riemann">Ecuaciones de Cauchy-Riemann</h1>
+
+<ul>
+  <li>
+    <p>Ecuaciones de Cauchy-Riemann</p>
+
+    <p>Sea <script type="math/tex">f\colon A\to \mathbb{C}</script> derivable en <script type="math/tex">z_{0}</script>. Si
+<script type="math/tex">f=u+iv</script>, entonces</p>
+
+    <script type="math/tex; mode=display">
+u_{x}(z_{0})=v_{y}(z_{0}),\qquad u_{y}(z_{0})=-v_{x}(z_{0}).
+</script>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -894,6 +1043,10 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/variable-compleja/blog/2015/05/04/series-de-laurent/">Series De Laurent</a>
+      </li>
+    
+      <li class="post">
         <a href="/variable-compleja/blog/2015/04/20/series-de-potencias/">Series De Potencias</a>
       </li>
     
@@ -907,10 +1060,6 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
     
       <li class="post">
         <a href="/variable-compleja/blog/2015/04/10/singularidades/">Clasificación De Singularidades</a>
-      </li>
-    
-      <li class="post">
-        <a href="/variable-compleja/blog/2015/04/06/modulo-maximo/">Teoremas Del Módulo Máximo Y Del Mapeo Abierto</a>
       </li>
     
   </ul>
