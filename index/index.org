@@ -78,6 +78,7 @@
   - 20 de abril. [[pres:2015-04-20-ejemplos-de-series][Ejemplos de series]]
   - 27 de abril. [[pres:2015-04-27-series-de-potencias][Series de potencias]]
   - 4 de mayo. [[pres:2015-05-04-series-de-laurent][Series de Laurent]]
+  - 8 de mayo. [[pres:2015-05-08-residuos][Residuos y cálculo de integrales]]
 
 * Exámenes
 

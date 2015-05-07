@@ -1,0 +1,119 @@
+#+title: Residuos y cálculo de integrales
+#+author: 
+#+date: 2015-05-08 7:00
+    
+#+setupfile: opciones.org
+
+#+beamer: \setbeamertemplate{navigation symbols}{}
+#+beamer: \setbeamertemplate{items}[circle]
+#+beamer: \languagepath{spanish}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
+#+latex_header: \usepackage{pgfplots}
+#+latex_header: \usetikzlibrary{babel}
+
+#+beamer: \tableofcontents
+
+* Definición
+
+** 
+
+*** Residuo						       :B_definition:
+    :PROPERTIES:
+    :BEAMER_env: definition
+    :END:
+    Supongamos que \(f\) tiene una singularidad aislada en
+    \(z_{0}\). Si la expansión de Laurent alrededor de \(z_{0}\) es:
+    \begin{displaymath}
+    \cdots+\frac{b_{2}}{(z-z_{0})^{2}}+\frac{b_{1}}{(z-z_{0})}+a_{0}+a_{1}(z-z_{0})+\cdots
+    \end{displaymath}
+    entonces \(b_{1}\) se llama el *residuo* de \(f\) en \(z_{0}\), y
+    se denota como
+    \begin{displaymath}
+    b_{1}=\mathrm{Res}(f,z_{0}).
+    \end{displaymath}
+
+*** Observación
+    Si \(\lim_{z\to z_{0}}(z-z_{0})f(z)\) existe, es igual a
+    \(\mathrm{Res}(f,z_{0})\). En tal caso, \(f(z)\) tiene una
+    singularidad removible en \(z_{0}\), o un polo de orden 1
+    (/simple/). 
+
+** 
+
+*** Cálculo de residuos 					  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sean \(g,h\) analíticas en \(z_{0}\), y supongamos que
+    \(g(z_{0})\ne 0\), \(h(z_{0})=0\), y \(h'(z_{0})\ne 0\). Entonces
+    \(f(z)=\frac{g(z)}{h(z)}\) tiene un polo simple en \(z_{0}\), y
+    \begin{displaymath}
+    \mathrm{Res}(f,z_{0})=\frac{g(z_{0})}{h'(z_{0})}
+    \end{displaymath}
+
+*** Generalización						  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Supongamos que \(g\) tiene un cero de orden \(k\) en \(z_{0}\) y
+    que \(h\) tiene un cero de orden \(k+1\) en \(z_{0}\). Entonces
+    \(f(z)=\frac{g(z)}{h(z)}\) tiene un polo simple en \(z_{0}\), y
+    \begin{displaymath}
+    \mathrm{Res}(f,z_{0})=(k+1)\frac{g^{(k)}(z_{0})}{h^{(k+1)}(z_{0})}
+    \end{displaymath}
+
+** 
+
+*** Residuo en polo de orden dos				  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sean \(g,h\) analíticas en \(z_{0}\), y supongamos que
+    \(g(z_{0})\ne 0\), \(h(z_{0})=h'(z_{0})=0\) y \(h''(z_{0})\ne
+    0\). Entonces \(f(z)=\frac{g(z)}{h(z)}\) tiene un polo de orden dos en
+    \(z_{0}\), y
+    \begin{displaymath}
+    \mathrm{Res}(f,z_{0})=2\frac{g'(z_{0})}{h''(z_{0})}-\frac{2}{3}\frac{g(z_{0})h'''(z_{0})}{[h''(z_{0})]^2}
+    \end{displaymath}    
+
+** 
+
+*** Teorema del residuo						  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(D\subseteq \mathbb{C}\) un dominio estrellado. Sean
+    \(z_{1}, z_{2},\ldots,z_{n}\in D\). Sea \(f\) una función
+    analítica en \(D-\{z_{1}, z_{2},\ldots,z_{n}\}\). Sea \(\gamma\)
+    una curva cerrada en \(D\). Entonces:
+    \begin{displaymath}
+    \int_{\gamma}f(z)\,dz=2\pi i\sum_{i=1}^{n}[\mathrm{Res}(f,z_{0})n(f,z_{0})].
+    \end{displaymath}
+
+* Cálculo de integrales reales
+
+** 
+
+*** Cálculo de integral impropia				  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    Sea \(f\) analítica en \(\mathbb{C}\), salvo por una cantidad
+    finita de polos, ninguno en el eje real. Supongamos que existen
+    \(M,R\) tales que:
+    \begin{displaymath}
+    |f(z)| \leq \frac{M}{|z|^2}.
+    \end{displaymath}
+    para \(|z|\geq R\). Entonces \(\int_{-\infty}^{\infty}f(x)\,dx\)
+    es igual a:
+    \begin{displaymath}
+    2\pi i\sum [\text{residuos de \(f\) en el semiplano superior}]
+    \end{displaymath}
+
+*** Observación
+    Las hipótesis del teorema anterior se cumplen para
+    \(f=\frac{P}{Q}\), si \(P,Q\) son polinomios, el grado de \(Q\) es
+    mayor que \(2+\mathrm{grado}(P)\), y \(Q\) no tiene ceros en el
+    eje real.

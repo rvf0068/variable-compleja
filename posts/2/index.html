@@ -9,8 +9,9 @@
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Definición Derivada Sean y en el interior de
-. Decimos que es derivable en si el límite existe. En caso de existir, al valor del límite lo denotamos &hellip;">
+  <meta name="description" content="Consecuencias Condición suficiente para derivabilidad Sea donde es
+abierto. Supongamos que existen en
+, son continuas en , y satisfacen allí las &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +96,117 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/variable-compleja/blog/2015/02/06/cauchy-riemann/">Consecuencias De Las Ecuaciones De Cauchy-Riemann</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-06T07:00:00-06:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1 id="consecuencias">Consecuencias</h1>
+
+<h2 id="condicin-suficiente-para-derivabilidad">Condición suficiente para derivabilidad</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">f=u+iv\colon U\to \mathbb{C}</script> donde <script type="math/tex">U</script> es
+abierto. Supongamos que <script type="math/tex">u_{x},u_{y},v_{x},v_{y}</script> existen en
+<script type="math/tex">U</script>, son continuas en <script type="math/tex">z_{0}\in U</script>, y satisfacen allí las
+ecuaciones de Cauchy-Riemann, es decir,
+<script type="math/tex">u_{x}(z_{0})=v_{y}(z_{0})</script> y
+<script type="math/tex">v_{x}(z_{0})=-u_{y}(z_{0})</script>. Entonces <script type="math/tex">f</script> es derivable en
+<script type="math/tex">z_{0}</script>, y <script type="math/tex">f'(z_{0})=u_{x}(z_{0})+iv_{x}(z_{0})</script>.</p>
+  </li>
+</ul>
+
+<h2 id="dominios">Dominios</h2>
+
+<ul>
+  <li>
+
+    <p>Si <script type="math/tex">D\subseteq \mathbb{C}</script> es abierto y conexo, decimos que
+<script type="math/tex">D</script> es un <strong>dominio</strong>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">u\colon D\subseteq \mathbb{C}\to \mathbb{R}</script> donde <script type="math/tex">D</script> es
+un dominio. Si <script type="math/tex">u_{x}(z)=u_{y}(z)=0</script> para todo <script type="math/tex">z\in D</script>,
+entonces <script type="math/tex">u</script> es constante.</p>
+  </li>
+</ul>
+
+<h2 id="funciones-analticas">Funciones analíticas</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">U\subseteq \mathbb{C}</script> un abierto. Si <script type="math/tex">f</script> es derivable en
+todo <script type="math/tex">z\in U</script>, decimos que <script type="math/tex">f</script> es <strong>analítica</strong> en <script type="math/tex">U</script>.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">f</script> una función analítica en un dominio <script type="math/tex">D\subseteq
+    \mathbb{C}</script>. Si <script type="math/tex">f'(z)=0</script> para todo <script type="math/tex">z\in D</script>, entonces <script type="math/tex">f</script>
+es constante.</p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
+    \mathbb{C}</script>. Si alguna de las funciones <script type="math/tex">u,v,\vert f\vert </script> es constante
+en <script type="math/tex">D</script>, entonces <script type="math/tex">f</script> es constante en <script type="math/tex">D</script>.</p>
+  </li>
+</ul>
+
+<h2 id="funciones-armnicas">Funciones armónicas</h2>
+
+<ul>
+  <li>
+
+    <p>Sea <script type="math/tex">u\colon D\to \mathbb{R}</script>. El <strong>laplaciano</strong> de <script type="math/tex">u</script> es</p>
+
+    <script type="math/tex; mode=display">
+\bigtriangleup u=\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}
+</script>
+
+    <p>La función <script type="math/tex">u</script> es <strong>armónica</strong> si <script type="math/tex">\bigtriangleup u=0</script></p>
+  </li>
+  <li>
+
+    <p>Sea <script type="math/tex">f=u+iv</script> analítica en un dominio <script type="math/tex">D\subseteq
+    \mathbb{C}</script>. Demostraremos más adelante que <script type="math/tex">u,v</script> son funciones
+de clase <script type="math/tex">C^{\infty}</script>. Suponiendo eso, se tiene que <script type="math/tex">u,v</script> son
+armónicas.</p>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1043,6 +1155,10 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/variable-compleja/blog/2015/05/08/residuos/">Residuos Y Cálculo De Integrales</a>
+      </li>
+    
+      <li class="post">
         <a href="/variable-compleja/blog/2015/05/04/series-de-laurent/">Series De Laurent</a>
       </li>
     
@@ -1056,10 +1172,6 @@ imaginaria</strong> de <script type="math/tex">z</script>. Escribimos <script ty
     
       <li class="post">
         <a href="/variable-compleja/blog/2015/04/17/series/">Series De Funciones Analíticas</a>
-      </li>
-    
-      <li class="post">
-        <a href="/variable-compleja/blog/2015/04/10/singularidades/">Clasificación De Singularidades</a>
       </li>
     
   </ul>

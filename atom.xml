@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-05-07T16:20:22-05:00</updated>
+  <updated>2015-05-07T18:06:12-05:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,120 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Residuos Y Cálculo De Integrales]]></title>
+    <link href="http://rvf0068.github.io/variable-compleja/blog/2015/05/08/residuos/"/>
+    <updated>2015-05-08T07:00:00-05:00</updated>
+    <id>http://rvf0068.github.io/variable-compleja/blog/2015/05/08/residuos</id>
+    <content type="html"><![CDATA[<h1 id="definicin">Definición</h1>
+
+<ul>
+  <li>
+    <p>Residuo</p>
+
+    <p>Supongamos que <script type="math/tex">f</script> tiene una singularidad aislada en
+<script type="math/tex">z_{0}</script>. Si la expansión de Laurent alrededor de <script type="math/tex">z_{0}</script> es:</p>
+
+    <script type="math/tex; mode=display">
+\cdots+\frac{b_{2}}{(z-z_{0})^{2}}+\frac{b_{1}}{(z-z_{0})}+a_{0}+a_{1}(z-z_{0})+\cdots
+</script>
+
+    <p>entonces <script type="math/tex">b_{1}</script> se llama el <strong>residuo</strong> de <script type="math/tex">f</script> en <script type="math/tex">z_{0}</script>, y
+se denota como</p>
+
+    <script type="math/tex; mode=display">
+b_{1}=\mathrm{Res}(f,z_{0}).
+</script>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>Si <script type="math/tex">\lim_{z\to z_{0}}(z-z_{0})f(z)</script> existe, es igual a
+<script type="math/tex">\mathrm{Res}(f,z_{0})</script>. En tal caso, <script type="math/tex">f(z)</script> tiene una
+singularidad removible en <script type="math/tex">z_{0}</script>, o un polo de orden 1
+(<em>simple</em>). </p>
+  </li>
+  <li>
+    <p>Cálculo de residuos</p>
+
+    <p>Sean <script type="math/tex">g,h</script> analíticas en <script type="math/tex">z_{0}</script>, y supongamos que
+<script type="math/tex">g(z_{0})\ne 0</script>, <script type="math/tex">h(z_{0})=0</script>, y <script type="math/tex">h'(z_{0})\ne 0</script>. Entonces
+<script type="math/tex">f(z)=\frac{g(z)}{h(z)}</script> tiene un polo simple en <script type="math/tex">z_{0}</script>, y</p>
+
+    <script type="math/tex; mode=display">
+\mathrm{Res}(f,z_{0})=\frac{g(z_{0})}{h'(z_{0})}
+</script>
+  </li>
+  <li>
+    <p>Generalización</p>
+
+    <p>Supongamos que <script type="math/tex">g</script> tiene un cero de orden <script type="math/tex">k</script> en <script type="math/tex">z_{0}</script> y
+que <script type="math/tex">h</script> tiene un cero de orden <script type="math/tex">k+1</script> en <script type="math/tex">z_{0}</script>. Entonces
+<script type="math/tex">f(z)=\frac{g(z)}{h(z)}</script> tiene un polo simple en <script type="math/tex">z_{0}</script>, y</p>
+
+    <script type="math/tex; mode=display">
+\mathrm{Res}(f,z_{0})=(k+1)\frac{g^{(k)}(z_{0})}{h^{(k+1)}(z_{0})}
+</script>
+  </li>
+  <li>
+    <p>Residuo en polo de orden dos</p>
+
+    <p>Sean <script type="math/tex">g,h</script> analíticas en <script type="math/tex">z_{0}</script>, y supongamos que
+<script type="math/tex">g(z_{0})\ne 0</script>, <script type="math/tex">h(z_{0})=h'(z_{0})=0</script> y <script type="math/tex">h''(z_{0})\ne
+    0</script>. Entonces <script type="math/tex">f(z)=\frac{g(z)}{h(z)}</script> tiene un polo de orden dos en
+<script type="math/tex">z_{0}</script>, y</p>
+
+    <script type="math/tex; mode=display">
+\mathrm{Res}(f,z_{0})=2\frac{g'(z_{0})}{h''(z_{0})}-\frac{2}{3}\frac{g(z_{0})h'''(z_{0})}{[h''(z_{0})]^2}
+</script>
+  </li>
+  <li>
+    <p>Teorema del residuo</p>
+
+    <p>Sea <script type="math/tex">D\subseteq \mathbb{C}</script> un dominio estrellado. Sean
+<script type="math/tex">z_{1}, z_{2},\ldots,z_{n}\in D</script>. Sea <script type="math/tex">f</script> una función
+analítica en <script type="math/tex">D-\{z_{1}, z_{2},\ldots,z_{n}\}</script>. Sea <script type="math/tex">\gamma</script>
+una curva cerrada en <script type="math/tex">D</script>. Entonces:</p>
+
+    <script type="math/tex; mode=display">
+\int_{\gamma}f(z)\,dz=2\pi i\sum_{i=1}^{n}[\mathrm{Res}(f,z_{0})n(f,z_{0})].
+</script>
+  </li>
+</ul>
+
+<h1 id="clculo-de-integrales-reales">Cálculo de integrales reales</h1>
+
+<ul>
+  <li>
+    <p>Cálculo de integral impropia</p>
+
+    <p>Sea <script type="math/tex">f</script> analítica en <script type="math/tex">\mathbb{C}</script>, salvo por una cantidad
+finita de polos, ninguno en el eje real. Supongamos que existen
+<script type="math/tex">M,R</script> tales que:</p>
+
+    <script type="math/tex; mode=display">
+|f(z)| \leq \frac{M}{|z|^2}.
+</script>
+
+    <p>para <script type="math/tex">\vert z\vert \geq R</script>. Entonces <script type="math/tex">\int_{-\infty}^{\infty}f(x)\,dx</script>
+es igual a:</p>
+
+    <script type="math/tex; mode=display">
+2\pi i\sum [\text{residuos de \(f\) en el semiplano superior}]
+</script>
+  </li>
+  <li>
+    <p>Observación</p>
+
+    <p>Las hipótesis del teorema anterior se cumplen para
+<script type="math/tex">f=\frac{P}{Q}</script>, si <script type="math/tex">P,Q</script> son polinomios, el grado de <script type="math/tex">Q</script> es
+mayor que <script type="math/tex">2+\mathrm{grado}(P)</script>, y <script type="math/tex">Q</script> no tiene ceros en el
+eje real.</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Series De Laurent]]></title>

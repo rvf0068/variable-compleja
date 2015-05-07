@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>La Función Exponencial - Variable compleja</title>
+  <title>Residuos Y Cálculo De Integrales - Variable compleja</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Definición Observemos que las funciones y satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
-. La función de variable compleja se llama &hellip;">
+  <meta name="description" content="Definición Residuo Supongamos que tiene una singularidad aislada en
+. Si la expansión de Laurent alrededor de es: entonces se llama el residuo de en &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/02/09/funcion-exponencial">
+  <link rel="canonical" href="http://rvf0068.github.io/variable-compleja/blog/2015/05/08/residuos">
   <link href="/variable-compleja/favicon.png" rel="icon">
   <link href="/variable-compleja/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/variable-compleja/atom.xml" rel="alternate" title="Variable compleja" type="application/atom+xml">
@@ -98,7 +98,7 @@
   
   <header>
     
-      <h1 class="entry-title">La Función Exponencial</h1>
+      <h1 class="entry-title">Residuos Y Cálculo De Integrales</h1>
     
     
       <p class="meta">
@@ -114,7 +114,7 @@
   
 
 
-<time datetime="2015-02-09T09:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-05-08T07:00:00-05:00" pubdate data-updated="true"></time>
         
       </p>
     
@@ -125,164 +125,106 @@
 
 <ul>
   <li>
+    <p>Residuo</p>
 
-    <p>Observemos que las funciones <script type="math/tex">u=e^{x}\cos y</script> y <script type="math/tex">v=e^{x}\sin y</script>
-satisfacen las ecuaciones de Cauchy-Riemann en el plano complejo
-<script type="math/tex">\mathbb{C}</script>. </p>
-  </li>
-  <li>
-
-    <p>La función de variable compleja</p>
+    <p>Supongamos que <script type="math/tex">f</script> tiene una singularidad aislada en
+<script type="math/tex">z_{0}</script>. Si la expansión de Laurent alrededor de <script type="math/tex">z_{0}</script> es:</p>
 
     <script type="math/tex; mode=display">
-e^{z}=e^{x+iy}=e^{x}\cos y+ie^{x}\sin y
+\cdots+\frac{b_{2}}{(z-z_{0})^{2}}+\frac{b_{1}}{(z-z_{0})}+a_{0}+a_{1}(z-z_{0})+\cdots
 </script>
 
-    <p>se llama <strong>función exponencial compleja</strong>.</p>
-  </li>
-</ul>
-
-<h2 id="propiedades">Propiedades</h2>
-
-<ul>
-  <li><script type="math/tex">(e^{z})'=e^{z}</script>.</li>
-  <li><script type="math/tex">e^{a+b}=e^{a}e^{b}</script> para todos <script type="math/tex">a,b\in \mathbb{C}</script>.</li>
-  <li><script type="math/tex">e^{z}\ne 0</script> para todo <script type="math/tex">z\in \mathbb{C}</script>.</li>
-  <li><script type="math/tex">f(z)=e^{z}</script> es una función <strong>entera</strong>, es decir, es analítica en
-el plano complejo <script type="math/tex">\mathbb{C}</script>.</li>
-</ul>
-
-<h1 id="las-funciones-trigonomtricas">Las funciones trigonométricas</h1>
-
-<ul>
-  <li>
-    <p>Seno y coseno</p>
-
-    <p>Las funciones trigonométricas de variable compleja se definen
-como:</p>
+    <p>entonces <script type="math/tex">b_{1}</script> se llama el <strong>residuo</strong> de <script type="math/tex">f</script> en <script type="math/tex">z_{0}</script>, y
+se denota como</p>
 
     <script type="math/tex; mode=display">
-\cos z=\frac{e^{iz}+e^{-iz}}{2},\qquad \sin z=\frac{e^{iz}-e^{-iz}}{2i}
+b_{1}=\mathrm{Res}(f,z_{0}).
 </script>
-  </li>
-  <li>
-    <p>Propiedades</p>
-
-    <ul>
-      <li><script type="math/tex">e^{iz}=\cos z+i\sin z</script> (fórmula de Euler),</li>
-      <li><script type="math/tex">\cos^{2} z+\sin^{2}z=1</script>,</li>
-      <li><script type="math/tex">(\cos z)'=-\sin z</script>, <script type="math/tex">(\sin z)'=\cos z</script>,</li>
-      <li><script type="math/tex">\cos(a+b)=\cos a\cos b-\sin a\sin b</script>, <script type="math/tex">\sin(a+b)=\cos a\sin
-      b+\sin a\cos b</script>.</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="logaritmo">Logaritmo</h1>
-
-<h2 id="definicin-1">Definición</h2>
-
-<ul>
-  <li>
-    <p>Logaritmo</p>
-
-    <p>Dado <script type="math/tex">w\in \mathbb{C}</script>, se define <script type="math/tex">z=\log w</script> como una solución
-de la ecuación <script type="math/tex">e^{z}=w</script>.</p>
-  </li>
-  <li>
-    <p>Observaciones</p>
-
-    <ul>
-      <li>Como <script type="math/tex">e^{z}\ne 0</script> para todo <script type="math/tex">z\in \mathbb{C}</script>, se obtiene
-que <script type="math/tex">0</script> no tiene logaritmo.</li>
-      <li>
-        <p>Sea <script type="math/tex">w\ne 0</script>. Entonces <script type="math/tex">e^{x+iy}=w</script> es equivalente a:</p>
-
-        <script type="math/tex; mode=display">
-e^{x}=|w|,\qquad e^{iy}=\frac{w}{|w|}.
-</script>
-      </li>
-      <li>
-        <p>De lo anterior se obtiene:</p>
-
-        <script type="math/tex; mode=display">
-\log w = \log |w| +i\arg w,
-</script>
-
-        <p>donde <script type="math/tex">\arg w</script> representa el conjunto de argumentos de
-<script type="math/tex">w</script>. En particular, <script type="math/tex">\log w</script> tiene una infinidad de valores,
-que difieren por un múltiplo de <script type="math/tex">2\pi i</script>.</p>
-      </li>
-      <li>Sin embargo, si <script type="math/tex">a\in\mathbb{R}</script>, <script type="math/tex">a>0</script>, consideraremos
-el valor usual (real) de <script type="math/tex">\log a</script>.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="ramas">Ramas</h2>
-
-<ul>
-  <li>
-
-    <p>Si <script type="math/tex">f\colon U\to \mathbb{C}</script> es analítica y <script type="math/tex">D\subseteq f(U)</script>
-es un dominio, una <strong>rama de <script type="math/tex">f^{-1}</script> en <script type="math/tex">D</script></strong> es una función
-continua <script type="math/tex">g\colon D\to U</script> tal que <script type="math/tex">f(g(z))=z</script> para todo <script type="math/tex">z\in
-    D</script>.</p>
-  </li>
-  <li>
-    <p>Argumento principal</p>
-
-    <p>Dado <script type="math/tex">z\in \mathbb{C}-\{0\}</script>, definimos
-<script type="math/tex">\mathrm{Arg}(z)</script> como el argumento de <script type="math/tex">z</script> que está en el
-intervalo <script type="math/tex">(-\pi,\pi]</script>.</p>
   </li>
   <li>
     <p>Observación</p>
 
-    <p>La función <script type="math/tex">\mathrm{Arg}\colon \mathbb{C}-\{z\in \mathbb{C}\mid
-    z\leq 0\}\to \mathbb{R}</script> es continua.</p>
+    <p>Si <script type="math/tex">\lim_{z\to z_{0}}(z-z_{0})f(z)</script> existe, es igual a
+<script type="math/tex">\mathrm{Res}(f,z_{0})</script>. En tal caso, <script type="math/tex">f(z)</script> tiene una
+singularidad removible en <script type="math/tex">z_{0}</script>, o un polo de orden 1
+(<em>simple</em>). </p>
+  </li>
+  <li>
+    <p>Cálculo de residuos</p>
+
+    <p>Sean <script type="math/tex">g,h</script> analíticas en <script type="math/tex">z_{0}</script>, y supongamos que
+<script type="math/tex">g(z_{0})\ne 0</script>, <script type="math/tex">h(z_{0})=0</script>, y <script type="math/tex">h'(z_{0})\ne 0</script>. Entonces
+<script type="math/tex">f(z)=\frac{g(z)}{h(z)}</script> tiene un polo simple en <script type="math/tex">z_{0}</script>, y</p>
+
+    <script type="math/tex; mode=display">
+\mathrm{Res}(f,z_{0})=\frac{g(z_{0})}{h'(z_{0})}
+</script>
+  </li>
+  <li>
+    <p>Generalización</p>
+
+    <p>Supongamos que <script type="math/tex">g</script> tiene un cero de orden <script type="math/tex">k</script> en <script type="math/tex">z_{0}</script> y
+que <script type="math/tex">h</script> tiene un cero de orden <script type="math/tex">k+1</script> en <script type="math/tex">z_{0}</script>. Entonces
+<script type="math/tex">f(z)=\frac{g(z)}{h(z)}</script> tiene un polo simple en <script type="math/tex">z_{0}</script>, y</p>
+
+    <script type="math/tex; mode=display">
+\mathrm{Res}(f,z_{0})=(k+1)\frac{g^{(k)}(z_{0})}{h^{(k+1)}(z_{0})}
+</script>
+  </li>
+  <li>
+    <p>Residuo en polo de orden dos</p>
+
+    <p>Sean <script type="math/tex">g,h</script> analíticas en <script type="math/tex">z_{0}</script>, y supongamos que
+<script type="math/tex">g(z_{0})\ne 0</script>, <script type="math/tex">h(z_{0})=h'(z_{0})=0</script> y <script type="math/tex">h''(z_{0})\ne
+    0</script>. Entonces <script type="math/tex">f(z)=\frac{g(z)}{h(z)}</script> tiene un polo de orden dos en
+<script type="math/tex">z_{0}</script>, y</p>
+
+    <script type="math/tex; mode=display">
+\mathrm{Res}(f,z_{0})=2\frac{g'(z_{0})}{h''(z_{0})}-\frac{2}{3}\frac{g(z_{0})h'''(z_{0})}{[h''(z_{0})]^2}
+</script>
+  </li>
+  <li>
+    <p>Teorema del residuo</p>
+
+    <p>Sea <script type="math/tex">D\subseteq \mathbb{C}</script> un dominio estrellado. Sean
+<script type="math/tex">z_{1}, z_{2},\ldots,z_{n}\in D</script>. Sea <script type="math/tex">f</script> una función
+analítica en <script type="math/tex">D-\{z_{1}, z_{2},\ldots,z_{n}\}</script>. Sea <script type="math/tex">\gamma</script>
+una curva cerrada en <script type="math/tex">D</script>. Entonces:</p>
+
+    <script type="math/tex; mode=display">
+\int_{\gamma}f(z)\,dz=2\pi i\sum_{i=1}^{n}[\mathrm{Res}(f,z_{0})n(f,z_{0})].
+</script>
   </li>
 </ul>
 
-<h2 id="raz-cuadrada">Raíz cuadrada</h2>
+<h1 id="clculo-de-integrales-reales">Cálculo de integrales reales</h1>
 
 <ul>
   <li>
+    <p>Cálculo de integral impropia</p>
 
-    <p>La función</p>
-
-    <script type="math/tex; mode=display">
-z\mapsto \sqrt{|z|}(\cos \frac{\mathrm{Arg}(z)}{2}+i\sin\frac{\mathrm{Arg}(z)}{2}),
-</script>
-
-    <p>es una rama de la inversa de <script type="math/tex">f(z)=z^{2}</script>, definida en
-<script type="math/tex">D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}</script>.</p>
-  </li>
-  <li>
-
-    <p>La función </p>
+    <p>Sea <script type="math/tex">f</script> analítica en <script type="math/tex">\mathbb{C}</script>, salvo por una cantidad
+finita de polos, ninguno en el eje real. Supongamos que existen
+<script type="math/tex">M,R</script> tales que:</p>
 
     <script type="math/tex; mode=display">
-z\mapsto \log |z|+i\mathrm{Arg}(z)
+|f(z)| \leq \frac{M}{|z|^2}.
 </script>
 
-    <p>es una rama de la inversa de <script type="math/tex">f(z)=e^{z}</script>, definida en
-<script type="math/tex">D=\mathbb{C}-\{z\in \mathbb{C}\mid z\leq 0\}</script>.</p>
+    <p>para <script type="math/tex">\vert z\vert \geq R</script>. Entonces <script type="math/tex">\int_{-\infty}^{\infty}f(x)\,dx</script>
+es igual a:</p>
+
+    <script type="math/tex; mode=display">
+2\pi i\sum [\text{residuos de \(f\) en el semiplano superior}]
+</script>
   </li>
-</ul>
-
-<h2 id="derivabilidad-de-ramas">Derivabilidad de ramas</h2>
-
-<ul>
   <li>
+    <p>Observación</p>
 
-    <p>Sea <script type="math/tex">f\colon U\to \mathbb{C}</script> analítica, y sea <script type="math/tex">g\colon D\to
-    U</script> una rama de <script type="math/tex">f^{-1}</script>. Sean <script type="math/tex">z_{0}\in D</script> y
-<script type="math/tex">w_{0}=g(z_{0})\in U</script>. Si <script type="math/tex">f'(w_{0})\ne 0</script>, entonces <script type="math/tex">g</script> es
-derivable en <script type="math/tex">z_{0}</script> y <script type="math/tex">g'(z_{0})=\frac{1}{f'(w_{0})}</script>.</p>
-
-    <p>Por lo tanto, si <script type="math/tex">f'</script> no tiene ceros en <script type="math/tex">g(D)</script>, entonces <script type="math/tex">g</script>
-es analítica en <script type="math/tex">D</script>, y <script type="math/tex">g'(z)=\frac{1}{f'(g(z))}</script>.</p>
+    <p>Las hipótesis del teorema anterior se cumplen para
+<script type="math/tex">f=\frac{P}{Q}</script>, si <script type="math/tex">P,Q</script> son polinomios, el grado de <script type="math/tex">Q</script> es
+mayor que <script type="math/tex">2+\mathrm{grado}(P)</script>, y <script type="math/tex">Q</script> no tiene ceros en el
+eje real.</p>
   </li>
 </ul>
 </div>
@@ -307,7 +249,7 @@ es analítica en <script type="math/tex">D</script>, y <script type="math/tex">g
   
 
 
-<time datetime="2015-02-09T09:00:00-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-05-08T07:00:00-05:00" pubdate data-updated="true"></time>
       
 
 
@@ -315,7 +257,7 @@ es analítica en <script type="math/tex">D</script>, y <script type="math/tex">g
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/02/09/funcion-exponencial/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/02/09/funcion-exponencial/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/variable-compleja/blog/2015/05/08/residuos/" data-via="" data-counturl="http://rvf0068.github.io/variable-compleja/blog/2015/05/08/residuos/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -328,10 +270,8 @@ es analítica en <script type="math/tex">D</script>, y <script type="math/tex">g
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/variable-compleja/blog/2015/02/06/cauchy-riemann/" title="Previous Post: Consecuencias de las ecuaciones de Cauchy-Riemann">&laquo; Consecuencias de las ecuaciones de Cauchy-Riemann</a>
+        <a class="basic-alignment left" href="/variable-compleja/blog/2015/05/04/series-de-laurent/" title="Previous Post: Series de Laurent">&laquo; Series de Laurent</a>
       
-      
-        <a class="basic-alignment right" href="/variable-compleja/blog/2015/02/13/integrales/" title="Next Post: Integrales">Integrales &raquo;</a>
       
     </p>
   </footer>
@@ -398,8 +338,8 @@ es analítica en <script type="math/tex">D</script>, y <script type="math/tex">g
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/09/funcion-exponencial/';
-        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/02/09/funcion-exponencial/';
+        var disqus_identifier = 'http://rvf0068.github.io/variable-compleja/blog/2015/05/08/residuos/';
+        var disqus_url = 'http://rvf0068.github.io/variable-compleja/blog/2015/05/08/residuos/';
         var disqus_script = 'embed.js';
       
     (function () {

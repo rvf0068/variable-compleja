@@ -1,0 +1,156 @@
+% Created 2015-05-07 jue 18:05
+\documentclass[spanish,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[mono=false]{libertine}
+\usepackage[scaled=0.7]{luximono}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usetikzlibrary{babel}
+\usetheme{default}
+\usecolortheme{shark}
+\useinnertheme[outline,shadow]{chamfered}
+\useoutertheme[glossy,nofootline]{wuerzburg}
+\date{2015-05-08 7:00}
+\title{Residuos y cálculo de integrales}
+\beamerdefaultoverlayspecification{<+->}
+\usefonttheme{professionalfonts}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Residuos y cálculo de integrales},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.3.1 (Org mode N/A)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\languagepath{spanish}
+
+\tableofcontents
+
+\section{Definición}
+\label{orgheadline1}
+
+\begin{frame}[label=sec-1-1]{}
+\begin{definition}[Residuo]
+Supongamos que \(f\) tiene una singularidad aislada en
+\(z_{0}\). Si la expansión de Laurent alrededor de \(z_{0}\) es:
+\begin{displaymath}
+\cdots+\frac{b_{2}}{(z-z_{0})^{2}}+\frac{b_{1}}{(z-z_{0})}+a_{0}+a_{1}(z-z_{0})+\cdots
+\end{displaymath}
+entonces \(b_{1}\) se llama el \alert{residuo} de \(f\) en \(z_{0}\), y
+se denota como
+\begin{displaymath}
+b_{1}=\mathrm{Res}(f,z_{0}).
+\end{displaymath}
+\end{definition}
+
+\begin{block}{Observación}
+Si \(\lim_{z\to z_{0}}(z-z_{0})f(z)\) existe, es igual a
+\(\mathrm{Res}(f,z_{0})\). En tal caso, \(f(z)\) tiene una
+singularidad removible en \(z_{0}\), o un polo de orden 1
+(\emph{simple}). 
+\end{block}
+\end{frame}
+
+\begin{frame}[label=sec-1-2]{}
+\begin{theorem}[Cálculo de residuos]
+Sean \(g,h\) analíticas en \(z_{0}\), y supongamos que
+\(g(z_{0})\ne 0\), \(h(z_{0})=0\), y \(h'(z_{0})\ne 0\). Entonces
+\(f(z)=\frac{g(z)}{h(z)}\) tiene un polo simple en \(z_{0}\), y
+\begin{displaymath}
+\mathrm{Res}(f,z_{0})=\frac{g(z_{0})}{h'(z_{0})}
+\end{displaymath}
+\end{theorem}
+
+\begin{theorem}[Generalización]
+Supongamos que \(g\) tiene un cero de orden \(k\) en \(z_{0}\) y
+que \(h\) tiene un cero de orden \(k+1\) en \(z_{0}\). Entonces
+\(f(z)=\frac{g(z)}{h(z)}\) tiene un polo simple en \(z_{0}\), y
+\begin{displaymath}
+\mathrm{Res}(f,z_{0})=(k+1)\frac{g^{(k)}(z_{0})}{h^{(k+1)}(z_{0})}
+\end{displaymath}
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-3]{}
+\begin{theorem}[Residuo en polo de orden dos]
+Sean \(g,h\) analíticas en \(z_{0}\), y supongamos que
+\(g(z_{0})\ne 0\), \(h(z_{0})=h'(z_{0})=0\) y \(h''(z_{0})\ne
+    0\). Entonces \(f(z)=\frac{g(z)}{h(z)}\) tiene un polo de orden dos en
+\(z_{0}\), y
+\begin{displaymath}
+\mathrm{Res}(f,z_{0})=2\frac{g'(z_{0})}{h''(z_{0})}-\frac{2}{3}\frac{g(z_{0})h'''(z_{0})}{[h''(z_{0})]^2}
+\end{displaymath}    
+\end{theorem}
+\end{frame}
+
+\begin{frame}[label=sec-1-4]{}
+\begin{theorem}[Teorema del residuo]
+Sea \(D\subseteq \mathbb{C}\) un dominio estrellado. Sean
+\(z_{1}, z_{2},\ldots,z_{n}\in D\). Sea \(f\) una función
+analítica en \(D-\{z_{1}, z_{2},\ldots,z_{n}\}\). Sea \(\gamma\)
+una curva cerrada en \(D\). Entonces:
+\begin{displaymath}
+\int_{\gamma}f(z)\,dz=2\pi i\sum_{i=1}^{n}[\mathrm{Res}(f,z_{0})n(f,z_{0})].
+\end{displaymath}
+\end{theorem}
+\end{frame}
+
+\section{Cálculo de integrales reales}
+\label{orgheadline1}
+
+\begin{frame}[label=sec-2-1]{}
+\begin{theorem}[Cálculo de integral impropia]
+Sea \(f\) analítica en \(\mathbb{C}\), salvo por una cantidad
+finita de polos, ninguno en el eje real. Supongamos que existen
+\(M,R\) tales que:
+\begin{displaymath}
+|f(z)| \leq \frac{M}{|z|^2}.
+\end{displaymath}
+para \(|z|\geq R\). Entonces \(\int_{-\infty}^{\infty}f(x)\,dx\)
+es igual a:
+\begin{displaymath}
+2\pi i\sum [\text{residuos de \(f\) en el semiplano superior}]
+\end{displaymath}
+\end{theorem}
+
+\begin{block}{Observación}
+Las hipótesis del teorema anterior se cumplen para
+\(f=\frac{P}{Q}\), si \(P,Q\) son polinomios, el grado de \(Q\) es
+mayor que \(2+\mathrm{grado}(P)\), y \(Q\) no tiene ceros en el
+eje real.
+\end{block}
+\end{frame}
+\end{document}
