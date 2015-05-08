@@ -84,10 +84,11 @@
     :PROPERTIES:
     :BEAMER_env: theorem
     :END:
-    Sea \(D\subseteq \mathbb{C}\) un dominio estrellado. Sean
-    \(z_{1}, z_{2},\ldots,z_{n}\in D\). Sea \(f\) una función
-    analítica en \(D-\{z_{1}, z_{2},\ldots,z_{n}\}\). Sea \(\gamma\)
-    una curva cerrada en \(D\). Entonces:
+    Sea \(D\subseteq \mathbb{C}\) un dominio estrellado. Sean \(z_{1},
+    z_{2},\ldots,z_{n}\in D\). Sea \(f\) una función analítica en
+    \(D-\{z_{1}, z_{2},\ldots,z_{n}\}\). Sea \(\gamma\) una curva
+    cerrada en \(D\) que no pasa por alguno de los puntos
+    \(z_{1},z_{2},\ldots,z_{n}\). Entonces:
     \begin{displaymath}
     \int_{\gamma}f(z)\,dz=2\pi i\sum_{i=1}^{n}[\mathrm{Res}(f,z_{0})n(f,z_{0})].
     \end{displaymath}

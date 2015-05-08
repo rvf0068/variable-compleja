@@ -4,7 +4,7 @@
   <title><![CDATA[Variable compleja]]></title>
   <link href="http://rvf0068.github.io/variable-compleja/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/variable-compleja/"/>
-  <updated>2015-05-07T18:06:12-05:00</updated>
+  <updated>2015-05-08T07:57:36-05:00</updated>
   <id>http://rvf0068.github.io/variable-compleja/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -83,10 +83,11 @@ que <script type="math/tex">h</script> tiene un cero de orden <script type="math
   <li>
     <p>Teorema del residuo</p>
 
-    <p>Sea <script type="math/tex">D\subseteq \mathbb{C}</script> un dominio estrellado. Sean
-<script type="math/tex">z_{1}, z_{2},\ldots,z_{n}\in D</script>. Sea <script type="math/tex">f</script> una función
-analítica en <script type="math/tex">D-\{z_{1}, z_{2},\ldots,z_{n}\}</script>. Sea <script type="math/tex">\gamma</script>
-una curva cerrada en <script type="math/tex">D</script>. Entonces:</p>
+    <p>Sea <script type="math/tex">D\subseteq \mathbb{C}</script> un dominio estrellado. Sean <script type="math/tex">z_{1},
+    z_{2},\ldots,z_{n}\in D</script>. Sea <script type="math/tex">f</script> una función analítica en
+<script type="math/tex">D-\{z_{1}, z_{2},\ldots,z_{n}\}</script>. Sea <script type="math/tex">\gamma</script> una curva
+cerrada en <script type="math/tex">D</script> que no pasa por alguno de los puntos
+<script type="math/tex">z_{1},z_{2},\ldots,z_{n}</script>. Entonces:</p>
 
     <script type="math/tex; mode=display">
 \int_{\gamma}f(z)\,dz=2\pi i\sum_{i=1}^{n}[\mathrm{Res}(f,z_{0})n(f,z_{0})].

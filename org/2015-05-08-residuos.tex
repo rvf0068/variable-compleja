@@ -1,4 +1,4 @@
-% Created 2015-05-07 jue 18:05
+% Created 2015-05-08 Fri 07:55
 \documentclass[spanish,presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -48,7 +48,7 @@ label=\protect\usebeamerfont{enumerate item}%
  pdftitle={Residuos y cálculo de integrales},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 24.3.1 (Org mode N/A)}, 
+ pdfcreator={Emacs 24.3.1 (Org mode 8.3beta)}, 
  pdflang={English}}
 \begin{document}
 
@@ -60,7 +60,7 @@ label=\protect\usebeamerfont{enumerate item}%
 \tableofcontents
 
 \section{Definición}
-\label{orgheadline1}
+\label{sec:orgheadline1}
 
 \begin{frame}[label=sec-1-1]{}
 \begin{definition}[Residuo]
@@ -118,10 +118,11 @@ Sean \(g,h\) analíticas en \(z_{0}\), y supongamos que
 
 \begin{frame}[label=sec-1-4]{}
 \begin{theorem}[Teorema del residuo]
-Sea \(D\subseteq \mathbb{C}\) un dominio estrellado. Sean
-\(z_{1}, z_{2},\ldots,z_{n}\in D\). Sea \(f\) una función
-analítica en \(D-\{z_{1}, z_{2},\ldots,z_{n}\}\). Sea \(\gamma\)
-una curva cerrada en \(D\). Entonces:
+Sea \(D\subseteq \mathbb{C}\) un dominio estrellado. Sean \(z_{1},
+    z_{2},\ldots,z_{n}\in D\). Sea \(f\) una función analítica en
+\(D-\{z_{1}, z_{2},\ldots,z_{n}\}\). Sea \(\gamma\) una curva
+cerrada en \(D\) que no pasa por alguno de los puntos
+\(z_{1},z_{2},\ldots,z_{n}\). Entonces:
 \begin{displaymath}
 \int_{\gamma}f(z)\,dz=2\pi i\sum_{i=1}^{n}[\mathrm{Res}(f,z_{0})n(f,z_{0})].
 \end{displaymath}
@@ -129,7 +130,7 @@ una curva cerrada en \(D\). Entonces:
 \end{frame}
 
 \section{Cálculo de integrales reales}
-\label{orgheadline1}
+\label{sec:orgheadline1}
 
 \begin{frame}[label=sec-2-1]{}
 \begin{theorem}[Cálculo de integral impropia]
